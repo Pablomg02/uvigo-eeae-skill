@@ -1,0 +1,110 @@
+{
+  "eval_id": 9,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?",
+  "respuesta": "**Respuesta corta:** No. El III Convenio del PDI laboral del SUG **no está firmado ni publicado**: sigue en negociación (mesa constituida en feb-2025, bloqueada en el ámbito de aplicación), no hay texto, y por tanto **no hay ningún complemento nuevo ni teletrabajo que provengan de él**. Lo que está en vigor es el **II Convenio**, adaptado a la LOSU por acuerdo de la Comisión Paritaria de 7-feb-2025.\n\n**Fundamento**\n- **II Convenio colectivo PDI laboral UDC/USC/UVigo** (DOG 74, 14-abr-2011), art. 5: vigencia prorrogable de año en año y «No suposto de producirse a súa denuncia, este convenio aplicarase ata o momento da sinatura dun novo convenio». Es decir, el II sigue aplicándose mientras no haya III. [DOG](https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html)\n- **Acta de la Comisión Paritaria de 7-feb-2025** (publicada DOG 51, 14-mar-2025): adapta el II Convenio a la LOSU (figuras nuevas: permanente laboral, ayudante doctor, etc.) y recupera el art. 42 (jubilación forzosa a los 70). Esto es lo único que ha cambiado, y es II Convenio, no III. [DOG](https://www.xunta.gal/dog/Publicados/2025/20250314/AnuncioG0767-280225-0004_gl.html)\n- **Constitución de la Comisión Negociadora del III Convenio**: acuerdo de la misma reunión de 7-feb-2025; primera reunión el 21-feb-2025. La negociación sigue en la **fase inicial (ámbito de aplicación**, sobre todo personal de proyectos) y no consta texto (CIG, CCOO, 2025). [CIG](https://www.cig-ensino.gal/nova/aprobase-a-recuperacion-da-xubilacion-forzosa-para-o-pdi-laboral-nas-universidades-publicas-galegas.html)\n- **Prueba de que sigue aplicándose el II**: las convocatorias de profesorado de junio de 2026 (DOG 108, 11-jun-2026 y DOG 110, 15-jun-2026) siguen fijando las retribuciones «para el profesorado ayudante doctor en el artículo 32 del **II Convenio**». [DOG](https://www.xunta.gal/dog/Publicados/2026/20260615/AnuncioG2018-290526-0003_es.html)\n- **Teletrabajo**: el EBEP, art. 47 bis, lo prevé con carácter «voluntario y reversible» y lo remite a desarrollo «por negociación colectiva»; en el II Convenio **no hay artículo de teletrabajo** (solo el art. 11, «lugar de prestación del trabajo»). Los acuerdos de teletrabajo de la USC (2021) y la UDC son de **PAS** y excluyen expresamente al PDI laboral sujeto al convenio. [EBEP](https://www.boe.es/buscar/act.php?id=BOE-A-2015-11719)\n\n**Condiciones y excepciones**\n- Fuente del equívoco: en 2013 ya se constituyó una comisión negociadora «del III Convenio» que nunca llegó a firmarse; el nombre se arrastra desde entonces, y en feb-2025 se rehizo la mesa. Por eso mucha gente oye «III Convenio» desde hace años sin que exista.\n- No confundir el **acuerdo paritario de 2025** (que sí existe, es II Convenio) con el **III Convenio** (que no existe). Lo único que puede notarse «este curso» sin ser del III es, en su caso, la **sentencia TS 664/2025** y la convocatoria de 2026 sobre **sexenios/méritos investigadores del PDI laboral** (también a tiempo parcial), que es doctrina judicial + convocatoria, no un complemento pactado en convenio nuevo.\n\n**Qué no he podido verificar**\n- No localicé ningún texto del III Convenio en el corpus (marcado como inexistente, estado a 2026-10-01) ni en una búsqueda en línea hasta hoy; si se hubiera firmado muy recientemente podría no estar aún indexado. El dato del «complemento nuevo» no lo pude confirmar como norma (la pista de sexenios viene de fuentes sindicales, no verificadas en el BOE/UVigo).\n\n**Siguiente paso**\nPídele a tu compañero la **referencia del DOG** donde lo habría visto. Verifica en el [Registro de convenios del DOG](https://www.xunta.gal/dog) y con la **Comisión Paritaria / tu sección sindical** y la **Vicerreitoría de Profesorado e Ordenación Académica**. Para la DUDA del complemento, consulta la **convocatoria de sexenios del PDI laboral** de tu universidad (2026).",
+  "herramientas": [
+    "skill",
+    "bash",
+    "websearch"
+  ],
+  "tokens": {
+    "input": 84125,
+    "output": 2623,
+    "reasoning": 4284,
+    "cache_read": 212992,
+    "cache_write": 0,
+    "total": 304024
+  },
+  "coste_usd": 0.01740193,
+  "duracion_s": 75.13,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:35:08+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cat references/huecos.md\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista --ambito uvigo\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"convenio PDI laboral complemento\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"III Convenio complemento teletrabajo\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"teletrabajo PDI laboral\\\" -n 6; echo ---; python3 scripts/buscar.py \\\"III Convenio\\\" -n 6; echo ---; python3 scripts/buscar.py --lista --ambito galicia\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normati"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"III Convenio colectivo PDI laboral universidades gallegas 2026 firmado teletrabajo complemento\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py --novedades 2>&1 | head -60\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"complemento nuevo PDI laboral UVigo curso 2026 2027 retribuciones\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"III convenio PDI laboral universidades gallegas firmado 2026\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"teletrabajo PDI laboral Universidade de Vigo UVigo regulamento 2026\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"complemento\\\" --ambito galicia -n 10; echo ===; python3 scripts/buscar.py --ver convenio-pdi-laboral-acta-paritaria-2025-02-07 2>&1 | head -120\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"negociación III convenio PDIL Galicia 2026 estado\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"teletrabajo\\\" OR \\\"teletraballo\\\" PDI laboral universidade convenio Galicia\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py convenio-pdi-laboral-ii-2011 convenio-pdi-laboral-acta-paritaria-2025-02-07 ebep 2>&1 | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/3a2d154be0a0406bae9fa31d25c305f5/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"III Convenio\\\" PDIL Galicia SUG sinatura 2026 DOG\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

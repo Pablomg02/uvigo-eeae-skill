@@ -1,0 +1,122 @@
+{
+  "eval_id": 7,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?",
+  "respuesta": "**Respuesta corta:** Sí al contrato del art. 83 (es compatible con la dedicación a tiempo completo, pero necesita la autorización interna de la UVigo); el asesoramiento externo retribuido a título personal es otra cosa: exige reconocimiento de compatibilidad del Rector y, siendo PDI a tiempo completo y con la misma empresa del proyecto, concurren causas legales de incompatibilidad, salvo que ese asesoramiento se canalice a través de la propia universidad.\n\n**Fundamento**\n- **LOSU (LO 2/2023), art. 60.1** y **art. 75.1**: los grupos pueden celebrar contratos con entidades para trabajos científicos/técnicos y «La dedicación será, en todo caso, compatible con la realización de trabajos científicos, tecnológicos, humanísticos o artísticos en los términos del artículo 60». [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2023-7500)\n- **Ley 53/1984, art. 4.3**: «La dedicación del profesorado universitario será en todo caso compatible con la realización de los trabajos a que se refiere el artículo 11 de la Ley de Reforma Universitaria [hoy art. 60 LOSU / 36 Ley de la Ciencia], en los términos previstos en la misma». Es decir, participar en el contrato del art. 83 no es incurrir en incompatibilidad. [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-1985-151)\n- **Ley 53/1984, art. 14**: «El ejercicio de actividades profesionales, laborales, mercantiles o industriales fuera de las Administraciones Públicas requerirá el previo reconocimiento de compatibilidad». El asesoramiento privado directo a la empresa cae aquí.\n- **Ley 53/1984, art. 17.2**: para el personal de la UVigo ese reconocimiento lo concede **el Rector/a**.\n- **Ley 53/1984, arts. 11.1 y 12.1.a**: no puede ejercerse actividad privada al servicio de entidades que «se relacionen directamente con las que desarrolle el Departamento» ni en «los asuntos en que esté interviniendo, haya intervenido en los dos últimos años o tenga que intervenir por razón del puesto público». La misma empresa y materia del proyecto activan esta prohibición.\n- **Ley 53/1984, arts. 16.2 y 16.3**: «la dedicación del profesorado universitario a tiempo completo tiene la consideración de especial dedicación» y la excepción del art. 6 (asesoramiento científico/técnico) es «salvo para el personal docente universitario a tiempo completo». Refuerza que no es autorizable como actividad privada.\n- **Convenio PDI laboral (II Convenio, 2011), art. 24**: se aplica el régimen de la Ley 53/1984 y «será incompatible la formalización de dos contratos simultáneos». [DOG](https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html)\n- **Normativa UVigo 621 (contratos art. 60 LOSU)**, art. 5.2: la autorización de la UVigo «non poderá ser considerada como dispensa dos requisitos recollidos na Lei 53/84»; art. 2.b incluye como modalidad de esos trabajos el «asesoramento científico-tecnolóxico»; arts. 13-14: aprobación y causas de denegación. [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/621)\n- **Regulamento de profesorado UVigo 512, art. 30.1**: el profesorado «poderá celebrar contratos... para realizar traballos de carácter científico, técnico ou artístico», pero siempre «nos termos establecidos na normativa vixente» (es decir, por el cauce de la UVigo, no como contrato privado propio). [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/512)\n\n**Condiciones y excepciones**\n- **Contrato del art. 83**: no requiere autorización *de compatibilidad*, sino la **autorización interna de la UVigo**: la IP presenta la propuesta en la Oficina de I+D, informa la dirección del grupo/instituto y firma el rector/vicerrector (621 arts. 11-13). Requisito para ser IP contratado: ser doctor/a, estar en activo y que el contrato cubra la duración del proyecto (621 art. 3.1). Importe > 400.000 €: Comisión de Transferencia.\n- **Asesoramiento externo retribuido**: requiere solicitud de **reconocimiento de compatibilidad al Rector** (Ley 53/1984 art. 14 y 17.2). Con dedicación a tiempo completo y con la empresa que contrata al grupo, lo previsible es la denegación por arts. 11.1, 12.1.a y 16.3.\n- **Vía correcta si el asesoramiento es científico-técnico del proyecto**: no lo factures personalmente; se canaliza como **informe/asesoramiento** dentro del propio contrato del art. 60 ante la UVigo (621 art. 2.b), con lo que queda cubierto por la compatibilidad del art. 4.3 y gestionado por la universidad.\n- Recuerda el conflicto de interés: 621 art. 2 («evitar potenciais situacións de conflitos de interese») y código ético UVigo (566).\n\n**Qué no he podido verificar:** el corpus no contiene un procedimiento interno UVigo específico de compatibilidad (plazos/formulario); la Ley 53/1984 figura como texto consolidado sin cambios desde 08-06-2024 y la LOSU desde 02-08-2024, con el corpus descargado el 01-10-2026.\n\n**Siguiente paso:** para el art. 83, Oficina de I+D / Vicerreitoría de Investigación (621). Para el asesoramiento, Servizo de Persoal (PDI) o Secretaría Xeral, que tramita la solicitud ante el Rector; confirma por escrito antes de firmar nada, porque la resolución se dicta en el plazo de dos meses (art. 14) y sin ella la actividad privada es ilícita.",
+  "herramientas": [
+    "skill",
+    "bash",
+    "read"
+  ],
+  "tokens": {
+    "input": 60404,
+    "output": 4760,
+    "reasoning": 6004,
+    "cache_read": 462848,
+    "cache_write": 0,
+    "total": 534016
+  },
+  "coste_usd": 0.01690754,
+  "duracion_s": 95.71,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:33:52+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cat references/temas.md 2>/dev/null | head -200; echo \\\"===JERARQUIA===\\\"; cat references/jerarquia.md 2>/dev/null | head -120\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"compatibilidade asesoramento contrato artigo 83\\\" -n 8; echo \\\"====\\\"; python3 scripts/buscar.py \\\"incompatibilidades PDI dedicación\\\" -n 8; echo \\\"====\\\"; python3 scripts/buscar.py \\\"autorización compatibilidade\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/ab91"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 621 2>/dev/null | head -250\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 512 --art 30 2>/dev/null; echo \\\"=====512 art 23=====\\\"; python3 scripts/buscar.py --ver 512 --art 23 2>/dev/null; echo \\\"=====convenio art24=====\\\"; python3 scripts/buscar.py \\\"réxime de dedicación incompatibilidades\\\" --ambito uvigo -n 5 2>/dev/null\", \""
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n \\\"Artículo 24\\\\|Artigo 24\\\\|Artículo 23\\\\|Artigo 23\\\\|incompatib\\\\|dedicación exclusiva\\\\|tempo completo\\\" normativa/uvigo/convenio-pdi-laboral-ii-2011* 2>/dev/null | head -40; echo \\\"===LISTA===\\\"; ls normativa/uvigo/ | grep -i convenio; ls normativa/uvigo/_originales/ | grep -"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"servizos a tempo parcial empresas\\\" --ambito uvigo -n 4; echo \\\"===435===\\\"; python3 scripts/buscar.py --ver 435 2>/dev/null | head -120\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 621 --grep \\\"incompatib\\\\|artigo 14\\\\|denegaci\\\\|conflito\\\" 2>/dev/null | head -60; echo \\\"===== art14 621 =====\\\"; python3 scripts/buscar.py --ver 621 --art 14 2>/dev/null | head -120\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/ho"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"find . -iname \\\"*convenio*\\\" -o -iname \\\"*pdi-laboral*\\\" | head; echo \\\"---\\\"; python3 scripts/buscar.py --lista 2>/dev/null | grep -i convenio; echo \\\"---ambito estatal?\\\"; python3 scripts/buscar.py \\\"convenio colectivo PDI laboral incompatibilidade\\\" -n 5 2>/dev/null\", \"workdir\": \"/tm"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"for a in \\\"primeiro\\\" \\\"terceiro\\\" \\\"cuarto\\\" \\\"oitavo\\\" \\\"decimoterceiro\\\" \\\"decimocuarto\\\" \\\"decimoquinto\\\" \\\"decimosexto\\\"; do :; done\\npython3 scripts/buscar.py --ver incompatibilidades 2>/dev/null | head -5\\necho \\\"=== ART 1 ===\\\"; python3 scripts/buscar.py --ver incompatibilidades"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n \\\"Artículo primero\\\\|Artículo segundo\\\\|Artículo tercero\\\\|Artículo cuarto\\\\|Artículo once\\\\|Artículo doce\\\\|Artículo trece\\\\|Artículo catorce\\\\|Artículo quince\\\\|Artículo dieciséis\\\\|Artículo diecisiete\\\\|Artículo dieciocho\\\\|Artículo diecinueve\\\\|Artículo veinte\\\" normativa/es"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver incompatibilidades 2>/dev/null | sed -n '1,10p'; echo \\\"===\\\"; ls normativa/estatal/ | grep -i incompat\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae/normativa/estatal/incompatibilidades.md\", \"offset\": 24, \"limit\": 180}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"artigo 60 LOSU transferencia coñecemento\\\" --ambito estatal -n 3 2>/dev/null | head -60\\necho \\\"=== busco LOSU 60 ===\\\"; python3 scripts/buscar.py --ver losu --art 60 2>/dev/null | sed -n '6,60p'\\necho \\\"=== LOSU 75 ===\\\"; python3 scripts/buscar.py --ver losu"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"echo \\\"=== creación empresas art 14 ===\\\"; python3 scripts/buscar.py --ver 215 --art 14 2>/dev/null | sed -n '6,80p'\\necho \\\"=== convenio art24 full ===\\\"; python3 scripts/buscar.py --ver convenio-pdi-laboral-ii-2011 --art 24 2>/dev/null | sed -n '6,60p'\\necho \\\"=== ley ciencia art 18 ="
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"recoñecemento de compatibilidade actividades privadas reitor\\\" --ambito uvigo -n 6 2>/dev/null | head -70; echo \\\"=== acta paritaria incompat ===\\\"; grep -n \\\"incompatib\\\\|compatib\\\\|artigo 24\\\\|artículo 24\\\" normativa/galicia/convenio-pdi-laboral-acta-parita"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py incompatibilidades losu convenio-pdi-laboral-ii-2011 621 512 2>/dev/null | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"for f in normativa/uvigo/621-*.md normativa/uvigo/512-*.md normativa/galicia/convenio-pdi-laboral-ii-2011.md normativa/estatal/incompatibilidades.md normativa/estatal/losu.md; do echo \\\"--- $f\\\"; grep -m1 -i \\\"descargado\\\\|fecha:\\\" \\\"$f\\\"; done 2>/dev/null; echo \\\"=== 621 art5 ===\\\"; py"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -m3 -i \\\"fuente\\\\|url_portal\\\" normativa/galicia/convenio-pdi-laboral-ii-2011.md\", \"workdir\": \"/tmp/uvigo-plan/runs/ab916ef44fa34f0a8b65f177bc7dbabd/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "skill_name": "normativa-uvigo-eeae",
+  "evals": [
+    {
+      "id": 0,
+      "grupo": "desarrollo",
+      "prompt": "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?",
+      "expected_output": "Regulamento de avaliación (565) arts. 35 y 37: derecho a revisión individual antes de que las calificaciones sean definitivas, con la fecha, hora y lugar publicadas junto con las notas; entre la publicación y la revisión deben transcurrir entre dos y siete días hábiles; la calificación definitiva no puede ser inferior a la provisional salvo error material, aritmético o de hecho; si persiste la desconformidad, segunda evaluación ante tribunal solicitada al órgano de dirección del centro en diez días hábiles, habiendo acudido antes a la revisión; el tribunal lo nombra el departamento o la comisión académica del máster y está formado por tres miembros del PDI, sin el profesorado responsable de la materia.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que el estudiantado tiene derecho a revisar individualmente todas las pruebas de evaluación antes de que las calificaciones sean definitivas, y que el profesorado publica junto con las notas la fecha, hora y lugar de revisión.",
+          "fuente": ["565 art. 35"]
+        },
+        {
+          "texto": "Indica que entre la publicación de las calificaciones y la fecha de revisión deben transcurrir entre dos y siete días hábiles, respetando los plazos de cierre de actas.",
+          "fuente": ["565 art. 35"]
+        },
+        {
+          "texto": "Indica que la calificación definitiva no puede ser inferior a la provisional salvo error material, aritmético o de hecho.",
+          "fuente": ["565 art. 35"]
+        },
+        {
+          "texto": "Indica que la segunda evaluación ante tribunal se solicita ante el órgano de dirección del centro en un plazo de diez días hábiles desde la publicación de las calificaciones definitivas (evaluación continua) o desde el cierre de actas (calificación final), y que es necesario haber acudido previamente a la revisión.",
+          "fuente": ["565 art. 37"]
+        },
+        {
+          "texto": "Indica que el tribunal de segunda evaluación está formado por tres miembros del PDI y que no puede formar parte de él el profesorado responsable de la evaluación de la materia.",
+          "fuente": ["565 art. 37"]
+        },
+        {
+          "texto": "No inventa plazos ni obligaciones no previstos en la norma (por ejemplo, no afirma que el profesor deba repetir el examen al margen del cauce de revisión).",
+          "fuente": ["565 art. 35", "565 art. 37"]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "grupo": "desarrollo",
+      "prompt": "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?",
+      "expected_output": "Convenio del PDI laboral art. 36: veintidós días hábiles de vacaciones, que se disfrutan en agosto salvo autorización excepcional en otro periodo sin docencia asignada y en intervalos mínimos de cinco días hábiles consecutivos; tres días sueltos en octubre con docencia no encajan como vacaciones. Vía correcta: asuntos particulares (art. 37.l, nueve días, según necesidades del servicio y preferentemente fuera de las jornadas con docencia). El convenio no recoge un permiso por boda de un familiar; la licencia por matrimonio (art. 37.a, quince días naturales) es para el propio trabajador. La norma aplicable es el convenio del PDI laboral, no las vacaciones de funcionarios del art. 50 del EBEP.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que las vacaciones del PDI laboral son de veintidós días hábiles como mínimo al año y que se disfrutan en agosto, salvo autorización excepcional en otro periodo sin docencia asignada y en intervalos mínimos de cinco días hábiles consecutivos.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 36"]
+        },
+        {
+          "texto": "Concluye que tres días sueltos en octubre con docencia asignada no encajan en la excepción de vacaciones fuera de agosto.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 36"]
+        },
+        {
+          "texto": "Señala la vía de los asuntos particulares (nueve días, atendiendo a las necesidades del servicio y preferentemente fuera de las jornadas con docencia).",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 37"]
+        },
+        {
+          "texto": "No aplica las vacaciones de los funcionarios del art. 50 del EBEP como norma que rija al profesorado laboral, o advierte de que la norma aplicable es el convenio.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 36", "ebep art. 50"]
+        },
+        {
+          "texto": "No afirma que el convenio reconozca un permiso por la boda de un familiar; si menciona la licencia por matrimonio, la limita a los quince días naturales del propio trabajador.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 37"]
+        },
+        {
+          "texto": "No inventa días ni permisos no previstos en la norma.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 37"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "grupo": "desarrollo",
+      "prompt": "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?",
+      "expected_output": "LOSU art. 78.c: máximo de 180 horas lectivas por curso para el profesorado ayudante doctor. El POD 2026/27 recoge esa misma capacidad máxima (180) para la figura LOSU y separa la fila del ayudante doctor LOU (hasta 240). El Regulamento de profesorado (art. 8) y el convenio (art. 14) son anteriores a la LOSU y no prevalecen. El POD cita una normativa de dedicación 2026/27 aprobada el 24 de noviembre de 2025, pero no está publicada: hay que confirmar la cifra con la Vicerreitoría de Profesorado y Ordenación Académica. 210 horas exceden el máximo legal.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que el máximo legal de docencia del profesorado ayudante doctor es de 180 horas lectivas por curso académico (LOSU art. 78.c).",
+          "fuente": ["losu art. 78"]
+        },
+        {
+          "texto": "Concluye que 210 horas exceden ese máximo y no son correctas tal cual.",
+          "fuente": ["losu art. 78"]
+        },
+        {
+          "texto": "Señala que la tabla de capacidades del POD 2026/27 fija un máximo de 180 horas para el profesorado ayudante doctor LOSU y distingue la fila del ayudante doctor LOU (hasta 240).",
+          "fuente": ["709-normativa-para-elaborar-o-pod-plan-de-ordenacion-docent-doc2", "losu art. 78"]
+        },
+        {
+          "texto": "Advierte de que la normativa de dedicación y reconocimientos docentes 2026/27 no está publicada y de que la cifra debe confirmarse con la Vicerreitoría de Profesorado y Ordenación Académica.",
+          "fuente": ["709-normativa-para-elaborar-o-pod-plan-de-ordenacion-docent-doc2", "657"]
+        },
+        {
+          "texto": "Explica que el Regulamento de profesorado (art. 8) reconoce al ayudante doctor una capacidad docente igual a la del profesorado permanente y que esa norma y el convenio (art. 14) son anteriores a la LOSU, por lo que no prevalecen sobre el límite de 180 horas.",
+          "fuente": ["512 art. 8", "convenio-pdi-laboral-ii-2011 art. 14"]
+        },
+        {
+          "texto": "No inventa horas ni el contenido de una normativa de dedicación 2026/27 que no puede verificar.",
+          "fuente": ["losu art. 78", "657"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "grupo": "desarrollo",
+      "prompt": "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?",
+      "expected_output": "Regulamento de TFG/TFM de la EEAE art. 13: tribunal de tres miembros (presidente/a, secretario/a, vogal), designado por la CARC en el caso de los TFG (y por la CAM en los TFM); al menos un suplente; un mismo tribunal no evalúa más de cinco trabajos salvo casos excepcionales autorizados por las comisiones delegadas; el tutor o cotutor no puede pertenecer al tribunal que evalúe a su estudiantado.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que el tribunal tiene tres miembros con los roles de presidencia, secretaría y vocalía.",
+          "fuente": ["tfg-tfm-eeae art. 13"]
+        },
+        {
+          "texto": "Indica que el tribunal de TFG lo designa la CARC (y el de TFM la CAM).",
+          "fuente": ["tfg-tfm-eeae art. 13"]
+        },
+        {
+          "texto": "Indica que el tutor o cotutor no puede pertenecer al tribunal que evalúe a su estudiantado.",
+          "fuente": ["tfg-tfm-eeae art. 13"]
+        },
+        {
+          "texto": "Indica que un mismo tribunal no evalúa más de cinco trabajos, salvo casos excepcionales autorizados por las comisiones delegadas.",
+          "fuente": ["tfg-tfm-eeae art. 13"]
+        },
+        {
+          "texto": "Indica que cada tribunal cuenta al menos con un suplente.",
+          "fuente": ["tfg-tfm-eeae art. 13"]
+        },
+        {
+          "texto": "No inventa una composición, un número de miembros ni un límite de trabajos distintos de los de la norma.",
+          "fuente": ["tfg-tfm-eeae art. 13"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "grupo": "desarrollo",
+      "prompt": "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?",
+      "expected_output": "Docencia: RD 103/2019 art. 4.2: máximo de 60 horas anuales y 180 en el total del contrato predoctoral, por lo que 70 horas superan el tope anual. Prórroga: Regulamento de doutoramento (625) art. 27: un año a tiempo completo (dos a tiempo parcial), solicitada de forma motivada y autorizada por la CAPD a instancia del doctorando; no es una baja temporal (art. 28) ni una ampliación del contrato. Los plazos y el procedimiento concreto deben consultarse en la convocatoria y en la EIDO o en la web del programa.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Cita el RD 103/2019 art. 4.2: máximo de 60 horas anuales y 180 en el total del contrato predoctoral.",
+          "fuente": ["rd-103-2019-epif art. 4"]
+        },
+        {
+          "texto": "Concluye que 70 horas superan el tope anual y no se pueden realizar tal cual.",
+          "fuente": ["rd-103-2019-epif art. 4"]
+        },
+        {
+          "texto": "Cita el Regulamento de doutoramento (625) art. 27: la prórroga es de un año a tiempo completo (dos a tiempo parcial) y se solicita de forma motivada.",
+          "fuente": ["625 art. 27"]
+        },
+        {
+          "texto": "Indica que la prórroga la autoriza la CAPD a solicitud del doctorando, no el director.",
+          "fuente": ["625 art. 27"]
+        },
+        {
+          "texto": "Distingue la prórroga de la baja temporal (625 art. 28), que no computa en los plazos de permanencia y responde a otras causas.",
+          "fuente": ["625 art. 27", "625 art. 28"]
+        },
+        {
+          "texto": "No inventa plazos ni requisitos no previstos y remite a la convocatoria y a la EIDO o al programa para el procedimiento concreto.",
+          "fuente": ["625 art. 27"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "grupo": "desarrollo",
+      "prompt": "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?",
+      "expected_output": "Dos planos: el calendario oficial de exámenes lo aprueba la Xunta do Centro y solo se modifica por circunstancias excepcionales resueltas por el decanato o la dirección tras oír al profesorado y a las delegaciones del estudiantado (565 art. 25.2); un viaje de congreso no está entre las causas tasadas del art. 15.2, solo podría valorarse por la causa residual «cualquier otra causa sobrevenida» acreditada. Si la ausencia se justifica, el estudiantado tiene derecho a realizar la prueba en otra fecha fijada por el profesorado responsable de la materia, preferentemente consensuada, siempre antes del cierre de actas y con al menos 48 horas de antelación (art. 26). El profesor no cambia el calendario oficial por su cuenta. Avaliación global: se elige según el procedimiento y plazo del centro, que no puede ser inferior a un mes (art. 19.4); el calendario de la EEAE 2026/27 fija la solicitud del primer cuatrimestre del 8 de septiembre al 8 de octubre de 2026, por lo que el 2 de octubre de 2026 aún está en plazo; la prueba global se realiza en la fecha oficial (art. 21.2).",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Distingue que el calendario oficial de exámenes lo aprueba la Xunta do Centro y solo se modifica por circunstancias excepcionales resueltas por el decanato o la dirección tras oír al profesorado y a las delegaciones del estudiantado, no a petición individual del alumno.",
+          "fuente": ["565 art. 25"]
+        },
+        {
+          "texto": "Indica que la ausencia justificada da derecho a realizar la prueba en otra fecha fijada por el profesorado responsable de la materia, preferentemente consensuada con el estudiantado, siempre antes del cierre de actas y con un mínimo de 48 horas entre la comunicación y la prueba.",
+          "fuente": ["565 art. 26"]
+        },
+        {
+          "texto": "Señala que las causas justificadas son las tasadas del art. 15 (exámenes oficiales, representación en órganos, hospitalización o consulta médica, enfermedad, fallecimiento o enfermedad grave de familiar, deber público, alerta meteorológica, huelga y estudiantado deportista) más la residual «cualquier otra causa sobrevenida» acreditada, y que un viaje de congreso no figura entre las tasadas.",
+          "fuente": ["565 art. 15"]
+        },
+        {
+          "texto": "Indica que la elección de la avaliación global sigue el procedimiento y plazo establecidos por el centro, que no puede ser inferior a un mes, y que en el calendario de la EEAE 2026/27 el plazo del primer cuatrimestre es del 8 de septiembre al 8 de octubre de 2026, por lo que el 2 de octubre de 2026 aún se puede solicitar.",
+          "fuente": ["565 art. 19", "calendario-eeae-2026-27"]
+        },
+        {
+          "texto": "Indica que las pruebas de avaliación global se realizan en la fecha oficial del examen de la materia y no en una fecha pactada con el profesor.",
+          "fuente": ["565 art. 21"]
+        },
+        {
+          "texto": "No promete que el profesor o el decanato vayan a cambiar la fecha del examen oficial por un congreso, no ofrece soluciones informales y no inventa plazos.",
+          "fuente": ["565 art. 25", "565 art. 26"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "grupo": "nuevas",
+      "prompt": "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?",
+      "expected_output": "Regulamento de doutoramento (625) art. 43: la mención internacional exige una estancia total de al menos tres meses fuera de España en una institución de enseñanza superior o centro de investigación, con al menos una estancia de un mes y ninguna inferior a siete días, en no más de cinco períodos separados; parte de la tesis (introducción, resumen y conclusiones) redactada y defendida en una lengua habitual de comunicación científica distinta de las oficiales de España; dos informes de expertos doctores de instituciones no españolas, distintos de la de la estancia y que no pueden formar parte del tribunal, y al menos un experto no español en el tribunal. Las estancias descritas (dos meses y medio más tres semanas) podrían sumar los tres meses si se acreditan y autorizan. Art. 36: tras el depósito y la revisión del expediente se abre un período de exposición pública de diez días hábiles en período lectivo; la defensa pública debe realizarse en un plazo máximo de tres meses desde la autorización, y si se supera se reinician los trámites.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que la mención internacional exige una estancia total de al menos tres meses fuera de España, con al menos una estancia de un mes como mínimo y ninguna inferior a siete días, y en no más de cinco períodos separados.",
+          "fuente": ["625 art. 43"]
+        },
+        {
+          "texto": "Concluye que, si se acreditan y autorizan, las estancias descritas (dos meses y medio más tres semanas) pueden sumar los tres meses exigidos, al cumplir el mínimo de un mes en una de ellas y no ser ninguna inferior a siete días.",
+          "fuente": ["625 art. 43"]
+        },
+        {
+          "texto": "Indica que parte de la tesis (al menos introducción, resumen y conclusiones) debe redactarse y defenderse en una lengua habitual de comunicación científica distinta de las lenguas oficiales de España.",
+          "fuente": ["625 art. 43"]
+        },
+        {
+          "texto": "Indica que la tesis debe ser informada por al menos dos expertos doctores de instituciones no españolas (distintas de la de la estancia), que no pueden formar parte del tribunal, y que al menos un experto no español debe integrar el tribunal.",
+          "fuente": ["625 art. 43"]
+        },
+        {
+          "texto": "Indica que tras el depósito se abre un período de exposición pública de diez días hábiles en período lectivo.",
+          "fuente": ["625 art. 36"]
+        },
+        {
+          "texto": "Indica que la defensa pública debe realizarse en un plazo máximo de tres meses desde la autorización y que, si se supera, se reinician los trámites; no inventa otros plazos ni requisitos (como un número mínimo de publicaciones).",
+          "fuente": ["625 art. 36", "625 art. 43"]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "grupo": "nuevas",
+      "prompt": "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?",
+      "expected_output": "LOSU art. 60: los grupos de investigación reconocidos, los departamentos y los institutos, y su profesorado, pueden celebrar contratos con entidades públicas y privadas para trabajos científicos, tecnológicos, humanísticos o artísticos. LOSU art. 75.1: la dedicación a tiempo completo es compatible con esos trabajos en los términos del art. 60. Ley 53/1984 art. 4.3: la dedicación del profesorado universitario es compatible en todo caso con los trabajos del art. 11 de la LRU (canal hoy del art. 60 LOSU). Fuera de ese cauce, la compatibilidad para investigación no permanente o asesoramiento científico-técnico en supuestos concretos solo puede autorizarse excepcionalmente (art. 6.1), y está prohibida la actividad privada en asuntos en los que se intervenga por razón del puesto o que comprometa la imparcialidad (arts. 1.3 y 12.1). La tramitación de compatibilidades corresponde a la Vicerreitoría de Profesorado y Ordenación Académica.",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que el contrato de investigación se canaliza a través de la universidad (grupos de investigación reconocidos, departamentos e institutos y su profesorado), que pueden celebrar contratos con entidades públicas y privadas para trabajos científicos (art. 60 LOSU).",
+          "fuente": ["losu art. 60"]
+        },
+        {
+          "texto": "Indica que la dedicación a tiempo completo es compatible con la realización de trabajos científicos en los términos del art. 60 LOSU.",
+          "fuente": ["losu art. 75"]
+        },
+        {
+          "texto": "Cita que la dedicación del profesorado universitario es compatible en todo caso con los trabajos del art. 11 de la LRU (contenido equivalente hoy al art. 60 LOSU), en los términos previstos en la ley.",
+          "fuente": ["incompatibilidades art. cuarto"]
+        },
+        {
+          "texto": "Señala que la compatibilidad para actividades de investigación no permanente o asesoramiento científico-técnico en supuestos concretos solo puede autorizarse excepcionalmente y acreditando el encargo en concurso público o especiales calificaciones.",
+          "fuente": ["incompatibilidades art. sexto"]
+        },
+        {
+          "texto": "Indica que no puede realizar actividad privada en asuntos en los que intervenga o haya intervenido por razón del puesto ni que comprometa el estricto cumplimiento de sus deberes o su imparcialidad.",
+          "fuente": ["incompatibilidades art. primero", "incompatibilidades art. doce"]
+        },
+        {
+          "texto": "No da por hecho que la asesoría privada esté autorizada ni inventa el procedimiento: la tramitación de compatibilidades corresponde a la Vicerreitoría de Profesorado y Ordenación Académica.",
+          "fuente": ["616-resolucion-do-30-de-maio-de-2024-de-delegacion-de-compe-doc2", "incompatibilidades art. sexto"]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "grupo": "nuevas",
+      "prompt": "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?",
+      "expected_output": "No: el Regulamento de avaliación (565 art. 34) y el Regulamento de estudantes (460 art. 11) establecen que las calificaciones se publican en la plataforma interna o aula virtual oficial, con acceso limitado al profesorado de la materia y al estudiantado matriculado. Solo excepcionalmente, por motivos justificados y cuando no sea posible lo anterior, pueden publicarse en tablones físicos cerrados con llave y fuera de las zonas comunes. Los datos se limitan al nombre y apellidos y a la calificación; si hay estudiantes con los mismos nombres y apellidos, se añaden los cuatro dígitos del DNI en las posiciones 4.ª a 7.ª (o documento equivalente). Rige el principio de minimización de datos (RGPD art. 5).",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Indica que las calificaciones deben publicarse en la plataforma interna o aula virtual oficial, con acceso limitado al profesorado de la materia y al estudiantado matriculado.",
+          "fuente": ["565 art. 34", "460 art. 11"]
+        },
+        {
+          "texto": "Indica que solo excepcionalmente, por motivos justificados y cuando no sea posible lo anterior, pueden publicarse en tablones físicos cerrados con llave y fuera de las zonas comunes.",
+          "fuente": ["565 art. 34", "460 art. 11"]
+        },
+        {
+          "texto": "Indica que los datos publicados se limitan al nombre y apellidos y a la calificación.",
+          "fuente": ["565 art. 34", "460 art. 11"]
+        },
+        {
+          "texto": "Indica que, si hay estudiantes con los mismos nombres y apellidos, se añaden los cuatro dígitos del DNI en las posiciones 4.ª a 7.ª (o documento equivalente).",
+          "fuente": ["565 art. 34", "460 art. 11"]
+        },
+        {
+          "texto": "Aplica el principio de minimización de datos y no publica datos innecesarios como el DNI completo o calificaciones de otras materias.",
+          "fuente": ["565 art. 34", "118 art. 5"]
+        },
+        {
+          "texto": "No considera suficiente el problema técnico con la plataforma para publicar la lista abierta en el pasillo y no afirma que exista una habilitación general para hacerlo.",
+          "fuente": ["565 art. 34", "460 art. 11"]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "grupo": "nuevas",
+      "prompt": "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?",
+      "expected_output": "No se puede confirmar: no consta publicado ningún III Convenio del PDI laboral. La norma aplicable sigue siendo el II Convenio de 2011, prorrogado hasta que se firme uno nuevo (art. 5), con la adaptación del acta de la Comisión Paritaria de 7 de febrero de 2025 y el acuerdo sobre la cláusula de jubilación. No se puede verificar el contenido del supuesto III Convenio (complemento salarial, teletrabajo u otras mejoras) ni darlo por existente; hay que remitirse a la fuente oficial (DOG, registro de convenios colectivos o representación sindical y Recursos Humanos).",
+      "files": [],
+      "assertions": [
+        {
+          "texto": "Advierte de que no consta publicado ningún III Convenio del PDI laboral ni puede confirmar que esté firmado.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 5", "convenio-pdi-laboral-acta-paritaria-2025-02-07"]
+        },
+        {
+          "texto": "Indica que la norma aplicable sigue siendo el II Convenio (2011), prorrogado hasta que se firme uno nuevo, con la adaptación del acta de la Comisión Paritaria de 7 de febrero de 2025.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 5", "convenio-pdi-laboral-acta-paritaria-2025-02-07"]
+        },
+        {
+          "texto": "No confirma ni inventa el contenido del supuesto III Convenio (complemento salarial, teletrabajo u otras mejoras) que no puede verificar.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 5"]
+        },
+        {
+          "texto": "Remite a la fuente oficial (DOG, registro de convenios colectivos, representación sindical o Recursos Humanos) para verificar si se ha firmado un nuevo convenio.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 5"]
+        },
+        {
+          "texto": "No presenta el acta paritaria de 2025 ni el acuerdo de recuperación de la cláusula de jubilación como si fueran el III Convenio.",
+          "fuente": ["convenio-pdi-laboral-acta-paritaria-2025-02-07", "convenio-pdi-laboral-acordo-xubilacion-2025"]
+        },
+        {
+          "texto": "No afirma que exista un derecho u obligación (teletrabajo, complemento) que no esté publicado.",
+          "fuente": ["convenio-pdi-laboral-ii-2011 art. 5"]
+        }
+      ]
+    }
+  ]
+}

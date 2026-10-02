@@ -1,0 +1,103 @@
+{
+  "eval_id": 6,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?",
+  "respuesta": "Con la normativa aplicable (RD 99/2011 art. 15.1, modificado por RD 576/2023, y Reglamento de Estudios de Doctorado de la UVigo, art. 43, que aplica la EIDO), esto es lo que te afecta:\n\n**1. ¿Valen las estancias?** Sí, en principio. La mención admite **una o varias estancias que sumen al menos 3 meses** fuera de España, siempre que **una de ellas dure como mínimo 1 mes**. Tus 2,5 meses (Alemania) + 3 semanas (Francia) ≈ 3,2 meses, y Alemania supera el mes, así que cumples el cómputo. Condiciones:\n- Deben ser estancias reales de investigación; **jornadas, seminarios y congresos no cuentan**.\n- Cada estancia debe ser **avalada por la dirección, autorizada por la CAPD** antes de realizarla y **validada por la entidad de acogida** (certificado), e incorporada al documento de actividades (DAD).\n- Ve con cuidado porque el margen es justo y la guía de la EIDO aún habla de \"estancia mínima de 3 meses\": confirma con la EIDO/CAPD que computan acumulativamente las dos.\n\n**2. Informes:** dos informes **favorables previos al depósito**, de dos doctores de **instituciones no españolas**, en el impreso oficial **DO-31**, identificando claramente institución (logo), firmante (firma y sello). **No pueden ser** quienes te acogieron/supervisaron en las estancias; sí pueden luego formar parte del tribunal.\n\n**3. Tribunal:** lo propone la CAPD (7 nombres) y lo nombra la EIDO: **3 titulares + 2 suplentes**, mayoría externos a la universidad, paridad y externalidad. Para la mención internacional, **al menos un miembro (y su suplente) de institución no española, distinto del responsable de la estancia** y de los informantes externos.\n\n**4. Idioma:** al menos introducción, resumen y conclusiones redactados y defendidos en una lengua de comunicación científica distinta del español (art. 43).\n\n**5. Plazos tras depositar:**\n- **Exposición pública: 10 días hábiles en período lectivo** desde la revisión administrativa; durante ellos cualquier doctor puede consultar/alegar y ya no se puede modificar la tesis.\n- La **CAPD tiene 2 meses** desde tu solicitud de depósito para remitir la autorización a la EIDO (la solicitud suspende el plazo máximo de depósito hasta 4 meses).\n- Tras el visto bueno de la Comisión Permanente de la EIDO y el nombramiento del tribunal, la **defensa debe celebrarse en un máximo de 3 meses**; la presidencia la convoca con **10 días hábiles** de antelación mínima.\n- Tras la defensa, **5 días hábiles** para remitir la documentación.\n\nBase: EIDO UVigo, \"Guía rápida / Preguntas frecuentes\" y Reglamento de Estudios de Doutoramento UVigo (art. 43).",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch",
+    "webfetch"
+  ],
+  "tokens": {
+    "input": 59801,
+    "output": 1650,
+    "reasoning": 4219,
+    "cache_read": 216704,
+    "cache_write": 0,
+    "total": 282374
+  },
+  "coste_usd": 0.01314166,
+  "duracion_s": 65.25,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:47:21+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-bench/runs/0c6ed519194649f4b087e439cfb1de94/home\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-bench/runs/0c6ed519194649f4b087e439cfb1de94/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"EEAE doctorado mención internacional tesis estancia tres meses informe tribunal\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"EEAE\\\" doctorado mención internacional\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidad de Vigo mención doctorado internacional requisitos estancia informes tribunal\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo tese doutoramento depósito exposición pública prazo defensa regulamento\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://eido.uvigo.gal/en/thesis/quick-guide\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://eido.uvigo.gal/es/tesis/guia-rapida\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"markdown\", \"url\": \"https://secretaria.uvigo.gal/uv/web/normativa/public/show/625\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"Regulamento de Estudos de Doutoramento\\\" Universidade de Vigo artigo 43 mención internacional estancias \\\"un mes\\\"\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/opencode && curl -sL -o reg.pdf \\\"https://secretaria.uvigo.gal/uv/web/normativa/public/normativa/documento/downloadbyhash/c9f0c2f9570c4a1fde6976d4ef8b5d50a4abc3a9ddb10d97323b0259e661d136\\\" && ls -la reg.pdf && (which pdftotext && pdftotext reg.pdf reg.txt && wc -l reg.txt) || ec"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"markdown\", \"url\": \"https://eido.uvigo.gal/es/tesis/preguntas-frecuentes\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"EEAE Universidad de Vigo Escuela de Ingeniería Aeronáutica y del Espacio doctorado\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "eval_id": 0,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?",
+  "respuesta": "En la UVigo esto lo regula el **Regulamento sobre a avaliación, a cualificación e a calidade da docencia e do proceso de aprendizaxe do estudantado** (Claustro 18/04/2023, mod. 22/12/2023), que separa **revisión** (arts. 35-36) de **reclamación / segunda avaliación ante tribunal** (art. 37).\n\n**1. ¿Estás obligado a la revisión?**\n\n- La revisión es un **derecho del estudiantado** (art. 35.1) que tú debes facilitar: publicar junto a las notas **fecha, hora y lugar** de revisión. La revisión debe celebrarse **entre 2 y 7 días hábiles después de la publicación** (art. 35.3), respetando el cierre de actas.\n- Es una revisión individualizada **antes de que la nota sea definitiva**, y la calificación definitiva no puede ser inferior a la provisional salvo error material, aritmético o de hecho (art. 35.4). No es una re-negociación de la nota.\n- Por tanto:\n  - Si **ya convocaste y celebraste** la revisión en plazo y el alumno no acudió, **no estás obligado a rehacerla** diez días después (documenta que se convocó).\n  - Si **no la convocaste/publicaste**, hay incumplimiento del art. 35 y el alumno tiene derecho a revisarla.\n  - Si las **actas ya están cerradas**, la nota es definitiva y la revisión ordinaria ya no procede: el cauce es la reclamación.\n\n**2. Qué puede reclamar si no se la haces**\n\n- **Segunda evaluación ante tribunal (art. 37):** ante el decanato/dirección del centro, en **10 días hábiles** desde la publicación de las notas definitivas (evaluación continua) o desde el cierre de actas (nota final). Requisito: **haber acudido antes a la revisión**; si no pudo por causa justificada —o porque no la convocaste—, puede alegarlo.\n- **Reclamación por incumplimiento de la guía docente (art. 10):** ante decanato/dirección; se te traslada para alegaciones (5 días hábiles) y el centro resuelve (5 días hábiles).\n- **Recurso de alzada ante reitoría (art. 61):** contra resolución desfavorable, 10 días hábiles; reitoría recaba informe de la Valedoría Universitaria (no vinculante).\n- Además: **Valedoría Universitaria**, **caixa QSP** y, agotada la vía administrativa, **recurso contencioso-administrativo**.\n- Debes **custodiar el examen** hasta que exista resolución firme (art. 30).\n\n**Recomendación práctica:** aunque no estés obligado, cítalo a tutoría y muéstrale el examen y la corrección (art. 36 permite acreditar la asistencia); eso desactiva casi siempre el conflicto. Si mantiene el desacuerdo de fondo, que use el tribunal. Coordina con el/la coordinador/a de la materia y mira el protocolo del centro EEAE y la guía docente.",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch",
+    "webfetch",
+    "grep"
+  ],
+  "tokens": {
+    "input": 72456,
+    "output": 2967,
+    "reasoning": 10600,
+    "cache_read": 496256,
+    "cache_write": 0,
+    "total": 582279
+  },
+  "coste_usd": 0.02049737,
+  "duracion_s": 124.55,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:36:01+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"find /tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f -maxdepth 4 -type d | head -100\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/xdg-data/opencode/repos; find /tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/xdg-data/opencode/repos -maxdepth 3 | head -50\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"UVigo regulamento avaliación revisión exame reclamación prazos Universidade de Vigo\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo revisión exame 10 días reclamación nota procedemento\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"UVigo \\\"revisión\\\" exame prazo \\\"10 días\\\" OR \\\"cinco días\\\" profesor obrigado reglamento avaliación\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"Reglamento sobre la evaluación, la cualificación y la calidad de la docencia\\\" UVigo artículo 37 reclamación calificaciones plazo\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/uv/web/normativa/public/show/565\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://dereito.uvigo.es/es/docencia/examenes\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/opencode && curl -sL -o reg_uvigo.pdf \\\"https://secretaria.uvigo.gal/uv/web/normativa/public/normativa/documento/downloadbyhash/0271885d954a7b55d657ac7ee0cad92d6f75d6f895d4086247dbb2637f35388d\\\" && file reg_uvigo.pdf && ls -la reg_uvigo.pdf\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"which pdftotext; which pdfinfo; python3 -c \\\"import pypdf; print('pypdf ok')\\\" 2>/dev/null; python3 -c \\\"import fitz; print('fitz ok')\\\" 2>/dev/null\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -o reg_uvigo.pdf \\\"https://secretaria.uvigo.gal/uv/web/normativa/public/normativa/documento/downloadbyhash/0271885d954a7b55d657ac7ee0cad92d6f75d6f895d4086247dbb2637f35388d\\\" && file reg_uvigo.pdf && ls -la reg_uvigo.pdf\", \"workdir\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"pdftotext -layout reg_uvigo.pdf reg_uvigo.txt && wc -l reg_uvigo.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace\"}"
+      },
+      {
+        "herramienta": "grep",
+        "entrada_resumen": "{\"pattern\": \"revisi|reclamaci|Artigo 3[0-9]|prazo|días\", \"include\": \"reg_uvigo.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"offset\": 536, \"limit\": 105}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"offset\": 185, \"limit\": 30}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"limit\": 60, \"offset\": 1}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"limit\": 45, \"offset\": 940}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"limit\": 45, \"offset\": 470}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"limit\": 125, \"offset\": 60}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/3cd5e6bafa0d4e3f9ad678c93275075f/home/workspace/reg_uvigo.txt\", \"limit\": 55, \"offset\": 390}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"numResults\": 5, \"query\": \"EEAE Escola de Enxeñaría Aeronáutica e do Espazo Universidade de Vigo revisión calificacións exames\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

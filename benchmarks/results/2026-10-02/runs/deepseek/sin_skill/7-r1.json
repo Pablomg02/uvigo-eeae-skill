@@ -1,0 +1,79 @@
+{
+  "eval_id": 7,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?",
+  "respuesta": "Respuesta breve: **el contrato del art. 83 (hoy art. 60 LOSU) sí es compatible de forma automática; el contrato de asesoramiento externo remunerado firmado directamente con la empresa, no** (salvo que lo canalices por la universidad). No te lo van a autorizar como actividad privada.\n\n## 1. Contrato de I+D (art. 83 LOU → actual art. 60 LOSU)\n\n- Es una actividad **inherentemente compatible** con la dedicación a tiempo completo: la propia Ley 53/1984, art. 4.3, declara que la dedicación del profesorado universitario es \"en todo caso compatible\" con los trabajos del art. 83.\n- **No necesitas autorización de compatibilidad.** El contrato no lo firmas tú con la empresa: lo firma la **Universidade de Vigo** (Rector/Vicerrector de Investigación) con la empresa, y tú participas como investigador/a o IP a través del grupo.\n- Trámite interno: autorización del contrato por el órgano competente (OTRI/Servizo de Investigación), visto bueno del departamento y declaración de no conflicto de intereses.\n\n## 2. Contrato de asesoramiento externo retribuido (directo con la empresa)\n\n- Es una **actividad privada** y, al ser tu dedicación **de tiempo completo**, la ley considera que tienes **\"especial dedicación\"** (Ley 53/1984, art. 16.2).\n- Con carácter general **no se te puede autorizar** compatibilidad para otras actividades públicas o privadas; el art. 16.3 excluye expresamente al **profesorado universitario a tiempo completo** de la vía excepcional del art. 6 (asesoramiento científico-técnico en supuestos concretos). En el ámbito estatal lo repite el RD 598/1985, art. 15.1.\n- Solo hay tres salidas legales:\n  1. **Canalizarlo por la universidad** como contrato de **asesoría científico-técnica del art. 60 LOSU** (antiguo 83), firmado por la UVigo con la empresa. Es la vía normal y no requiere compatibilidad personal.\n  2. Actividades del **art. 19** (producción científica/técnica, colaboración ocasional, ponencias...) que no exigen autorización, pero no un asesoramiento continuado y retribuido.\n  3. Supuestos de **spin-off/empresas participadas** por la universidad (Ley 14/2011 y art. 6.2 Ley 53/1984).\n\n## 3. ¿De quién es la autorización, si la hubiera?\n\n- La competencia corresponde al **Rector** de la UVigo, en relación con el personal a su servicio (Ley 53/1984, art. 17.2). En la UVigo, las **actividades privadas** las resuelve el Rector (solicitud previa a través del Servizo de Persoal, con silencio estimatorio a los 3 meses).\n- Si fuera un segundo puesto público, el órgano competente sería el que figure adscrito el puesto principal (Rector si es la UVigo), con informe del segundo.\n\n## Recomendación práctica\n\nFirma sin problema el **art. 83/60** por la vía universitaria. Para el asesoramiento retribuido, **no lo firmes a título personal**: plantéalo como **contrato de asesoría técnico-científica del art. 60 LOSU** a través de la OTRI; si la empresa exige formalmente contratarte a ti, consulta antes con el Servizo de Persoal (PDI) porque previsiblemente será denegado.\n\n*(Orientación general, no asesoramiento jurídico; conviene confirmar con el Servizo de Persoal–Compatibilidades y la OTRI de la UVigo.)*",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch",
+    "webfetch"
+  ],
+  "tokens": {
+    "input": 54283,
+    "output": 1444,
+    "reasoning": 5914,
+    "cache_read": 84992,
+    "cache_write": 0,
+    "total": 146633
+  },
+  "coste_usd": 0.01281223,
+  "duracion_s": 66.86,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:37:08+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la; find . -maxdepth 3 -type f | head -100\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/8697e90499bd4de3adef7e6a6940085a/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"profesor laboral tiempo completo universidad contrato artículo 83 compatibilidad asesoramiento externo autorización\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo compatibilidad profesorado artículo 83 asesoramiento empresa quién autoriza\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://www.boe.es/buscar/act.php?id=BOE-A-1985-151\", \"format\": \"text\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"UVigo normativa compatibilidades PDI solicitud rector autorización actividades privadas\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"LOSU artículo 60 contratos convenios artículo 83 LOU investigación universidad empresa\", \"numResults\": 6}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"profesor universitario tiempo completo asesoramiento empresa actividad privada incompatibilidad artículo 16 Ley 53/1984 dedicación especial\", \"numResults\": 8}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

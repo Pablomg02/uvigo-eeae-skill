@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v7
+
+      - name: Preparar Python 3.11
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Empaquetar la skill
+        run: python3 tools/empaquetar.py
+
+      - name: Adjuntar el .skill a la Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: dist/normativa-uvigo-eeae.skill
+          fail_on_unmatched_files: true

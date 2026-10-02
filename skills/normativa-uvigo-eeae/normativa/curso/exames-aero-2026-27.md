@@ -1,0 +1,1571 @@
+---
+titulo: 'Calendario de exames do Grao en Enxeñaría Aeroespacial 2026-2027'
+ambito: 'Escola (EEAE)'
+fuente: 'https://aero.uvigo.es/gl/docencia/exames'
+url_documento: 'https://aero.uvigo.es/docs/docencia/exames/Exames_Aero_2026-27.pdf'
+estado_fuente: 'publicado en la web del centro; puede corregirse durante el curso'
+curso: '2026-2027'
+original_local: 'normativa/curso/_originales/Exames_Aero_2026-27.pdf'
+descargado: '2026-10-01'
+sha256_texto: '3f6d87785d9f90ee'
+---
+
+LEYENDA
+
+ALG
+CAL1
+FIS1
+EG
+INF
+
+Algebra Lineal
+Cálculo I
+Física I
+Expresión Gráfica
+Informática
+
+PRIMER CURSO
+QUI
+CAL2
+FIS2
+AE
+TA
+
+Química
+Cálculo II
+Física II
+Administración de Empresas
+Tecnología Aeroespacial
+
+MM
+IE
+TD
+CTM
+MC
+
+Métodos Matemáticos
+Ingeniería Eléctrica
+Termodinámica
+Ciencia y Tec. de Materiales
+Mecánica Clásica
+
+SEGUNDO CURSO
+ED
+MF
+EA
+TASE
+RME
+
+Estadística
+Mecánica de Fluidos
+Electrónica y Automática
+Trans Aereo y Sist Embarcados
+Resistencia de Mat. y Elast.
+
+FA
+MSEA
+MF2
+AMAA
+CN
+
+TERCER CURSO
+Fabricación Aeroespacial
+AA
+Mec Sól y Estruct Aeronáuticas
+ISCA
+Mecánica de Fluidos II y CFD
+DMV
+Aerorreact y Mot Alternativos Aero
+VE
+Cálculo Numérico
+AMCA
+MAO
+
+DGP
+MV
+AAFR
+SP
+MCVA
+CO
+VA
+
+CUARTO CURSO
+Dirección y Gestión de Proyectos
+TCMA
+Mecánica de Vuelo
+SN
+Aeronaves de Ala Fija y Rotatoria
+MIA
+Sistemas de Propulsión
+STR
+Mant y Certif de Vehículos Aeroespaciales
+MT
+Control y Optimización
+SGI
+Vehículos Aeroespaciales
+
+Edificio Manuel Martínez-Risco (MR)
+Aulas
+MR B1, MR B2
+Laboratorios
+MR L1, MR L2, MR L7, MR L8, MR L10
+Edificio de Ferro (EF)
+Aulas
+EF 0.2, EF 0.3, EF 0.8, EF 3.4
+Campus Auga (CA)
+Aulas
+CA AM, CA 2.8, CA 2.14, CA Nave
+
+Aerodinámica y aeroelasticidad
+Ing Sistemas y Com Aeroespaciales
+Diseño Mec MEF y Vibraciones
+Vehículos Espaciales
+Aleaciones y Mat Comp Aeroespaciales
+Mecánica Analítica y Orbital
+
+Tec Conformado Materiales Aeroespaciales
+Sistenas de Navegación
+Materiales para la Industria Aeroespacial
+Sistemas en Tiempo Real
+Meteorología
+Sistemas de Gestión de la Información
+
+FIN DE CARRERA
+
+Curso 1º
+
+Materia
+
+LUNES - 21/09/2026
+Aula
+
+CAL1
+
+CA AM
+
+Curso 2º
+Curso 3º
+Curso 4º
+
+Curso 1º
+Curso 2º
+Curso 3º
+Curso 4º
+
+AA
+
+EF 0.3
+
+CO
+
+EF 0.1
+
+Materia
+
+LUNES - 28/09/2026
+Aula
+
+FIS2
+
+CA AM
+
+ED
+
+MR B1
+
+AMCA
+MIA
+
+EF 0.3
+EF 0.1
+
+Materia
+
+LUNES - 05/10/2026
+Aula
+
+Curso 1º
+Curso 2º
+Curso 3º
+Curso 4º
+
+MAO
+
+EF 0.3
+
+STR
+
+EF 0.1
+
+MARTES - 22/09/2026
+Aula
+Hora
+0900
+CA AM
+1600
+CAL2
+0900
+EF 3.4
+1600
+MC
+0900
+ISCA
+EF 0.3
+1600
+0900
+TCMA
+EF 0.1
+1600
+
+MIÉRCOLES - 23/09/2026
+Materia
+Aula
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+MARTES - 29/09/2026
+Aula
+Hora
+0900
+CA AM
+1600
+ALG
+0900
+EF 3.4
+1600
+MM
+0900
+FA
+EF 0.1
+1600
+0900
+1600
+
+MIÉRCOLES - 30/09/2026
+Materia
+Aula
+Hora
+0900
+1600
+0900
+EF 3.4
+1600
+IE
+0900
+MSEA
+EF 0.3
+1600
+0900
+MV
+EF 0.1
+1600
+
+MARTES - 06/10/2026
+Aula
+Hora
+0900
+1600
+0900
+CA AM
+1600
+0900
+EF 3.4
+1600
+0900
+EF 0.1
+1600
+
+MIÉRCOLES - 07/10/2026
+Materia
+Aula
+Hora
+0900
+1600
+0900
+EF 3.4
+1600
+TASE
+DMV
+CA 2.8
+0900
+1600
+0900
+SGI
+EF 0.3
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+MF
+VE
+SP
+
+Materia
+
+JUEVES 24/09/2026
+Aula
+
+QUI
+
+CA AM
+
+EA
+
+EF 3.4
+
+CN
+SN
+
+EF 0.3
+EF 0.1
+
+Materia
+
+JUEVES 01/10/2026
+Aula
+
+FIS1
+
+CA AM
+
+TD
+
+EF 3.4
+
+AAFR
+
+EF 0.1
+
+Materia
+
+JUEVES 08/10/2026
+Aula
+
+TA
+
+CA AM
+
+RME
+
+EF 3.4
+
+AMAA
+
+EF 0.3
+
+VA
+
+EF 01
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+VIERNES 25/09/2026
+Aula
+
+INF
+
+MR B1
+
+DGP
+
+EF 0.2
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+VIERNES 02/10/2026
+Aula
+
+EG
+
+CA AM
+
+CTM
+
+EF 3.4
+
+MF2
+
+EF 0.2
+
+MCVA
+
+CA 2.8
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+VIERNES 09/10/2026
+Aula
+
+AE
+
+CA AM
+
+MT
+
+EF 0.2
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+PRIMER CUATRIMESTRE
+Materia
+
+LUNES - 14/12/2026
+Aula
+
+Curso 1º
+Curso 2º
+Curso 3º
+
+MSEA
+
+CA AM
+
+Curso 4º
+
+Materia
+
+LUNES - 11/01/2027
+Aula
+
+MM
+
+CA AM
+
+Curso 1º
+Curso 2º
+Curso 3º
+Curso 4º
+
+Curso 1º
+Curso 2º
+Curso 3º
+Curso 4º
+
+MCVA
+
+CA 2.8
+
+Materia
+ALG
+
+LUNES - 18/01/2027
+Aula
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+MARTES - 15/12/2026
+Aula
+
+EG
+
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+MARTES - 12/01/2027
+Aula
+
+CN
+
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+MARTES - 19/01/2027
+Aula
+
+IE
+
+CA AM
+
+DGP
+
+CA AM
+
+MV
+
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+TD
+
+MIERCOLES - 16/12/2026
+Aula
+Hora
+0900
+1600
+CA AM
+0900
+1600
+0900
+1600
+0900
+1600
+
+MIERCOLES - 13/01/2027
+Aula
+Hora
+0900
+1600
+CA AM
+0900
+MC
+1600
+0900
+1600
+0900
+CA AM
+1600
+VA
+
+MIERCOLES - 20/01/2027
+Aula
+Hora
+0900
+1600
+0900
+1600
+CA AM
+0900
+MF2
+1600
+0900
+1600
+
+Materia
+
+JUEVES - 17/12/2026
+Aula
+
+FA
+
+CA AM
+
+Materia
+CAL1
+
+JUEVES - 14/01/2027
+Aula
+CA AM
+
+AAFR
+
+CA AM
+
+Materia
+INF
+
+JUEVES - 21/01/2027
+Aula
+MR B1/B2
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+FIS1
+
+VIERNES 18/12/2026
+Aula
+CA AM
+
+CO
+
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+VIERNES 15/01/2027
+Aula
+
+AMAA
+
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+VIERNES 22/01/2027
+Aula
+
+CTM
+
+CA AM
+
+SP
+
+CA 2.8
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+SEGUNDO CUATRIMESTRE
+Materia
+
+LUNES - 17/05/2027
+Aula
+
+Curso 1º
+Curso 2º
+Curso 3º
+Curso 4º
+
+Curso 1º
+
+Materia
+FIS2
+
+LUNES - 24/05/2027
+Aula
+CA AM
+
+Curso 2º
+Curso 3º
+Curso 4º
+
+Curso 1º
+
+MT
+
+CA AM
+
+Materia
+QUI
+
+LUNES - 31/05/2027
+Aula
+CA AM
+
+Curso 2º
+Curso 3º
+Curso 4º
+
+AA
+
+CA AM
+
+MARTES - 18/05/2027
+Aula
+Hora
+0900
+1600
+0900
+1600
+CA AM
+0900
+AMCA
+1600
+0900
+1600
+
+MIÉRCOLES - 19/05/2027
+Materia
+Aula
+Hora
+0900
+1600
+0900
+TASE
+CA AM
+1600
+0900
+1600
+0900
+1600
+STR
+CA AM
+
+MARTES - 25/05/2027
+Aula
+Hora
+0900
+1600
+0900
+1600
+RME
+CA AM
+0900
+1600
+0900
+1600
+
+MIÉRCOLES - 26/05/2027
+Materia
+Aula
+Hora
+0900
+1600
+0900
+1600
+CA AM
+0900
+VE
+1600
+0900
+1600
+
+MARTES - 01/06/2027
+Aula
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+CA AM
+
+MIÉRCOLES - 02/06/2027
+Materia
+Aula
+Hora
+0900
+1600
+0900
+MF
+CA AM
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+SN
+
+Materia
+TA
+
+JUEVES 20/05/2027
+Aula
+CA AM
+
+SGI
+
+CA AM
+
+Materia
+CAL2
+
+JUEVES 27/05/2027
+Aula
+CA AM
+
+MAO
+
+CA AM
+
+Materia
+AE
+
+JUEVES 03/06/2027
+Aula
+CA AM
+
+DMV
+
+MR B1 / MR B2
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+ISCA
+
+VIERNES 21/05/2027
+Aula
+Hora
+0900
+1600
+0900
+1600
+CA AM
+0900
+1600
+0900
+1600
+
+VIERNES 28/05/2027
+Aula
+Hora
+0900
+1600
+0900
+EA
+CA AM
+1600
+0900
+1600
+0900
+1600
+TCMA
+CA AM
+
+ED
+
+MIA
+
+VIERNES 04/06/2027
+Aula
+Hora
+0900
+1600
+MR B1/B2
+0900
+1600
+0900
+1600
+0900
+1600
+CA AM
+
+SEGUNDA OPORTUNIDAD
+Materia
+
+LUNES - 14/06/2027
+Aula
+
+TD
+
+CA AM
+
+Curso 1º
+Curso 2º
+Curso 3º
+Curso 4º
+
+Curso 1º
+
+AAFR
+
+CA AM
+
+Materia
+INF
+
+LUNES - 21/06/2027
+Aula
+MR B1/B2
+
+Curso 2º
+Curso 3º
+
+MF2
+
+CA AM
+
+Curso 4º
+
+Curso 1º
+
+Materia
+TA
+
+LUNES - 28/06/2027
+Aula
+CA AM
+
+Curso 2º
+Curso 3º
+Curso 4º
+
+Curso 1º
+
+ISCA
+SN
+
+Materia
+QUI
+
+CA AM
+EF 0.3
+
+LUNES - 05/07/2027
+Aula
+CA AM
+
+Curso 2º
+Curso 3º
+Curso 4º
+
+AMAA
+VA
+
+CA AM
+EF 0.3
+
+MARTES - 15/06/2027
+Aula
+CA AM
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+FIS1
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+MARTES - 22/06/2027
+Aula
+
+IE
+
+CA AM
+
+DGP
+
+CA AM
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+
+MARTES - 29/06/2027
+Aula
+
+TASE
+
+CA AM
+
+SGI
+
+CA AM
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+
+MARTES - 06/07/2027
+Aula
+
+MF
+
+CA AM
+
+CN
+
+AA
+
+STR
+
+CA AM
+
+CA AM
+
+EF 3.4
+
+MIÉRCOLES - 16/06/2027
+Aula
+Hora
+0900
+1600
+CA AM
+0900
+MM
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+ALG
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+AE
+
+MIÉRCOLES - 23/06/2027
+Aula
+Hora
+CA AM
+0900
+1600
+0900
+1600
+0900
+CA AM
+1600
+MSEA
+0900
+1600
+MIÉRCOLES - 30/06/2027
+Aula
+Hora
+
+RME
+
+CA AM
+
+MT
+
+EF 0.3
+
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+MIÉRCOLES - 07/07/2027
+Aula
+Hora
+CA AM
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+
+JUEVES 17/06/2027
+Aula
+
+MC
+
+CA AM
+
+CO
+
+CA AM
+
+Materia
+
+JUEVES 24/06/2027
+Aula
+
+CTM
+
+CA AM
+
+SP
+
+CA 2.8
+
+Materia
+CAL2
+
+JUEVES 01/07/2027
+Aula
+CA AM
+
+VE
+
+CA AM
+
+Materia
+
+JUEVES 08/07/2027
+Aula
+
+EA
+
+CA AM
+
+DMV
+MIA
+
+MR B1 / MR B2
+EF 3.4
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+CAL1
+
+VIERNES 18/06/2027
+Aula
+CA AM
+
+MV
+
+EF 3.4
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Materia
+EG
+
+VIERNES 25/06/2027
+Aula
+CA AM
+
+FA
+
+CA AM
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+
+VIERNES 02/07/2027
+Aula
+
+ED
+
+MR B1/B2
+
+MAO
+
+CA AM
+
+MCVA
+
+CA 2.8
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Materia
+FIS2
+
+VIERNES 09/07/2027
+Aula
+CA AM
+
+AMCA
+TCMA
+
+CA AM
+EF 3.4
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1600
+0900
+1600
+0900
+1600
+0900
+1600
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500
+
+Hora
+0900
+1500
+0900
+1500
+0900
+1500
+0900
+1500

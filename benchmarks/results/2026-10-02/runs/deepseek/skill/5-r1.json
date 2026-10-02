@@ -1,0 +1,202 @@
+{
+  "eval_id": 5,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?",
+  "respuesta": "Ya tengo todo. Aquí tienes la respuesta.\n\n---\n\n**Respuesta corta:** Al del viaje: **en principio no hay derecho** a cambiarle la fecha por un congreso (el examen de SP es único por curso, 22/01/2027); puedes admitirlo solo si lo acredita como «calquera outra causa sobrevida» (art. 15.2.j) y, si hay discrepancia, decide la dirección del centro. Al de la evaluación global: **depende, y va muy justo** — el plazo del 1º cuatrimestre es del 8/09 al 8/10/2026, así que hoy (2/10) aún puede, pero solo unos días.\n\n**Fundamento**\n\nAlumno 1 — coincidencia con viaje de congreso:\n- **Calendario de exames 2026-27, Curso 4º: SP (Sistemas de Propulsión) el viernes 22/01/2027, aula CA 2.8, 16:00 h.** [aero.uvigo.es, PDF verificado](https://aero.uvigo.es/docs/docencia/exames/Exames_Aero_2026-27.pdf)\n- Regulamento 565 (Regulamento sobre a avaliación…), art. 21.2: «As probas de avaliación global realizaranse sempre na data oficial do exame». [portal UVigo](https://secretaria.uvigo.gal/uv/web/normativa/public/show/565)\n- Art. 25.2: el calendario de exámenes «non poderá modificarse salvo circunstancias excepcionais», resueltas por la **dirección del centro** tras oír al profesorado y a las delegaciones de estudiantado.\n- Art. 26.1–2: si falta a una prueba, «terá dereito a realizar a proba de avaliación noutra data fixada polo profesorado responsable da materia», consensuada con el estudiante y **siempre antes del cierre de actas** de la convocatoria (1ºC: 12/02/2027), con **mínimo 48 h** entre la comunicación y la prueba.\n- Art. 15.2.j: entre las causas justificadas está «calquera outra causa sobrevida»; **un viaje de congreso no figura expresamente** en la lista (a–i). Si la invoca, debe acreditarla. Art. 15.3: en caso de discrepancia profesor/estudiante, decide el órgano de dirección del centro.\n\nAlumno 2 — evaluación global:\n- Regulamento 565, art. 19.4: la elección de la modalidad de evaluación global se hace «segundo o procedemento e o prazo establecido polo centro, que **non poderá ser inferior a un mes**».\n- Calendario académico EEAE 2026/27, **«Solicitude avaliación global — 1ºC: 8 setembro a 8 outubro»** (2ºC: 27/01–27/02; 2ª op.: 5/05–5/06). [aero.uvigo.es](https://aero.uvigo.es/docs/docencia/calendario/Calendario_EEAE_2026-27.pdf)\n- Art. 19.4: solicitarla supone **renunciar** a seguir evaluándose por continua y a la calificación ya obtenida; la prueba se hace en la fecha oficial (art. 21.2).\n\n**Condiciones y excepciones**\n- El viaje de congreso: puede justificarlo si lo acredita; el margen es hasta el 12/02/2027 (cierre de actas), no hasta el 22/01. Si no aceptas justificación, el estudiante puede plantearlo y decide la dirección del centro. No confundir con cambiar el calendario oficial (competencia de la dirección del centro).\n- La evaluación global: si renuncia a la continua, pierde lo ya entregado; aún está dentro del plazo (hasta el 8/10/2026), pero si lo pide hoy le queda evaluándose por global toda la materia.\n\n**Qué no he podido verificar**\n- La guía docente de \"Sistemas de Propulsión\" **2025/26** no detalla, en el texto extraído, una condición propia sobre evaluación global ni fechas de exámenes; si existe, prevalece dentro del marco de 565 art. 9 (una vez iniciado el curso no pueden modificarse metodologías ni criterios de evaluación).\n- El calendario docente local es del curso **2026/27**; he comprobado que el PDF publicado coincide con la copia local (`comprobar.py`: ✓ sin cambios).\n\n**Siguiente paso:** contesta al primero por escrito valorando la acreditación y la fecha de cierre (12/02); consúltale a la dirección del centro si no aceptas. Al segundo, confírmale que hoy sí está en plazo (8/10/2026) y que tramite la solicitud ya por el procedimiento del centro.",
+  "herramientas": [
+    "skill",
+    "bash",
+    "read"
+  ],
+  "tokens": {
+    "input": 61594,
+    "output": 6484,
+    "reasoning": 467,
+    "cache_read": 842624,
+    "cache_write": 0,
+    "total": 911169
+  },
+  "coste_usd": 0.01593757,
+  "duracion_s": 176.99,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:34:53+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista --ambito eeae 2>&1 | head -60\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/guia.py --lista 2>&1 | head -80\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 565 2>&1 | grep -n -A4 -i \\\"art. 19\\\\|art. 20\\\\|art. 21\\\\|avaliación global\\\\|art. 25\\\\|art. 26\\\\|art. 15\\\\|art. 16\\\" | head -100\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista --ambito curso 2>&1 | head -60\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/guia.py \\\"Sistemas de propulsión\\\" --curso 2025_26 2>&1 | head -120\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 565 > /tmp/opencode/565.txt 2>&1; wc -l /tmp/opencode/565.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver calendario-eeae-2026-27 > /tmp/opencode/cal.txt 2>&1; python3 scripts/buscar.py --ver exames-aero-2026-27 > /tmp/opencode/ex.txt 2>&1; wc -l /tmp/opencode/cal.txt /tmp/opencode/ex.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/hom"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/guia.py \\\"Sistemas de propulsión\\\" --curso 2025_26 --grep \\\"avaliación\\\" 2>&1 | head -80\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae/scripts/guia.py\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/opencode/565.txt\", \"offset\": 248, \"limit\": 160}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '248,420p' /tmp/opencode/565.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n -i \\\"global\\\\|renuncia\\\\|solicit\\\\|prazo\\\\|mes\\\" /tmp/opencode/565.txt | sed -n '1,60p'\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n -i \\\"avaliación\\\\|metodolox\\\" /tmp/opencode/565.txt | grep -i \\\"global\\\\|continua\\\\|artigo 2[01]\\\\|exame\\\" | sed -n '1,40p'; echo ---; grep -n \\\"Artigo 26\\\" -A 40 /tmp/opencode/565.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/s"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"avaliación global prazo solicitude\\\" -n 8; echo ===; python3 scripts/buscar.py \\\"avaliación global\\\" --ambito curso -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n -i \\\"Sistemas de propulsión\\\\|propulsión\\\" /tmp/opencode/ex.txt | head; echo ===; grep -n -i \\\"global\\\" /tmp/opencode/cal.txt | head; echo ===; grep -n -i \\\"global\\\\|renuncia\\\\|solicitude\\\\|xaneiro\\\\|1º\\\\|primeiro\\\" /tmp/opencode/ex.txt | head -40\", \"workdir\": \"/tmp/uvigo-plan/r"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout exames-aero-2026-27 2>&1 | grep -i -n \\\"propulsión\\\\|global\\\\|xaneiro\\\\|renuncia\\\" | head -30\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '540,600p' /tmp/opencode/cal.txt; echo =====EX=====; sed -n '70,180p' /tmp/opencode/ex.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '539,565p' /tmp/opencode/cal.txt; echo ===; sed -n '160,260p' /tmp/opencode/cal.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n -i \\\"SP\\\\|Sistemas de Prop\\\\|MIA\\\\|Dirección\\\" /tmp/opencode/ex.txt | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout exames-aero-2026-27 > /tmp/opencode/ex_layout.txt 2>&1; wc -l /tmp/opencode/ex_layout.txt; grep -n -i \\\"SP\\\\|propul\\\\|MIA\\\\|global\\\" /tmp/opencode/ex_layout.txt | head -30\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspa"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '320,360p' /tmp/opencode/ex.txt; echo ---781---; sed -n '770,800p' /tmp/opencode/ex.txt; echo ---1390---; sed -n '1390,1445p' /tmp/opencode/ex.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '750,800p' /tmp/opencode/ex.txt; echo ====; sed -n '1070,1100p' /tmp/opencode/ex.txt; echo ====; sed -n '1360,1420p' /tmp/opencode/ex.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/opencode/ex.txt\", \"offset\": 772, \"limit\": 18}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '1,60p' /tmp/opencode/cal.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '772,790p' /tmp/opencode/ex.txt; echo ...; sed -n '775,790p' /tmp/opencode/ex.txt | cat -A\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '70,110p' /tmp/opencode/ex.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py 565 exames-aero calendario-eeae 2>&1 | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 - <<'PY'\\nimport re\\nt=open('/tmp/opencode/ex.txt',encoding='utf-8').read()\\n# find line indices of date headers\\nlines=t.split('\\\\n')\\nfor i,l in enumerate(lines):\\n    if re.search(r'(LUNES|MARTES|MI[ÉE]RCOLES|JUEVES|VIERNES)\\\\s*[-–]?\\\\s*\\\\d',l):\\n        print(i+1,l)\\nPY\", \"w"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '774,800p' /tmp/opencode/ex.txt\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout exames-aero-2026-27 --grep \\\"22/01\\\" 2>&1 | head -40; echo ===; python3 scripts/buscar.py --layout exames-aero-2026-27 --grep \\\"Sistemas de Prop\\\" 2>&1 | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.openc"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '780,800p' /tmp/opencode/565.txt; echo ===MIA===; grep -n -A6 -i \\\"Artigo 9\\\\|modific\\\" /tmp/opencode/565.txt | head -50\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 - <<'PY'\\nimport re\\nt=open('/tmp/opencode/ex.txt',encoding='utf-8').read()\\nlines=t.split('\\\\n')\\n# print lines around MIA occurrences\\nfor m in [i for i,l in enumerate(lines) if l.strip()=='MIA']:\\n    print('--- around',m+1)\\n    print('\\\\n'.join(lines[max(0,m-6):m+6]))\\nPY\","
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 - <<'PY'\\nimport re\\nt=open('/tmp/opencode/ex.txt',encoding='utf-8').read()\\nlines=t.split('\\\\n')\\n# first occurrence of each abbreviation in legend order\\nfor code in ['SP','MIA','CTM','MCVA','TCMA','ED','DMV','CO','VA']:\\n    idx=[i for i,l in enumerate(lines) if l.strip()==co"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 - <<'PY'\\nt=open('/tmp/opencode/ex.txt',encoding='utf-8').read()\\nlines=t.split('\\\\n')\\nprint('=== LUNES 05/10/2026 region 179-195 ===')\\nprint('\\\\n'.join(lines[178:195]))\\nprint('=== JUEVES 24/09 341-360 ===')\\nprint('\\\\n'.join(lines[340:360]))\\nPY\", \"workdir\": \"/tmp/uvigo-plan"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 - <<'PY'\\nt=open('/tmp/opencode/ex.txt',encoding='utf-8').read()\\nlines=t.split('\\\\n')\\nprint('=== LUNES 14/12/2026 region 506-521 ===')\\nprint('\\\\n'.join(lines[505:522]))\\nprint('=== LUNES 18/01/2027 region 545-561 ===')\\nprint('\\\\n'.join(lines[544:562]))\\nPY\", \"workdir\": \"/tmp"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 - <<'PY'\\nt=open('/tmp/opencode/ex.txt',encoding='utf-8').read()\\nlines=t.split('\\\\n')\\nprint('\\\\n'.join(lines[544:560]))\\nprint('---- raw cat for region 545-580')\\nfor i in range(544,585):\\n    print(i+1,repr(lines[i]))\\nPY\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py exames-aero-2026-27 2>&1 | head; echo ===; python3 scripts/buscar.py --layout exames-aero-2026-27 --grep \\\"VIERNES 22/01/2027\\\" 2>&1 | head -20\", \"workdir\": \"/tmp/uvigo-plan/runs/181bb3457a6046939e2b03d962350ea3/home/workspace/.opencode/skills/normativa-uvig"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

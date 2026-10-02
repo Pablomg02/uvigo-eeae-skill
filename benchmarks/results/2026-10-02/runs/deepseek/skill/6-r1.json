@@ -1,0 +1,102 @@
+{
+  "eval_id": 6,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?",
+  "respuesta": "**Respuesta corta:** Sí, en principio te vale: 2,5 meses + 3 semanas ≈ 3,2 meses acumulados (≥ 3 meses), con una estancia ≥ 1 mes y ninguna < 7 días. Necesitas 2 informes de expertos externos y un tribunal con presencia extranjera; tras el depósito hay **10 días hábiles de exposición pública** y la defensa debe celebrarse en un **máximo de 3 meses** desde la autorización.\n\n**Fundamento**\n- Regulamento de Estudos de Doutoramento da UVigo (Consello de Goberno 20/06/2024, en vigor 1-oct-2024), art. 43.a: «Que durante a etapa de realización da tese o/a doutorando/a realizase unha ou varias estancias durante, polo menos, tres meses fóra de España… En caso de realizar varias estancias, polo menos unha delas deberá ter unha duración mínima de un mes e ningunha unha duración inferior aos sete días… En ningún caso a estadía total de tres meses poderá desagregarse en máis de cinco períodos separados». [secretaria.uvigo.gal/…/show/625](https://secretaria.uvigo.gal/uv/web/normativa/public/show/625)\n- Art. 43.c: los informes son «un mínimo de dous/dúas expertos/as doutores/as pertencentes a algunha institución… non español **non coincidente coa institución na que se realizou a estadía**. Os expertos que fagan os informes **non poden estar no tribunal**… Estes informes substituirán aos referidos no artigo 36».\n- Art. 43.d y art. 38.f: «polo menos un/ha experto/a… non español, co título de doutor/a, e **distinto dos/dous expertos do apartado c)**, forme parte do tribunal avaliador»; no puede estar en el tribunal la persona responsable de la estancia; mayoría de miembros ajena a las universidades del programa y a las instituciones de las estancias.\n- Art. 36: tras el depósito se abre «un período de **exposición pública de dez días hábiles en período lectivo**»; y «A defensa pública realizarase nun prazo máximo de **tres meses** desde a autorización da defensa polo órgano designado pola EIDO… Se se supera este prazo, iniciaranse de novo os trámites de autorización».\n- Art. 39: la secretaría comunica a la EIDO día, lugar y hora **con al menos 10 días de antelación**.\n- Real Decreto 99/2011, art. 15.1 (modificado por RD 576/2023): exige lo mismo; añade que la lengua distinta del español no se exige si estancias, informes y expertos proceden de país hispanohablante (no es tu caso). [boe.es/…?id=BOE-A-2011-2541](https://www.boe.es/buscar/act.php?id=BOE-A-2011-2541)\n\n**Condiciones y excepciones**\n- Tus cifras encajan justo: la estancia alemana (2,5 meses) cumple el mínimo de 1 mes; la francesa (3 semanas) supera los 7 días; el total ≈ 96 días supera los 90. Ambas deben ser en instituciones de prestigio, en país distinto al de tu residencia habitual/formación previa, **avaladas por la dirección y autorizadas por la CAPD** (idealmente antes de cada estancia; la EIDO exige autorización previa).\n- Además, parte de la tesis (al menos resumen, introducción y conclusiones) redactada y defendida en lengua distinta de las oficiales de España (art. 43.b).\n- El tribunal: 3 titulares + 2 suplentes; al menos un doctor extranjero titular (y otro suplente si es posible), distinto de los dos informantes; mayoría externa a UVigo/programa y a las instituciones de acogida; paridad y demás requisitos del art. 38.\n- Régimen transitorio: si iniciaste el doctorado antes del curso 2023/24, se te aplican las normas de tu inicio salvo tribunal, defensa y evaluación; el requisito de informes externos sí se aplica a todo el estudiantado desde 2024/25 (disposición transitoria primera de 625).\n\n**Qué no he podido verificar**\n- La duración exacta en días de tus estancias («dos meses y medio» y «tres semanas») y que la suma computable alcance los 3 meses: es el punto crítico. Confírmalo con los certificados de acogida.\n- Que no fracciones la estancia total en más de 5 períodos (tú tienes 2, correcto).\n\n**Siguiente paso**\nSolicita a la CAPD la autorización previa de cada estancia (si no lo hiciste ya), acredita su realización con certificado del centro receptor y escrito de la dirección, y prepara los informes de los 2 expertos externos. Verifica el procedimiento y formularios vigentes con la EIDO (secretaria.uvigo.gal / eido.uvigo.gal) y la comisión académica de tu programa. Comprobado hoy que 625 y el RD 99/2011 no presentan cambios en el portal ni en el BOE.",
+  "herramientas": [
+    "skill",
+    "read",
+    "bash"
+  ],
+  "tokens": {
+    "input": 38376,
+    "output": 2805,
+    "reasoning": 3876,
+    "cache_read": 237312,
+    "cache_write": 0,
+    "total": 282369
+  },
+  "coste_usd": 0.01047694,
+  "duracion_s": 62.97,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:33:13+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"mención internacional\\\" --ambito eido -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"mención internacional doutoramento\\\" -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 625 --art 43\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 625 --art 42 && echo \\\"=====41=====\\\" && python3 scripts/buscar.py --ver 625 --art 41\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 625 --art 40\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && for a in 35 36 38 39; do echo \\\"=====ART $a=====\\\"; python3 scripts/buscar.py --ver 625 --art $a; done\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver rd-99-2011-doctorado --art 15 2>/dev/null || python3 scripts/buscar.py \\\"mención internacional\\\" --ambito estatal -n 5\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/comprobar.py 625 rd-99-2011-doctorado 2>&1 | head -40; echo \\\"---huecos---\\\"; python3 scripts/buscar.py \\\"estancia tres meses mención internacional\\\" --ambito"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && ls normativa/eido/ && echo \\\"---GREP---\\\" && grep -ril \\\"exposición\\\" normativa/eido/ | head\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && grep -in \\\"internacional\\\\|exposici\\\\|10 dí\\\\|dez dí\\\\|estancia\\\" normativa/eido/eido-guia-solicitude-deposito-tese.md | head -30\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae/normativa/eido/eido-guia-solicitude-deposito-tese.md\", \"offset\": 290, \"limit\": 210}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/9067c9a3291545b0ae7f764bda8ec6ee/home/workspace/.opencode/skills/normativa-uvigo-eeae && grep -in \\\"transitor\\\\|entrada en vigor\\\\|2023/2024\\\\|2023-2024\\\\|inicio\\\" normativa/uvigo/*625* 2>/dev/null | head -20; ls normativa/uvigo/ | grep 625\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

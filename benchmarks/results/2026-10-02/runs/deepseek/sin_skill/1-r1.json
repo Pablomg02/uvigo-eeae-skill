@@ -1,0 +1,71 @@
+{
+  "eval_id": 1,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?",
+  "respuesta": "No, no puedes cogerlos como vacaciones. Te lo resumo:\n\n**1. Vacaciones (no procede)**\nEl **art. 36 del II Convenio colectivo del PDI laboral de las universidades de A Coruña, Santiago y Vigo** (que te aplica como contratado/a doctor: su art. 2 incluye al profesorado contratado laboral) fija 22 días hábiles, a disfrutar **en agosto** y \"entendidas concedidas sin necesidad de solicitud\". Fuera de agosto solo se autorizan **excepcionalmente, en periodos en que no tengas docencia asignada y en intervalos mínimos de 5 días hábiles consecutivos**. Octubre es periodo docente y 3 días no alcanzan ese mínimo. La **Instrución anual del Vicerrectorado de Profesorado sobre vacaciones y días de libre disposición del PDI (UVigo)** lo confirma: en el personal contratado, las vacaciones se gozan en los periodos sin docencia (Nadal/Entroido/verano).\n\n**2. Lo que sí puedes pedir**\n- **Días de asuntos particulares** (art. 37.1.l del II Convenio; la Instrución anual los fija en 6, más 2 por el 6.º trienio...): \"sin justificación y atendiendo siempre a las necesidades del servicio\", y **preferentemente fuera de las jornadas con obligación docente**. Puedes usarlos para la boda.\n- **Hasta 3 días por conciliación de la vida laboral, familiar y personal**, que se gestionan igual que los de asuntos particulares (Instrución anual del Vicerrectorado). Encajan bien con un viaje de 3 días.\n- Ojo: la **licencia por matrimonio de 15 días (art. 37.1.a)** es solo para **tu** boda o pareja de hecho, no para la boda de un familiar.\n\n**3. A quién se lo pides**\nA la **dirección de tu departamento**, no a la dirección de la Escola. Por la **Resolución rectoral de delegación de competencias de 31/10/2023 (DOG 10/11/2023)**, corresponde a los **directores/as de departamento** conceder vacaciones, permisos y licencias (incluidos asuntos particulares y conciliación). Los \"otros permisos\" se solicitan por escrito con el visto bueno del responsable del departamento y se remiten al **Servicio de Persoal Docente e Investigador / Vicerrectorado de Profesorado**.\n\n**4. Normas que te amparan**\n- **II Convenio colectivo del PDI laboral** de las universidades gallegas, arts. 36 y 37.\n- **Instrución de la Vicerreitoría de Profesorado e Ordenación Académica** sobre vacaciones y días de libre disposición del PDI (la de 2026, de 22/12/2025).\n- Supletoriamente, **art. 37 y 38 del Estatuto de los Trabajadores** y la **LOSU**.\n- Delegación de competencias de 31/10/2023 (DOG 10/11/2023).\n\nConsejo práctico: al coincidir con clases, negocia con la dirección del departamento poder recuperar o reubicar las sesiones, porque la concesión queda supeditada a las necesidades del servicio y a que no tengas obligaciones docentes.",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch",
+    "webfetch"
+  ],
+  "tokens": {
+    "input": 40584,
+    "output": 1162,
+    "reasoning": 3602,
+    "cache_read": 45824,
+    "cache_write": 0,
+    "total": 91172
+  },
+  "coste_usd": 0.00908347,
+  "duracion_s": 47.9,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:34:49+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-plan/runs/5deaed336f264ef6a3bf6af721719523/home/workspace\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/5deaed336f264ef6a3bf6af721719523/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"convenio colectivo persoal laboral Universidade de Vigo permiso asuntos persoais días\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"permiso asuntos propios persoal laboral Universidade de Vigo vacacións docentes contratado doctor\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://www.uvigo.gal/es/universidad/administracion-personal/pdi/gestiones-laborales-formativas-economicas\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Instrución vicerreitoría vacacións días libre disposición PDI 2026 Universidade de Vigo asuntos particulares conciliación\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "eval_id": 0,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?",
+  "respuesta": "**Respuesta corta:** No estás obligado a hacérsela diez días después: la revisión se celebra dentro de los 2–7 días hábiles siguientes a la publicación de notas, así que esa petición es extemporánea. Si no la haces, su vía es la segunda evaluación ante tribunal (art. 37), pero queda bloqueada porque la norma exige haber pasado antes por la revisión; solo la salvaría acreditando un defecto formal (por ejemplo, que no publicaste fecha/hora/lugar de revisión).\n\n**Fundamento**\n- Regulamento 565 (UVigo, en vigor desde 2023/24), art. 35.1: «O estudantado ten dereito a revisar todas as probas de avaliación de xeito individualizado **antes de que sexan definitivas**. Para tal fin, o profesorado responsable da materia publicará xunto coas cualificacións, a data, hora e lugar para revisar cada proba». [show/565]\n- 565, art. 35.3: «Entre a publicación das cualificacións da proba de avaliación e a data de revisión deberá transcorrer un período **entre dous e sete días hábiles** e sempre que se respecten os prazos de peche de actas».\n- RD 1791/2010 (Estatuto del Estudiante), art. 30.3: «El período de revisión finalizará en un plazo anterior al establecido por la universidad para la publicación y cierre de actas». Y art. 29.2: las notas se publican «junto» al horario, lugar y fecha de la revisión. [BOE-A-2010-20147]\n- 565, art. 37.1: segunda evaluación ante tribunal «nun prazo de **dez días hábiles**, contados desde a data de publicación das cualificacións definitivas […] ou desde o peche de actas»; y «Para poder exercer este dereito **é necesario que a/o estudante acudise previamente á revisión**».\n- 565, art. 61.1: contra una resolución desfavorable, recurso de alzada ante reitoría en 10 días hábiles.\n\n**Condiciones y excepciones**\n- La revisión no es un derecho abierto indefinidamente: se ejerce en la fecha que tú fijas y publicas, dentro de la ventana de 2–7 días hábiles. Cumplido eso, no hay obligación de repetirla.\n- Requisito de tu parte: haber publicado **con las notas** fecha, hora y lugar de revisión (565 art. 35.1; RD 1791 art. 29.2). Si no lo hiciste, el plazo no quedó válidamente fijado y conviene darle revisión para no darle un motivo impugnable.\n- Si las actas aún no están cerradas y la nota sigue provisional, nada impide hacérsela voluntariamente, pero no estás obligado.\n- Si lo que alega es un error material/aritmético, la vía no es la revisión tardía sino corregir: la definitiva no puede ser inferior a la provisional salvo error de ese tipo (565 art. 35.4), y el acta se rectifica por error de hecho dentro de 3 meses desde el registro de calificaciones (Normas de xestión académica para grados, 353).\n- Conserva el examen: en caso de reclamación, «o material obxecto da consulta […] deberá conservarse ata que exista unha resolución firme» (565 art. 30.1).\n\n**Qué puede reclamar él, en la práctica**\n- Tribunal de segunda evaluación (art. 37): probablemente inadmisible/no procedente si no consta que acudió a revisión.\n- Recurso de alzada (art. 61) si hay resolución desfavorable; queja/sugerencia y Valedoría (art. 60.b y 61.2), que prosperarían sobre todo si prueba defecto de forma en la publicación de la revisión.\n\n**Qué no he podido verificar:** No dices la materia ni si las notas son provisionales o las actas ya están cerradas; lo decisivo es contar días **hábiles** desde esa fecha y comprobar el cierre de actas de tu convocatoria (el calendario local del corpus es 2026/27, no tu enero; si hace falta, se baja de `aero.uvigo.es`). No hay norma específica de la EEAE sobre revisión: aplica 565. Asumo que actúas como profesor/a responsable o coordinador/a de la materia; la figura de ayudante doctor no altera estas obligaciones, que van unidas a la responsabilidad docente. [565 consultada y comprobada sin cambios en portal el 02-10-2026]\n\n**Siguiente paso:** respóndele por escrito indicando que el plazo de revisión, publicado con las notas, ya transcurrió, y deriva cualquier queja a la Secretaría/dirección del centro; si insiste, que formalice la reclamación y conserva el examen hasta resolución firme.",
+  "herramientas": [
+    "skill",
+    "bash",
+    "grep",
+    "read"
+  ],
+  "tokens": {
+    "input": 40465,
+    "output": 2512,
+    "reasoning": 4491,
+    "cache_read": 154880,
+    "cache_write": 0,
+    "total": 202348
+  },
+  "coste_usd": 0.01073619,
+  "duracion_s": 64.34,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:32:10+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"avaliación revisión\\\" --ver 565\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"revisión exámenes plazo\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "grep",
+        "entrada_resumen": "{\"pattern\": \"revisi|reclamaci|cualificaci\", \"path\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"reclamación cualificacións tribunal\\\" -n 8; echo \\\"-----\\\"; python3 scripts/buscar.py \\\"revisión cualificacións\\\" --ambito eeae -n 6\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\", \"offset\": 35, \"limit\": 25}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py 565 rd-1791-2010 2>&1 | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista --ambito curso 2>&1 | head -30; echo \\\"=====\\\"; python3 scripts/buscar.py \\\"peche de actas xaneiro\\\" --ambito curso -n 5\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"rectificación actas recurso alzada cualificación\\\" --ambito uvigo -n 6\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"actas rectificación erro de feito\\\" --ambito uvigo --ver 353 2>&1 | grep -n -i -A3 -B3 \\\"erro de feito\\\\|tres meses\\\\|3 meses\\\\|rectific\\\" | head -80\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver rd-1791-2010 2>&1 | grep -n -A30 \\\"Artículo 30\\\" | head -60\", \"workdir\": \"/tmp/uvigo-plan/runs/2d6a137429e94d04953ba36d7f5f0c4b/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

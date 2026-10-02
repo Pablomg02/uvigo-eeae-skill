@@ -1,0 +1,85 @@
+{
+  "eval_id": 0,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "juez": "claude-opus-5-5",
+  "resultado": {
+    "assertions": [
+      {
+        "indice": 0,
+        "resultado": "pass",
+        "cita": "«O estudantado ten dereito a revisar todas as probas de avaliación de xeito individualizado **antes de que sexan definitivas**. Para tal fin, o profesorado responsable da materia publicará xunto coas cualificacións, a data, hora e lugar para revisar cada proba»"
+      },
+      {
+        "indice": 1,
+        "resultado": "pass",
+        "cita": "«Entre a publicación das cualificacións da proba de avaliación e a data de revisión deberá transcorrer un período **entre dous e sete días hábiles** e sempre que se respecten os prazos de peche de actas»"
+      },
+      {
+        "indice": 2,
+        "resultado": "pass",
+        "cita": "la definitiva no puede ser inferior a la provisional salvo error de ese tipo (565 art. 35.4)"
+      },
+      {
+        "indice": 3,
+        "resultado": "fail",
+        "cita": "565, art. 37.1: segunda evaluación ante tribunal «nun prazo de **dez días hábiles**, contados desde a data de publicación das cualificacións definitivas […] ou desde o peche de actas»; y «Para poder exercer este dereito **é necesario que a/o estudante acudise previamente á revisión**»"
+      },
+      {
+        "indice": 4,
+        "resultado": "fail",
+        "cita": "Tribunal de segunda evaluación (art. 37): probablemente inadmisible/no procedente si no consta que acudió a revisión."
+      },
+      {
+        "indice": 5,
+        "resultado": "fail",
+        "cita": "565, art. 61.1: contra una resolución desfavorable, recurso de alzada ante reitoría en 10 días hábiles."
+      }
+    ],
+    "comentario": "La respuesta recoge bien el derecho de revisión, la ventana de 2 a 7 días hábiles, la regla de no empeorar la nota y el plazo de 10 días hábiles para pedir el tribunal, con revisión previa obligatoria. Pero no dice que la solicitud se presente ante el órgano de dirección del centro ni cómo se compone el tribunal, y da plazos que no se pueden comprobar con los textos citados: el de 10 días hábiles para la alzada, que parece contradecir el plazo legal de un mes, y el de 3 meses para rectificar el acta."
+  },
+  "prompt_juez": "Eres un corrector objetivo de respuestas sobre normativa universitaria. No sabes qué modelo ha respondido: evalúa solo el contenido de la respuesta.\n\nPREGUNTA PLANTEADA:\nSoy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?\n\nRESPUESTA DE REFERENCIA (orientativa, puede estar incompleta):\nRegulamento de avaliación (565) arts. 35 y 37: derecho a revisión individual antes de que las calificaciones sean definitivas, con la fecha, hora y lugar publicadas junto con las notas; entre la publicación y la revisión deben transcurrir entre dos y siete días hábiles; la calificación definitiva no puede ser inferior a la provisional salvo error material, aritmético o de hecho; si persiste la desconformidad, segunda evaluación ante tribunal solicitada al órgano de dirección del centro en diez días hábiles, habiendo acudido antes a la revisión; el tribunal lo nombra el departamento o la comisión académica del máster y está formado por tres miembros del PDI, sin el profesorado responsable de la materia.\n\nTEXTOS NORMATIVOS CITADOS (úsalos para comprobar cifras, plazos y atribuciones; no dependas de tu memoria):\n### 565 art. 35\n# Regulamento sobre a avaliación, a cualificación e a calidade da docencia e do proceso de aprendizaxe do estudantado  [565-regulamento-sobre-a-avaliacion-a-cualificacion-e-a-cali]\n# documento: Regulamento sobre a avaliación, a calificación e a calidade da docencia e do proceso de aprendizaxe do estudantado (Claustro 18-04-2023 e 22-12-2023))\n# fuente: https://secretaria.uvigo.gal/uv/web/normativa/public/show/565\n# original: normativa/uvigo/_originales/565-regulamento-sobre-a-avaliacion-a-cualificacion-e-a-cali.pdf\n# estado: Validada  \n\nArtigo 35. Da revisión das cualificacións\n1. O estudantado ten dereito a revisar todas as probas de avaliación de xeito individualizado antes de\nque sexan definitivas. Para tal fin, o profesorado responsable da materia publicará xunto coas\ncualificacións, a data, hora e lugar para revisar cada proba de avaliación.\n2. A revisión das cualificacións levaranse a cabo no mesmo centro e sede no que estea adscrito o\nestudante, ben no despacho habitual do profesorado, ben nas dependencias que este estime máis\nconveniente ou nos espazos que poida habilitar o centro para tal efecto.\n3. Entre a publicación das cualificacións da proba de avaliación e a data de revisión deberá transcorrer\nun período entre dous e sete días hábiles e sempre que se respecten os prazos de peche de actas\nrecollidos no calendario oficial da universidade.\n4. De ser o caso, unha vez feita a revisión, o profesorado debe publicar a cualificación definitiva do\nestudantado que a solicitase. A cualificación definitiva non pode ser inferior á provisional, agás erro\nmaterial, aritmético ou de feito.\n### 565 art. 37\n# Regulamento sobre a avaliación, a cualificación e a calidade da docencia e do proceso de aprendizaxe do estudantado  [565-regulamento-sobre-a-avaliacion-a-cualificacion-e-a-cali]\n# documento: Regulamento sobre a avaliación, a calificación e a calidade da docencia e do proceso de aprendizaxe do estudantado (Claustro 18-04-2023 e 22-12-2023))\n# fuente: https://secretaria.uvigo.gal/uv/web/normativa/public/show/565\n# original: normativa/uvigo/_originales/565-regulamento-sobre-a-avaliacion-a-cualificacion-e-a-cali.pdf\n# estado: Validada  \n\nArtigo 37. Da avaliación e cualificación ante tribunal\n1. No caso de desconformidade con calquera das probas de avaliación e/ou coa cualificación final obtida,\no estudantado ten dereito a solicitar ante o órgano de dirección do centro, nun prazo de dez días hábiles,\ncontados desde a data de publicación das cualificacións definitivas, no caso das probas de avaliación\ncontinua ou desde o peche de actas, no suposto de cualificación final, unha segunda avaliación ante un\ntribunal. Para poder exercer este dereito é necesario que a/o estudante acudise previamente á revisión\nda proba ou da avaliación.\n2. O órgano de dirección do centro, despois de recibir a solicitude por parte da ou do estudante,\nremitiraa de forma inmediata ao departamento encargado da docencia, no caso de materias de grao, ou\ná comisión académica do mestrado, no caso de materias de mestrado, xunto con toda a documentación\ndispoñible, para que nomee un tribunal encargado de avaliar a persoa solicitante. No caso dunha materia\ncompartida polo profesorado de varios departamentos, deberá garantirse unha repartición equitativa\nentre os departamentos implicados.\n3. Tras recibir a solicitude de revisión polo departamento ou pola comisión académica de mestrado,\nnomearase un tribunal por maioría simple dos membros asistentes ao consello de departamento ou á\ncomisión académica, tendo en conta que o profesorado responsable da materia deberá absterse na\nvotación. No caso de que estes órganos non consideren procedente o nomeamento do tribunal, deberá\nmotivarse de forma suficiente a decisión e remitila ao órgano de dirección do centro.\n4. O tribunal estará composto por tres membros do PDI, da área ou de áreas afíns do departamento\nencargado da docencia no caso de materias de grao, ou do mestrado no caso de materias de mestrado.\nNon poderá formar parte do tribunal o profesorado responsable da avaliación ou cualificación da\nmateria que orixinou a solicitude.\n5. O tribunal revisará todas as probas de avaliación e as evidencias nas que se sustentou o proceso de\navaliación e cualificación da ou do estudante solicitante que foron obxecto de reclamación e emitirá a\nsúa resolución nun prazo de cinco días hábiles desde o seu nomeamento. A resolución estará sempre\nmotivada.\n6. A dirección do departamento ou da comisión académica deberá remitir a resolución do tribunal ao\nórgano de dirección do centro nun prazo de quince días hábiles contados desde a recepción da\nreclamación no centro.\n7. Unha vez recibida a resolución do tribunal, o órgano de dirección do centro deberá notificarlla de\nforma inmediata á persoa interesada e á persoa coordinadora da materia, para que proceda á\nmodificación da cualificación de ser o caso.\n8. No caso dunha resolución desfavorable na reclamación do proceso, a persoa interesada poderá\ninterpoñer un recurso de alzada ante a reitoría, que actuará de conformidade co establecido no título XI.\n\nASERCIONES A EVALUAR (cada una se refiere a la respuesta evaluada):\n0. Indica que el estudiantado tiene derecho a revisar individualmente todas las pruebas de evaluación antes de que las calificaciones sean definitivas, y que el profesorado publica junto con las notas la fecha, hora y lugar de revisión.\n1. Indica que entre la publicación de las calificaciones y la fecha de revisión deben transcurrir entre dos y siete días hábiles, respetando los plazos de cierre de actas.\n2. Indica que la calificación definitiva no puede ser inferior a la provisional salvo error material, aritmético o de hecho.\n3. Indica que la segunda evaluación ante tribunal se solicita ante el órgano de dirección del centro en un plazo de diez días hábiles desde la publicación de las calificaciones definitivas (evaluación continua) o desde el cierre de actas (calificación final), y que es necesario haber acudido previamente a la revisión.\n4. Indica que el tribunal de segunda evaluación está formado por tres miembros del PDI y que no puede formar parte de él el profesorado responsable de la evaluación de la materia.\n5. No inventa plazos ni obligaciones no previstos en la norma (por ejemplo, no afirma que el profesor deba repetir el examen al margen del cauce de revisión).\n\nRESPUESTA EVALUADA:\n\"\"\"\n**Respuesta corta:** No estás obligado a hacérsela diez días después: la revisión se celebra dentro de los 2–7 días hábiles siguientes a la publicación de notas, así que esa petición es extemporánea. Si no la haces, su vía es la segunda evaluación ante tribunal (art. 37), pero queda bloqueada porque la norma exige haber pasado antes por la revisión; solo la salvaría acreditando un defecto formal (por ejemplo, que no publicaste fecha/hora/lugar de revisión).\n\n**Fundamento**\n- Regulamento 565 (UVigo, en vigor desde 2023/24), art. 35.1: «O estudantado ten dereito a revisar todas as probas de avaliación de xeito individualizado **antes de que sexan definitivas**. Para tal fin, o profesorado responsable da materia publicará xunto coas cualificacións, a data, hora e lugar para revisar cada proba». [show/565]\n- 565, art. 35.3: «Entre a publicación das cualificacións da proba de avaliación e a data de revisión deberá transcorrer un período **entre dous e sete días hábiles** e sempre que se respecten os prazos de peche de actas».\n- RD 1791/2010 (Estatuto del Estudiante), art. 30.3: «El período de revisión finalizará en un plazo anterior al establecido por la universidad para la publicación y cierre de actas». Y art. 29.2: las notas se publican «junto» al horario, lugar y fecha de la revisión. [BOE-A-2010-20147]\n- 565, art. 37.1: segunda evaluación ante tribunal «nun prazo de **dez días hábiles**, contados desde a data de publicación das cualificacións definitivas […] ou desde o peche de actas»; y «Para poder exercer este dereito **é necesario que a/o estudante acudise previamente á revisión**».\n- 565, art. 61.1: contra una resolución desfavorable, recurso de alzada ante reitoría en 10 días hábiles.\n\n**Condiciones y excepciones**\n- La revisión no es un derecho abierto indefinidamente: se ejerce en la fecha que tú fijas y publicas, dentro de la ventana de 2–7 días hábiles. Cumplido eso, no hay obligación de repetirla.\n- Requisito de tu parte: haber publicado **con las notas** fecha, hora y lugar de revisión (565 art. 35.1; RD 1791 art. 29.2). Si no lo hiciste, el plazo no quedó válidamente fijado y conviene darle revisión para no darle un motivo impugnable.\n- Si las actas aún no están cerradas y la nota sigue provisional, nada impide hacérsela voluntariamente, pero no estás obligado.\n- Si lo que alega es un error material/aritmético, la vía no es la revisión tardía sino corregir: la definitiva no puede ser inferior a la provisional salvo error de ese tipo (565 art. 35.4), y el acta se rectifica por error de hecho dentro de 3 meses desde el registro de calificaciones (Normas de xestión académica para grados, 353).\n- Conserva el examen: en caso de reclamación, «o material obxecto da consulta […] deberá conservarse ata que exista unha resolución firme» (565 art. 30.1).\n\n**Qué puede reclamar él, en la práctica**\n- Tribunal de segunda evaluación (art. 37): probablemente inadmisible/no procedente si no consta que acudió a revisión.\n- Recurso de alzada (art. 61) si hay resolución desfavorable; queja/sugerencia y Valedoría (art. 60.b y 61.2), que prosperarían sobre todo si prueba defecto de forma en la publicación de la revisión.\n\n**Qué no he podido verificar:** No dices la materia ni si las notas son provisionales o las actas ya están cerradas; lo decisivo es contar días **hábiles** desde esa fecha y comprobar el cierre de actas de tu convocatoria (el calendario local del corpus es 2026/27, no tu enero; si hace falta, se baja de `aero.uvigo.es`). No hay norma específica de la EEAE sobre revisión: aplica 565. Asumo que actúas como profesor/a responsable o coordinador/a de la materia; la figura de ayudante doctor no altera estas obligaciones, que van unidas a la responsabilidad docente. [565 consultada y comprobada sin cambios en portal el 02-10-2026]\n\n**Siguiente paso:** respóndele por escrito indicando que el plazo de revisión, publicado con las notas, ya transcurrió, y deriva cualquier queja a la Secretaría/dirección del centro; si insiste, que formalice la reclamación y conserva el examen hasta resolución firme.\n\"\"\"\n\nInstrucciones:\n- Para cada aserción decide \"pass\" (la respuesta la cumple de forma clara) o \"fail\" (no la cumple, la contradice o no es verificable en la respuesta).\n- En \"cita\" copia un fragmento LITERAL de la respuesta evaluada que justifique el resultado. No puede estar vacía. Si el resultado es \"fail\" porque la respuesta omite algo, cita el fragmento más cercano que demuestre la omisión, o la frase completa si la respuesta no menciona nada relevante.\n- \"comentario\": una o dos frases de valoración global.\n- Devuelve SOLO un objeto JSON válido, sin texto adicional ni bloques de código, con este esquema exacto:\n{\n  \"assertions\": [\n    {\"indice\": 0, \"resultado\": \"pass\" | \"fail\", \"cita\": \"fragmento literal de la respuesta evaluada\"}\n  ],\n  \"comentario\": \"una o dos frases\"\n}",
+  "tokens_juez": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 6377,
+    "cache_read_input_tokens": 4762,
+    "output_tokens": 1476,
+    "output_tokens_details": {
+      "thinking_tokens": 689
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 6377,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1476,
+        "cache_read_input_tokens": 4762,
+        "cache_creation_input_tokens": 6377,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6377
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "coste_usd_juez": 0.0814964,
+  "duracion_juez_s": 15.35,
+  "duracion_s": 15.35,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:40:08+02:00"
+}

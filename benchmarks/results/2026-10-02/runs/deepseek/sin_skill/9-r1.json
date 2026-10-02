@@ -1,0 +1,88 @@
+{
+  "eval_id": 9,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?",
+  "respuesta": "No es verdad, al menos en lo esencial. El **III Convenio del PDI laboral del SUG (UDC, USC y UVigo)** no está firmado. Lo que hay es:\n\n- **En vigor el II Convenio** (DOG 14/04/2011), prorrogado, y actualizado en **febrero de 2025** para adaptarlo a la LOSU (nuevas figuras: permanente laboral, visitante, sustituto; permisos/igualdad; y recuperación de la jubilación forzosa a los 70).\n- **Negociación del III iniciada el 21/02/2025** (CCOO, CIG, UGT, CSIF + las tres universidades), pero bloqueada/estancada desde el principio por el desacuerdo sobre el **ámbito** (personal de proyectos y convenios). Incluso UVigo amenazó con negociar un convenio propio. A día de hoy no consta texto firmado ni publicado en el DOG.\n\nPor tanto, **no hay un \"complemento nuevo\" ni un derecho de teletrabajo** que nazcan de un III Convenio firmado. Concretamente:\n\n- **Teletrabajo:** no está reconocido en el convenio del PDI laboral. En UVigo hay acuerdo de teletrabajo para **PTXAS** (no PDI), y para PDI el derecho se ha reconocido por vía judicial como medida de conciliación (caso CNT), no por convenio.\n- **Complementos:** lo que sí se está extendiendo es el **derecho al cobro de sexenios/quinquenios para todo el PDIL** (incluido temporal y a tiempo parcial), pero por jurisprudencia del Supremo y resoluciones de 2026, no por un III Convenio.\n- Lo que tu compañero puede estar confundiendo con un \"complemento de teletrabajo\" (p. ej. 22 €/mes) viene de **convenios de otros sectores** (p. ej. enseñanza no regrada), no del PDI universitario gallego.\n\nResumen: **II Convenio vigente y actualizado; III Convenio en negociación, sin firmar; sin complemento nuevo ni teletrabajo por convenio.** Si te lo confirman internamente, pídeles el texto publicado en el DOG o el enlace del portal de transparencia de la UVigo: sin publicación en el DOG no hay convenio aplicable.\n\n¿Quieres que te resuma qué mejoras concretas introduce la actualización del II Convenio de febrero de 2025?",
+  "herramientas": [
+    "websearch"
+  ],
+  "tokens": {
+    "input": 100434,
+    "output": 1335,
+    "reasoning": 3196,
+    "cache_read": 238464,
+    "cache_write": 0,
+    "total": 343429
+  },
+  "coste_usd": 0.01849909,
+  "duracion_s": 55.79,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:47:11+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"III Convenio PDI laboral EEAE complemento teletrabajo\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"III Convenio colectivo PDI laboral universidades públicas Galicia UVigo firmado\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"III Convenio\\\" PDI laboral Universidade de Vigo complemento teletrabajo\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"III convenio\\\" PDIL universidades gallegas sinatura 2026 complemento\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"III Convenio PDI laboral SUG Galicia firmado 2026\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"teletraballo PDIL universidade de Vigo convenio 2026\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"negociación III convenio PDIL SUG novembro 2026 estado\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"CIG Ensino III convenio PDIL SUG sinatura teletraballo complemento salarial\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"\\\"III convenio colectivo\\\" \\\"PDI laboral\\\" Galicia asinado DOG 2026\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"PDI laboral universidade Vigo \\\"complemento\\\" novo 2026 nómina\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"convenio PDIL Galicia sinatura setembro outubro 2026 complemento teletraballo\", \"numResults\": 10}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

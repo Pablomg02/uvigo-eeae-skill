@@ -1,0 +1,172 @@
+{
+  "eval_id": 5,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?",
+  "respuesta": "Con la normativa de la UVigo y el calendario del centro (EEAE), esto es lo que procede contestarles:\n\n**1) Cambio del examen de enero de Sistemas de Propulsión (SP), 4º curso, 1º cuatrimestre**\n\n- El examen está fijado en el calendario oficial aprobado por la Xunta do Centro: **viernes 22/01/2027, 16:00, aula CA 2.8** (2ª oportunidad: 24/06/2027).\n- El calendario **no se puede modificar salvo circunstancias excepcionales**, y quien lo resuelve es el **Decanato/Dirección del centro**, no el profesor (art. 25.2 del Regulamento sobre avaliación, calificación e calidade da docencia).\n- Un **viaje a un congreso no figura entre las causas justificadas** del art. 15 (exámenes oficiales, representación en órganos colexiados, enfermedad, deber público, etc.). Solo entraría si fuese **representación de la Universidad de Vigo** (art. 15.2.b y art. 51.j del Regulamento de estudantes: derecho a examinarse en otra fecha cuando la prueba coincide con una sesión de un órgano colexiado del que es miembro).\n- Por tanto: no puedes cambiarle la fecha tú mismo. Puedes remitirle a presentar una **instancia (EEAE-001) ante la Dirección del centro** con justificantes; si el centro la considera justificada y autoriza, se fija nueva fecha (art. 26.2: mínimo 48 h de antelación, antes del cierre de actas). En caso contrario, debe presentarse el 22/01/2027 o ir a la 2ª oportunidad de junio.\n\n**2) Evaluación global**\n\n- **Sí, todavía está a tiempo.** El plazo para solicitar la modalidad de evaluación global de las materias del 1º cuatrimestre del Grao en Enxeñaría Aeroespacial es **del 7 de septiembre al 7 de octubre de 2026** (hoy, 2 de octubre, quedan días).\n- Debe hacerlo a través del formulario de la Secretaría Online \"Avaliación global, Grao Enxeñaría Aeroespacial, 2026/2027\" (1º cuatrimestre), marcando las materias. Al solicitarlo **renuncia a la evaluación continua** (art. 19.4 del Regulamento de avaliación).",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch",
+    "webfetch",
+    "grep"
+  ],
+  "tokens": {
+    "input": 83704,
+    "output": 2914,
+    "reasoning": 7970,
+    "cache_read": 975232,
+    "cache_write": 0,
+    "total": 1069820
+  },
+  "coste_usd": 0.0220117,
+  "duracion_s": 116.54,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:48:12+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-bench/runs/9b93484f59f6429da527b8ac0089b367/home/workspace\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-bench/runs/9b93484f59f6429da527b8ac0089b367/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo regulamento avaliación global prazo solicitude 2026\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"UVigo cambio data exame xustificación congreso regulamento avaliación\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"numResults\": 8, \"query\": \"UVigo avaliación global primeiro cuadrimestre prazo outubro 2026 grao enxeñaría\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"numResults\": 8, \"query\": \"\\\"Sistemas de propulsión\\\" UVigo guía docente exame xaneiro\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/uv/web/formularios/encuesta/cubrir_paso1/12439\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/uv/web/formularios/encuesta/cubrir_paso2/12439\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"markdown\", \"url\": \"https://dereito.uvigo.es/wp-content/uploads/2026/05/RegulamentoAvaliacionCompensacion.pdf\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"markdown\", \"url\": \"https://aero.uvigo.es/gl/docencia/exames/\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"markdown\", \"url\": \"https://secretaria.uvigo.gal/uv/web/normativa/public/show/565?_locale=es\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"markdown\", \"url\": \"https://aero.uvigo.es/gl/o-centro/normativa-e-formularios\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"which pdftotext curl python3; ls /tmp/opencode\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -o /tmp/opencode/reglamento.pdf \\\"https://secretaria.uvigo.gal/uv/web/normativa/public/normativa/documento/downloadbyhash/0271885d954a7b55d657ac7ee0cad92d6f75d6f895d4086247dbb2637f35388d\\\" && ls -la /tmp/opencode/reglamento.pdf\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -o /tmp/opencode/exames.pdf \\\"https://aero.uvigo.es/docs/docencia/exames/Exames_Aero_2026-27.pdf\\\" && ls -la /tmp/opencode/exames.pdf\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/opencode && pdftotext -layout reglamento.pdf reglamento.txt && pdftotext -layout exames.pdf exames_new.txt && wc -l reglamento.txt exames_new.txt\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/opencode/exames-aero-layout.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"pdftotext -layout reglamento.pdf reglamento.txt && pdftotext -layout exames.pdf exames_new.txt && wc -l reglamento.txt exames_new.txt\", \"workdir\": \"/tmp/opencode\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"pdftotext -layout /tmp/opencode/reglamento.pdf /tmp/opencode/reglamento.txt && pdftotext -layout /tmp/opencode/exames.pdf /tmp/opencode/exames_new.txt && wc -l /tmp/opencode/reglamento.txt /tmp/opencode/exames_new.txt\"}"
+      },
+      {
+        "herramienta": "grep",
+        "entrada_resumen": "{\"pattern\": \"propulsi|Propulsi|PROPULSI\", \"path\": \"/tmp/opencode/exames_new.txt\"}"
+      },
+      {
+        "herramienta": "grep",
+        "entrada_resumen": "{\"pattern\": \"Artigo 15|Artigo 25|Artigo 26|forza maior|circunstancias excepcionais|ausencia xustificada\", \"path\": \"/tmp/opencode/reglamento.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n -i \\\"propulsi\\\" /tmp/opencode/exames_new.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"grep -n -iE \\\"Artigo 15|Artigo 25|Artigo 26|forza maior|circunstancias excepcionais|ausencia xustificada|Artigo 19|Artigo 20\\\" /tmp/opencode/reglamento.txt\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/opencode/exames_new.txt\", \"offset\": 1, \"limit\": 239}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cp /tmp/opencode/exames_new.txt /tmp/opencode/reglamento.txt \\\"/tmp/uvigo-bench/runs/9b93484f59f6429da527b8ac0089b367/home/workspace/\\\" && ls -la \\\"/tmp/uvigo-bench/runs/9b93484f59f6429da527b8ac0089b367/home/workspace/\\\"\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '1,120p' /tmp/opencode/exames_new.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '120,239p' /tmp/opencode/exames_new.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '245,300p' /tmp/opencode/reglamento.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"sed -n '315,435p' /tmp/opencode/reglamento.txt\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -o /tmp/opencode/rri.pdf \\\"https://aero.uvigo.es/docs/escuela/normativa/RRI_EEAE.pdf\\\" && pdftotext -layout /tmp/opencode/rri.pdf /tmp/opencode/rri.txt && grep -n -iE \\\"exame|examen|avaliaci|ausencia|congreso\\\" /tmp/opencode/rri.txt | head -50\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"numResults\": 6, \"query\": \"UVigo falta xustificada asistencia congreso representación estudantado exame outra data\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "eval_id": 3,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?",
+  "respuesta": "**Respuesta corta:** Los nombra la **CARC** de la EEAE; cada tribunal tiene **3 miembros titulares** (presidencia, secretaría y vogal) + al menos 1 suplente; **no puedes ser del tribunal de tu alumno/a**; y un mismo tribunal **no evalúa más de 5 trabajos**, salvo excepción autorizada.\n\n**Fundamento**\n- Regulamento de TFG/TFM da EEAE, 19/12/2018, art. 13.1: «Cada tribunal estará formado por tres membros cos seguintes roles... Presidente/a, Secretario/a, Vogal»; art. 13.2: «Cada tribunal terá cando menos un/ha suplente». [aero.uvigo.es](https://aero.uvigo.es/docs/escuela/normativa/TFG-TFM_EEAE.pdf)\n- EEAE, art. 13, encabezado: «o tribunal avaliador dos TFG será designado pola CARC»; y art. 2: la CARC «propoñerá os tribunais» (comisión delegada de los TFG). [misma fuente]\n- EEAE, art. 13.7 (literal): «O/a titor/a e cotitor/a dun TFG ou TFM non poderán pertencer ao tribunal que avalíe ao seu estudantado titorizado». Por tanto **no**.\n- EEAE, art. 13.3 (literal): «Un mesmo tribunal non avaliará máis de 5 traballos, salvo casos excepcionais autorizados polas comisións delegadas».\n- Normativa de TFG da UVigo (CG 15/06/2016, mod. 31/10/2022), art. 8 bis.1: la Xunta de Centro o comisión delegada nombra el tribunal colexiado «entre o profesorado da titulación», con presidencia, secretaría y vogal(es); permite varios tribunales por titulación. [show/550](https://secretaria.uvigo.gal/uv/web/normativa/public/show/550)\n\n**Condiciones y excepciones**\n- Los 5 trabajos son **por tribunal**, no por profesor. La EEAE añade (art. 13.4) que, dentro de lo posible, un mismo profesor no esté en más de una convocatoria del curso como titular.\n- Excepción a los 5: solo casos excepcionales autorizados por las comisiones delegadas (CARC/CAM).\n- Existe en la normativa UVigo la modalidad de **tribunal unipersoal** (art. 8 ter 550), en la que el/la propio/a tutor/a es el tribunal; pero el Regulamento de la EEAE configura los tribunales como colexiados de tres miembros y no contempla esa modalidad, por lo que la regla del art. 13.7 se aplica a la composición colegiada.\n\n**Qué no he podido verificar:** el Regulamento de la EEAE es de 2018 y la web de la Escola no marca vigencia; `comprobar.py` confirma que el PDF publicado coincide con la copia local, y 550 no ha cambiado en el portal (comprobado hoy).\n\n**Siguiente paso:** para cualquier caso excepcional (número >5, sustitución de miembro, defensa virtual), dirigirse a la **CARC** de la EEAE, que es la competente para nombrar y autorizar.",
+  "herramientas": [
+    "skill",
+    "bash",
+    "grep"
+  ],
+  "tokens": {
+    "input": 28994,
+    "output": 2092,
+    "reasoning": 1091,
+    "cache_read": 87424,
+    "cache_write": 0,
+    "total": 119601
+  },
+  "coste_usd": 0.00652117,
+  "duracion_s": 36.81,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:31:42+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"tribunal tfg\\\" --ambito eeae -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "grep",
+        "entrada_resumen": "{\"pattern\": \"[Tt][Ff][Gg]\", \"path\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"tribunal tfg\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver tfg-tfm-eeae --art 13\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"tribunal\\\" --lista --ambito uvigo 2>/dev/null | head -60\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"titor tribunal\\\" --ambito uvigo -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"tribunal\\\" --ambito uvigo -n 10 2>/dev/null | grep -A30 \\\"550-normativa\\\"\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 550-data 2>/dev/null | head -5; python3 scripts/buscar.py \\\"traballo de fin de grao tribunal\\\" -n 10 --ambito uvigo 2>/dev/null | grep -B2 -A25 \\\"550\\\"\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/nor"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"unipersoal\\\" --ambito eeae -n 5; echo \\\"---550 tribunal unipersoal eeae---\\\"; python3 scripts/buscar.py \\\"unipersoal\\\" -n 5\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py 550 tfg-tfm-eeae 2>/dev/null | head -40\", \"workdir\": \"/tmp/uvigo-plan/runs/6e3c1f68950540b8bedc72c5f1c94827/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

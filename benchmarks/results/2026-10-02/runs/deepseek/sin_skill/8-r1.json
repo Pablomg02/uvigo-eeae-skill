@@ -1,0 +1,53 @@
+{
+  "eval_id": 8,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?",
+  "respuesta": "Sí puedes publicar calificaciones sin consentimiento del alumnado, pero **no como lo planteas**: el \"tablón del pasillo\" es precisamente una zona común y ahí no está permitido. La respuesta está en las *Recomendaciones sobre la publicación de las calificaciones del alumnado* de la Delegada de Protección de Datos de la UVigo y en el Informe 30/2019 de la AEPD.\n\n**Base legal (no necesitas consentimiento)**\n- Disposición adicional 21ª de la LO 4/2007 (modifica la LOU): no se precisa consentimiento del estudiante para publicar resultados de pruebas de evaluación.\n- Art. 6.1.e) RGPD (misión de interés público) y 6.1.f) (interés legítimo de los compañeros del grupo).\n\n**Dónde publicar (orden de preferencia)**\n1. **Faitic / aula virtual** (restringido al profesorado y alumnado del grupo). Es el medio preferente. Si da problemas, usa la Secretaría Virtual o la intranet, no canales no oficiales ni Internet (riesgo de indexación).\n2. **Tablón físico solo como vía alternativa y con condiciones**: que **no esté en zonas comunes**, que el acceso quede **restringido al grupo** y que se adopten medidas para evitar el conocimiento por terceros (tablón cerrado con llave y con vigilancia/retirada controlada). **Un tablón en el pasillo no cumple** estos requisitos.\n\n**Qué datos puedes publicar**\n- Únicamente **nombre y apellidos + calificación obtenida**.\n- Solo si hay alumnos con **mismo nombre y apellidos**, añade **4 cifras del DNI** (DA 7ª LOPDGDD), nunca el DNI completo.\n\n**Cuánto tiempo mantenerlas**\n- Provisionales: mientras corre el plazo de reclamaciones.\n- Definitivas: solo el tiempo imprescindible para que todos los interesados las conozcan.\n\nEn resumen: intenta resolverlo dentro de Faitic/intranet; el tablón del pasillo con nombre y nota no es conforme. Puedes consultar al DPD de la UVigo (dpd@uvigo.gal) para una vía oficial mientras Faitic falle. No soy abogado; para tu caso concreto, la recomendación institucional es la fuente aplicable.",
+  "herramientas": [
+    "bash",
+    "websearch"
+  ],
+  "tokens": {
+    "input": 18435,
+    "output": 639,
+    "reasoning": 927,
+    "cache_read": 8704,
+    "cache_write": 0,
+    "total": 28705
+  },
+  "coste_usd": 0.00373096,
+  "duracion_s": 18.85,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:36:24+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la; find . -maxdepth 3 -type f | head -50\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo publicación de notas tablón datos personales normativa protección de datos\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

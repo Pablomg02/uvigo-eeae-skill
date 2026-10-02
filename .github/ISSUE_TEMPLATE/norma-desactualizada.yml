@@ -1,0 +1,40 @@
+name: Norma desactualizada
+description: Avisa de una norma del corpus que ha cambiado, se ha derogado o ya no está vigente
+title: "[Norma desactualizada] "
+labels: ["normativa"]
+body:
+  - type: input
+    id: norma
+    attributes:
+      label: Norma afectada
+      description: Nombre del fichero (p. ej. `512-regulamento-de-profesorado`) o título de la norma.
+      placeholder: "512-regulamento-de-profesorado"
+    validations:
+      required: true
+
+  - type: textarea
+    id: cambio
+    attributes:
+      label: Qué ha cambiado
+      description: Explica qué artículo, cifra o vigencia ya no coincide con el texto oficial.
+      placeholder: "El artículo 15 fija ahora…"
+    validations:
+      required: true
+
+  - type: input
+    id: enlace
+    attributes:
+      label: Enlace oficial
+      description: URL de la fuente oficial donde consta el cambio (BOE, DOG, portal de la UVigo, EEAE, EIDO…).
+      placeholder: "https://secretaria.uvigo.gal/…"
+    validations:
+      required: true
+
+  - type: input
+    id: fecha
+    attributes:
+      label: Fecha
+      description: Fecha de publicación o de entrada en vigor del cambio (AAAA-MM-DD si es posible).
+      placeholder: "2026-10-02"
+    validations:
+      required: true

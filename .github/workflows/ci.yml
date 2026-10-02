@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  foto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v7
+
+      - name: Buscador (sin red)
+        run: |
+          test "$(python3 skills/normativa-uvigo-eeae/scripts/buscar.py --lista | wc -l)" -eq 160
+          python3 skills/normativa-uvigo-eeae/scripts/buscar.py "revisión exámenes plazo" -n 5 > /dev/null
+
+      - name: PDF original con columnas (sin red)
+        run: |
+          if ! command -v pdftotext > /dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          python3 skills/normativa-uvigo-eeae/scripts/buscar.py --layout 709 --grep "Capacidade docente" > /dev/null
+
+      - name: Empaquetar la skill (sin red)
+        run: python3 tools/empaquetar.py

@@ -1,0 +1,60 @@
+{
+  "eval_id": 4,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?",
+  "respuesta": "Voy a consultar la normativa vigente del programa FPU para darte datos actualizados.\n## 1. Las 70 h de prácticas (colaboración docente)\n\n**No.** Como beneficiario FPU tu colaboración en tareas docentes tiene un **máximo de 60 h por año** y **180 h en total** durante todo el contrato (con un **mínimo de 90 h** en conjunto). No cabe imputar 70 h a un mismo curso/cuatrimestre: tendrías que dejar la asignación en 60 h máx. Además, esas horas deben ser de carácter **práctico**, en el **departamento al que está adscrito tu director/a** y, con carácter general, en asignaturas de **Grado** (art. 4.2 RD 103/2019, EPIF, y art. 37/38 de la convocatoria FPU).\n\n## 2. La prórroga\n\nEl contrato FPU dura **4 años máximo** y **no existe una prórroga para terminar la tesis** si no has depositado. En 4º año no puedes ampliar un 5º por no acabar. Las únicas ampliaciones posibles son:\n\n- **Recuperar interrupciones** por enfermedad, maternidad/paternidad, adopción o causas similares (art. 3.2 EPIF): se prorroga por el **tiempo exacto de la baja**, mediante adenda.\n- **Prórroga COVID** (hasta 5 meses, Ley 2/2021): solo para contratos que terminaban **antes del 2/4/2023** → no te aplica.\n- Si tu contrato se formalizó por **menos de 4 años** (p. ej. por una ayuda predoctoral previa), puedes prorrogarlo hasta completar el máximo de 4 años.\n- Interrupción por **reclamación de incumplimiento de la dirección**: hasta 4 meses (art. 6.3 EPIF).\n\n**Cómo se pide** (solo si concurre alguna de esas causas): a través de tu **centro de adscripción**, trámite de prórroga en la sede electrónica del Ministerio (Fase 1: aprobación firmada por ti y el director; Fase 2: adenda al contrato y registro en el SEPE).\n\n**Si no hay causa legal**, no puedes prorrogarlo. Eso sí: no leer la tesis dentro del contrato **no supone incumplimiento** ni devolución de la ayuda; sigues matriculado en el doctorado y, si transcurre un año sin defender, deberás presentar un **informe extraordinario**.\n\nEl **POP** (1 año postdoctoral) tampoco te encaja: exige defender **antes de empezar la última anualidad** y tener las 90 h.\n\nConfírmalo con tu centro de adscripción o con el servicio de gestión de activos FPU (`activos.fpu@ciencia.gob.es`), que es quien tramita la prórroga.",
+  "herramientas": [
+    "websearch"
+  ],
+  "tokens": {
+    "input": 23134,
+    "output": 971,
+    "reasoning": 6478,
+    "cache_read": 26624,
+    "cache_write": 0,
+    "total": 57207
+  },
+  "coste_usd": 0.00801937,
+  "duracion_s": 57.43,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:36:05+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"FPU prórroga cuarto año tesis no depositada ampliación contrato 2025\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"FPU contrato predoctoral colaboración docente límite horas anuales 2025\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"FPU convocatoria artículo 37 colaboración tareas docentes máximo 60 horas año 90 mínimo 180 total\", \"numResults\": 6}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"FPU \\\"no puedo prorrogar\\\" cuarto año contrato predoctoral fin tesis sin depositar\", \"numResults\": 6}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

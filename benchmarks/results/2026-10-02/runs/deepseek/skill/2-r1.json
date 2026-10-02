@@ -1,0 +1,102 @@
+{
+  "eval_id": 2,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?",
+  "respuesta": "**Respuesta corta:** Si eres profesor ayudante doctor contratado bajo la LOSU, el máximo ordinario son **180 h lectivas/año**, así que 210 h te exceden en 30 h. Solo serían válidas si son docencia voluntaria por encima de tu capacidad, retribuida como hora extra y dentro del tope de 80 h/año.\n\n**Fundamento**\n- **LOSU** (LO 2/2023, rango de ley orgánica, art. 78.c): «Las Profesoras y Profesores Ayudantes Doctores desarrollarán tareas docentes **hasta un máximo de 180 horas lectivas por curso académico**, de forma que la actividad docente resulte compatible con el desarrollo de tareas de investigación». [boe.es](https://www.boe.es/buscar/act.php?id=BOE-A-2023-7500)\n- **Normativa para elaborar o POD 2026/2027** (CG 6-feb-2025, mod. 24-nov-2025), Anexo I, tabla «Capacidade docente máxima e mínima por categoría docente»: *Profesorado axudante doutor **LOSU**: mínimo 120, máximo **180**, 4 h/semana de titorías*; *Profesorado axudante doutor **LOU**: mínimo 120, máximo 240*. [show/709](https://secretaria.uvigo.gal/uv/web/normativa/public/show/709)\n- **Mismo POD 2026/27, apdo. A.b.2**: la docencia por encima de la capacidad docente solo se permite si el profesorado laboral (PCD, PPL o AXD) «**voluntariamente** acepte unha carga maior de docencia. Remuneraráselle a hora extra… **ata un máximo de tres horas á semana e co límite de 80 horas anuais**».\n- **Normativa de dedicación e recoñecementos docentes 2025/26** (657), apdo. 3: «A capacidade docente (CD) do profesorado axudante doutor calcularase tomando como base a correspondente ao **seu contrato**»: para un contrato LOSU la base es 180 h, y las reducciones del apdo. 2 solo la disminuyen. [show/657](https://secretaria.uvigo.gal/uv/web/normativa/public/show/657)\n\n**Condiciones y excepciones**\n- **Hay que distinguir tu régimen**: si tu contrato es **AXD-LOU** (anterior a la LOSU) el máximo sería 240 h y 210 estaría dentro; si es **AXD-LOSU** (lo habitual en contratos nuevos), el máximo es 180 h. El Regulamento de profesorado art. 8.3 (2012/13) dice que el AXD tiene «capacidade docente igual á capacidade ordinaria do profesorado a tempo completo con vinculación permanente» (240 h), pero es **anterior a la LOSU** y cede ante el art. 78.c y ante la tabla del POD 2026/27.\n- Las 210 h **podrían ser conformes** si se descomponen en tus 180 h de capacidad + hasta 30 h de carga voluntaria extra, aceptadas por ti y **retribuidas** (límite 80 h/año). Si no las has aceptado voluntariamente ni constan como horas extra, están por encima de tu capacidad.\n- El máximo se reduce además por sexenios y por desgravaciones de gobierno/representación (657, apdos. 1–2); dichas reducciones no elevan nunca la base.\n\n**Qué no he podido verificar**\n- La **Normativa de dedicación y reconocimientos docentes 2026/2027** (aprobada CG 24-nov-2025, a la que remite el POD 709) **no está publicada** en el portal; uso la de 2025/26 (657) solo como referencia. Las cifras de 180/240 para AXD-LOSU/LOU sí constan en la tabla del POD 2026/27, que es del curso que preguntas.\n- Comprobación en directo: 709, LOSU y 657 sin cambios a la fecha (corpus 2026-10-01).\n\n**Siguiente paso:** aclara en tu contrato si eres AXD **LOSU o LOU** y, si es LOSU, reclama al **departamento/Vicerreitoría de Profesorado e Ordenación Académica** el ajuste a 180 h o la justificación y retribución de las 30 h extra por escrito (solicita el texto de la normativa de dedicación 2026/27).",
+  "herramientas": [
+    "skill",
+    "read",
+    "bash"
+  ],
+  "tokens": {
+    "input": 41092,
+    "output": 2558,
+    "reasoning": 2701,
+    "cache_read": 150016,
+    "cache_write": 0,
+    "total": 196367
+  },
+  "coste_usd": 0.00976925,
+  "duracion_s": 50.6,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:31:56+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/huecos.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"dedicación docente máximo horas POD\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"ayudante doctor capacidad docente\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 657 2>&1 | head -200\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"POD capacidade docente axudante doutor\\\" --ambito curso -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"capacidade docente ordinaria profesorado permanente horas\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 709 2>&1 | sed -n '1,260p'\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver losu --art 78 2>&1 | sed -n '1,120p'\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/jerarquia.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout 709 --grep \\\"Capacidade docente máxima\\\" 2>&1 | sed -n '1,80p'\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"horas extra carga maior docencia axudante doutor\\\" -n 6\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/comprobar.py 709 losu 657 2>&1 | sed -n '1,60p'\", \"workdir\": \"/tmp/uvigo-plan/runs/e7e79ecb345a459e8e1da5c765c8b274/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

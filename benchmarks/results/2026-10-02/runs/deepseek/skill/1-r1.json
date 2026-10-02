@@ -1,0 +1,142 @@
+{
+  "eval_id": 1,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?",
+  "respuesta": "**Respuesta corta:** No como vacaciones. En octubre y con docencia asignada no encajan en el art. 36 do convenio; sí puedes pedirlos como **asuntos particulares** (o como días de conciliación), y a quien se los pide es a la **Dirección do teu departamento**.\n\n**Fundamento**\n- **II Convenio PDI laboral** (DOG 74, 14/04/2011), art. 36: «El período de vacaciones se disfrutará en el mes de agosto. Las vacaciones se entenderán concedidas en este mes sin necesidad de solicitud. **De modo excepcional, se podrán autorizar en otro periodo en el que el trabajador no tenga asignada docencia, en intervalos mínimos de cinco días hábiles consecutivos**». [enlace](https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html)\n- Mismo convenio, art. 37.1.l: «Por asuntos particulares, **sin justificación** y atendiendo siempre a las necesidades del servicio, **nueve días** […]. Estos permisos se disfrutarán **preferentemente fuera de las jornadas en las que el personal tenga obligaciones docentes**».\n- **Instrución da Vicerreitoría de Profesorado e Ordenación Académica** (17/12/2024, para 2025 – 655), ap. 2.1: vacaciones «preferentemente no mes de agosto, podendo autorizarse noutro mes sempre que as obrigas docentes e investigadoras o permitan». Ap. 4: «ata 3 días ao longo do ano por razóns de **conciliación da vida laboral coa familiar e persoal**, que se xestionarán como os días de asuntos particulares». [enlace](https://secretaria.uvigo.gal/uv/web/normativa/public/show/655)\n- **Resolución do Rectorado de 30/05/2024, de delegación de competencias** (616), XIII.9.a: «Se delegan en las directoras y directores de departamentos la **concesión de permisos y licencias al PDI** en los siguientes casos: a) **Vacaciones y permisos por asuntos propios**, atendiendo siempre a las necesidades del servicio». [enlace](https://secretaria.uvigo.gal/uv/web/normativa/public/show/616)\n\n**Condiciones y excepciones**\n- Lo tuyo es un viaje por la boda de un familiar: no es «licencia por matrimonio» del art. 37.1.a (esa es solo para tu propia boda). Tampoco es fallecimiento/enfermedad grave del art. 37.1.b. Encaja, por tanto, en **asuntos particulares** (art. 37.1.l), que no exigen justificación, o en los **3 días de conciliación** de la instrucción.\n- Como esos días caen en jornada con obligaciones docentes, la norma los quiere «preferentemente» fuera de ellas: pacta con el departamento la cobertura o la recuperación de la clase.\n- Ojo con la cifra: el convenio (rango superior) habla de **9 días**; la instrucción de 2025 dice **6**. Por jerarquía debería prevalecer el convenio en lo que mejore, pero conviene confirmarlo con la VOAP/departamento.\n\n**Qué no he podido verificar**\n- **No está publicada la instrución de vacaciones 2026** (la 655 es de 2025 y es solo orientativa para este año); el corpus se descargó el **2026-10-01**. La norma vinculante es el convenio (art. 36 y 37) y la delegación de competencias de 2024.\n\n**Siguiente paso:** solicita por escrito al **director/a do departamento** los 3 días como asuntos particulares (o conciliación), indicando fechas y cómo quedan cubiertas/recuperadas las clases. Si te lo deniegan o quieres confirmar el cómputo de días, pregunta a la **Vicerreitoría de Profesorado e Ordenación Académica**.",
+  "herramientas": [
+    "skill",
+    "read",
+    "bash"
+  ],
+  "tokens": {
+    "input": 74045,
+    "output": 3661,
+    "reasoning": 3794,
+    "cache_read": 338048,
+    "cache_write": 0,
+    "total": 419548
+  },
+  "coste_usd": 0.01659389,
+  "duracion_s": 71.52,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:32:17+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/temas.md\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/huecos.md\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae/references/jerarquia.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 655\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"vacacións días libre disposición\\\" -n 10\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls normativa/galicia/ | grep -i convenio\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"período de vacacións mes de agosto necesidades do servizo\\\" -n 5 --ambito galicia\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"asuntos particulares nove días non acumular vacacións\\\" -n 5 --ambito galicia\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver convenio-pdi-laboral-ii-2011 --art 36\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver convenio-pdi-laboral-ii-2011 --art 37\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"permisos licenzas profesorado competencia\\\" -n 8 --ambito eee\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"asuntos particulares permisos PDI xestión\\\" -n 8 --ambito uvigo\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"solicitude autorización vacacións departamento dirección\\\" -n 8\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 512 --art 26\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 512 --art 23\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"vacacións permiso xefatura departamento dirección escola autoriza\\\" -n 8 --ambito eeae\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista --ambito uvigo | head -100\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"autorización permisos vacacións persoal docente departamento\\\" -n 8 --ambito uvigo\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"dirección departamento profesorado permisos\\\" -n 8 --ambito uvigo\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"deber inescusable conciliación permisos directores departamento PDI\\\" -n 3 --ambito uvigo\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 616 --grep \\\"vacación\\\" ; echo \\\"-----\\\"; python3 scripts/buscar.py \\\"delegación competencias PDI vacacións asuntos particulares dirección departamento\\\" -n 3 --ambito uvigo\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspac"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver convenio-pdi-laboral-acta-paritaria-2025-02-07 2>/dev/null | grep -i -A3 -B1 \\\"vacaci\\\\|asuntos particulares\\\\|artigo 36\\\\|artigo 37\\\"\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/workspace/.opencode/skills/normativa-uvigo-eeae"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"vacacións asuntos particulares libre disposición\\\" -n 6 --ambito galicia; echo \\\"=====ACTA=====\\\"; python3 scripts/buscar.py \\\"artigo 36 artigo 37 permisos\\\" -n 4 --ambito galicia\", \"workdir\": \"/tmp/uvigo-plan/runs/32522e0906f54d6ab21cd3490384509d/home/worksp"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

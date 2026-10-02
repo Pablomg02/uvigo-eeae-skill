@@ -1,0 +1,29 @@
+# Bytecode de Python
+__pycache__/
+*.py[cod]
+
+# Artefactos de empaquetado
+dist/
+*.skill
+
+# Caché del juez (se regenera desde el corpus versionado)
+benchmarks/results/*/corpus/
+
+# PDF originales: solo se versionan los imprescindibles (el resto sigue en disco)
+skills/**/_originales/*
+!skills/**/_originales/709-*.pdf
+!skills/**/_originales/657-*.pdf
+!skills/**/_originales/234-*.pdf
+!skills/**/_originales/328-regulamento-para-a-liquidacion-e-tramitacion-de-indemni-doc3.pdf
+!skills/**/_originales/Calendario_EEAE*.pdf
+!skills/**/_originales/Exames_Aero*.pdf
+!skills/**/_originales/140-*.pdf
+!skills/**/_originales/147-*.pdf
+!skills/**/_originales/338-resolucion-reitoral-de-4-de-outubro-de-2016-pola-que-se-doc1.pdf
+!skills/**/_originales/338-resolucion-reitoral-de-4-de-outubro-de-2016-pola-que-se-doc2.pdf
+!skills/**/_originales/Convocatoria_reconocimiento_actividades.pdf
+!skills/**/_originales/Instrucion_gastos_tribunais_teses.pdf
+
+# Basura del sistema y de editores
+.DS_Store
+*~

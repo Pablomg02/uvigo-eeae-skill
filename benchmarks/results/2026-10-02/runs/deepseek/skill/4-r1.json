@@ -1,0 +1,163 @@
+{
+  "eval_id": 4,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?",
+  "respuesta": "**Respuesta corta:** No puedes dar 70 h: el tope del contrato FPU es **60 h por año** (y 180 h en todo el contrato), y además debes impartirlas en simultaneidad con un profesor responsable. Para seguir matriculada sin depositar, sí puedes pedir una **prórroga de estudios de 1 año** (no del contrato: el FPU no se prorroga más allá de 4 años, salvo interrupciones legales).\n\n**Fundamento (docencia)**\n- Ley 14/2011 de la Ciencia, art. 21.c: el contrato predoctoral «no podrá ser inferior a un año, ni exceder de cuatro años». [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2011-9617)\n- RD 103/2019 (EPIF), art. 4.2: el predoctoral puede colaborar en docencia «hasta un máximo de 180 horas durante la extensión total del contrato predoctoral, y sin que en ningún caso se puedan superar las 60 horas anuales». [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3700)\n- POD UVigo 2026/2027 (709), Anexo II: para FPU/ministerio (BFPU) la tabla fija **60 h de docencia anual máximo**; el predoctoral «ten a obriga de simultanear a docencia» con un profesor supervisor y «non poderá, en ningún caso, ter asignadas horas de docencia en teoría, titorías, prácticas externas, procesos de avaliación, nin coordinar materias, asinar actas ou formar parte dos tribunais de TFG ou TFM». [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/709)\n- Página oficial FPU (MICIU): la colaboración docente tiene «un mínimo de 90 y un máximo de 180 horas» en toda la ayuda. [ciencia.gob.es](https://www.ciencia.gob.es/Universidades/FPU.html) (consultado 02-10-2026)\n\nOjo: si por «prácticas» tu director se refiere a **prácticas externas**, el Anexo II las excluye expresamente; si son prácticas de laboratorio/aula de una materia, cuentan dentro de las 60 h anuales y en simultaneidad.\n\n**Fundamento (prórroga)**\n- 625, Regulamento de Estudos de Doutoramento, art. 26: máximo **4 años** a tiempo completo hasta el depósito. Art. 27: si no depositas, «a CAPD podería autorizar a súa prórroga, logo da solicitude do/a doutorando/a. A prórroga sería dun ano nos estudos de doutoramento a tempo completo…». [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/625)\n- Procedimiento concreto: Convocatoria de matrícula 2026/2027, **Anexo XV corregido** — solicitud motivada por la Secretaría Virtual, informe del director/tutor y autorización de la CAPD. [Convocatoria](https://secretaria.uvigo.gal/uv/web/convocatoria/public/show/1785) (consultado 02-10-2026)\n\n**Condiciones y plazos**\n- Las 70 h se reparten así: máximo 60 en el año; pide en el POD las horas dentro de ese intervalo (la solicitud se hace al elaborar el POD o del **20-dic-2025 al 20-ene-2026** para el 2º cuatrimestre, o cuando surjan necesidades sobrevenidas).\n- Prórroga (Anexo XV): si tu fecha límite de presentación de tesis está entre **1-nov-2026 y 30-mar-2027**, solicita del **2 al 13-nov-2026**; si está entre **1-abr-2027 y 15-may-2028**, del **5 al 16-abr-2027**. Director informa y CAPD resuelve. La prórroga es de **1 año**.\n- **Clave:** la prórroga de estudios no prorroga el contrato FPU. El contrato se extingue al llegar a los 4 años (RD 103/2019 arts. 6.1 y 9.1.b). Solo se amplía el cómputo por las interrupciones del art. 6.2 (IT, maternidad/paternidad, conciliación, etc.) o por reclamación de dirección (art. 6.3, hasta 4 meses): si has tenido alguno de esos periodos, el contrato se alarga por el tiempo equivalente.\n\n**Qué no he podido verificar**\n- Si ya has consumido horas docentes este año (reduce el margen disponible) y si has tenido periodos de interrupción que amplíen el contrato.\n- La convocatoria FPU concreta de tu año no está en el corpus; las cifras de docencia las tomo del RD 103/2019 y de la web oficial del programa. Corpus descargado el 2026-10-01; RD 103/2019, 625 y 709 figuran sin cambios.\n\n**Siguiente paso**\n- Docencia: habla con el departamento/POD; pide 60 h como máximo (y en simultaneidad). Si son prácticas externas, no pueden asignártelas.\n- Prórroga: pide cita con la secretaría de tu programa/CAPD y con la EIDO (eido@uvigo.gal) y solicítala en el plazo que corresponda a tu fecha límite. La renovación de matrícula 2026/27 está abierta hasta el **10-oct-2026**.\n- Contrato: consulta con el Serviço de Xestión de Estudos de Posgrao y con la Vicerreitoría de Profesorado si tienes interrupciones que amplíen el FPU; si no, ese año de prórroga no lleva contrato FPU.",
+  "herramientas": [
+    "skill",
+    "bash",
+    "websearch",
+    "webfetch"
+  ],
+  "tokens": {
+    "input": 101050,
+    "output": 4551,
+    "reasoning": 12155,
+    "cache_read": 645504,
+    "cache_write": 0,
+    "total": 763260
+  },
+  "coste_usd": 0.02711761,
+  "duracion_s": 139.43,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:34:01+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && cat references/temas.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && cat references/jerarquia.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && cat references/huecos.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver rd-103-2019-epif --art 4 2>/dev/null || python3 scripts/buscar.py \\\"retribución docencia predoctoral horas\\\" -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --lista --ambito estatal | head -60\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"prórroga tese duración máximo\\\" --ambito uvigo -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"prórroga contratos predoctorais duración\\\" -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver rd-103-2019-epif --art 6\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 625 --art 26 && echo \\\"=====27=====\\\" && python3 scripts/buscar.py --ver 625 --art 27 && echo \\\"=====24=====\\\" && python3 scripts/buscar.py --"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"colaboración docencia predoutoral horas\\\" --ambito uvigo -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"FPU formación profesorado universitario\\\" -n 6\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 709 2>/dev/null | sed -n '/Anexo II/,/Anexo III/p'\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver ley-ciencia --art 21\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/comprobar.py rd-103-2019-epif 625 ley-ciencia 709 2>&1 | head -40\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 625 --art 28 && echo \\\"=====29=====\\\" && python3 scripts/buscar.py --ver 625 --art 29 && echo \\\"=====31=====\\\" && python3 scripts/buscar.py --"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"convocatoria FPU ayudas Formación Profesorado Universitario 2025 2026 duración prórroga horas docencia 60 horas\", \"numResults\": 6}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-formacion-profesorado-universitario-fpu-2026\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://www.ciencia.gob.es/Universidades/FPU.html\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --lista --ambito eido\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"predoutoral prórroga contrato\\\" --ambito uvigo -n 10 && echo \\\"=== EIDO ===\\\" && python3 scripts/buscar.py \\\"prórroga\\\" --ambito eido -n 10\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"EIDO UVigo solicitude prórroga estudos doutoramento CAPD prazo matrícula 2026\", \"numResults\": 6}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://eido.uvigo.es/es/estudiantes/matricula\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"eido.uvigo.gal prórroga doutoramento solicitude CAPD duración máxima estudos permanencia\", \"numResults\": 5}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/uv/web/convocatoria/public/show/1785\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/opencode && curl -sL \\\"https://secretaria.uvigo.gal/uv/web/convocatoria/public/convocatoria/documento/downloadbyhash/495bd39329094cbde7d0f96d7567b4a161b2001cd24201fa33b11fca707f3444\\\" -o anexo15.pdf && file anexo15.pdf && pdftotext -layout anexo15.pdf - 2>/dev/null | head -120\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/opencode && curl -sL \\\"https://secretaria.uvigo.gal/uv/web/convocatoria/public/convocatoria/documento/downloadbyhash/7ff73d1c22c9cdbcc67eaebf129653f7fa213d3a6f9d785d7af67aacba038358\\\" -o anexo9.pdf && file anexo9.pdf && pdftotext -layout anexo9.pdf - 2>/dev/null | head -120\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL \\\"https://secretaria.uvigo.gal/uv/web/convocatoria/public/convocatoria/documento/downloadbyhash/495bd39329094cbde7d0f96d7567b4a161b2001cd24201fa33b11fca707f3444\\\" -o /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/anexo15.pdf && file /tmp/uvigo-plan/runs/d8"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL \\\"https://secretaria.uvigo.gal/uv/web/convocatoria/public/convocatoria/documento/downloadbyhash/7ff73d1c22c9cdbcc67eaebf129653f7fa213d3a6f9d785d7af67aacba038358\\\" -o /tmp/uvigo-plan/runs/d814a2f2ecda4e939ccfeb1d504c311c/home/workspace/anexo9.pdf && file /tmp/uvigo-plan/runs/d81"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

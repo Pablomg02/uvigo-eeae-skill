@@ -1,0 +1,26 @@
+[
+ {
+  "file": "normativa/galicia/convenio-pdi-laboral-ii-2011.md",
+  "titulo": "II Convenio colectivo para el personal docente e investigador laboral de las universidades de A Coruña, Santiago de Compostela y Vigo (DOG 74, 14/04/2011)",
+  "fecha_publicacion": "2011-04-14",
+  "fuente": "https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html",
+  "relevancia": "Texto base del convenio. Léelo siempre junto con el acta de 2025, que adapta parte de su contenido a la LOSU.",
+  "chars": 56012
+ },
+ {
+  "file": "normativa/galicia/convenio-pdi-laboral-acta-paritaria-2025-02-07.md",
+  "titulo": "Acta de la Comisión Paritaria del II Convenio PDI laboral (7/02/2025) para adaptarlo a los cambios normativos (DOG 51, 14/03/2025)",
+  "fecha_publicacion": "2025-03-14",
+  "fuente": "https://www.xunta.gal/dog/Publicados/2025/20250314/AnuncioG0767-280225-0004_gl.html",
+  "relevancia": "Modifica/adapta el texto de 2011 (LOSU, conciliación, igualdad). Prevalece sobre el texto de 2011 en lo que lo modifique.",
+  "chars": 32027
+ },
+ {
+  "file": "normativa/galicia/convenio-pdi-laboral-acordo-xubilacion-2025.md",
+  "titulo": "Acuerdo de la Comisión Negociadora del II Convenio PDI laboral para la recuperación de la cláusula de jubilación (DOG 51, 14/03/2025)",
+  "fecha_publicacion": "2025-03-14",
+  "fuente": "https://www.xunta.gal/dog/Publicados/2025/20250314/AnuncioG0767-280225-0002_gl.html",
+  "relevancia": "Recupera la cláusula de jubilación (art. 42 del convenio, que había decaído por la reforma laboral de 2012).",
+  "chars": 8511
+ }
+]

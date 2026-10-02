@@ -1,0 +1,43 @@
+{
+ "_comentario": "Marcas de vigencia puestas a mano. El portal de la UVigo marca 'Validada' normas de cursos pasados o ya consolidadas en otra. clave = id_portal o nombre de fichero. vigencia: historica | superada | duplicada | curso-pasado | aviso | provisional",
+ "657": {
+  "vigencia": "aviso",
+  "nota": "Dedicación 2025/26. El POD 2026/27 (709) remite a una normativa de dedicación 2026/27 (CG 24-nov-2025) que NO está publicada en el portal: pedirla a la VOAP y verificar cifras antes de aplicar."
+ },
+ "655": {
+  "vigencia": "aviso",
+  "nota": "Instrución de vacaciones y días de libre disposición del año 2025. Comprobar si hay instrución para 2026 (no encontrada en el portal)."
+ },
+ "444": {
+  "vigencia": "aviso",
+  "nota": "Instrución de la era COVID (docencia no presencial). Probablemente sin efecto; confirmar."
+ },
+ "303": {
+  "vigencia": "provisional",
+  "nota": "Normas provisorias (2019) hasta que se apruebe normativa definitiva de movilidad."
+ },
+ "281": {
+  "vigencia": "aviso",
+  "nota": "Criterios de OEP de 2019; puede haber sido superado por acuerdos posteriores (ver 659, 547)."
+ },
+ "62": {
+  "vigencia": "aviso",
+  "nota": "Normativa de recursos informáticos de 2006; revisar junto con 595 (correo corporativo) y el ENS."
+ },
+ "56": {
+  "vigencia": "aviso",
+  "nota": "Reglamento de uso del gallego de 2015."
+ },
+ "ley-informantes": {
+  "vigencia": "aviso",
+  "nota": "Aplica a la UVigo vía 656 (canal interno)."
+ },
+ "procedemento-cotutela": {
+  "vigencia": "aviso",
+  "nota": "Aprobado por la Comisión Permanente de la EIDO en 2015, antes del Regulamento de doutoramento de 2024 (625, art. 44). Si difieren, prevalece 625."
+ },
+ "procedemento-teses-proteccion-datos": {
+  "vigencia": "aviso",
+  "nota": "Aprobado en 2015, antes del Regulamento de doutoramento de 2024 (625, art. 37). Si difieren, prevalece 625."
+ }
+}

@@ -1,0 +1,62 @@
+{
+  "eval_id": 3,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?",
+  "respuesta": "Según el **Regulamento de TFG/TFM da Escola de Enxeñaría Aeronáutica e do Espazo** (EEAE, UVigo), Artigo 13:\n\n- **Quién lo nombra:** el tribunal de TFG lo designa la **CARC** (Comisión Académica e de Recoñecemento de Créditos da EEAE); en TFM lo designa la CAM del máster correspondiente.\n- **Miembros:** **3 titulares** (Presidente/a, Secretario/a y Vogal) más **al menos 1 suplente**.\n- **¿Puedes ser del tribunal de tu alumno/a?** **No.** El titor/a y cotitor/a no pueden pertenecer al tribunal que evalúe a su estudiantado titorizado (art. 13.7).\n- **Máximo por tribunal:** **5 trabajos**, salvo casos excepcionales autorizados por las comisiones delegadas (art. 13.3).\n\nFuente: https://aero.uvigo.es/docs/escuela/normativa/TFG-TFM_EEAE.pdf",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch"
+  ],
+  "tokens": {
+    "input": 36850,
+    "output": 596,
+    "reasoning": 764,
+    "cache_read": 28672,
+    "cache_write": 0,
+    "total": 66882
+  },
+  "coste_usd": 0.00642952,
+  "duracion_s": 19.22,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:35:12+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-plan/runs/d519edaac12048f2ad817e18fa1ede57/home/workspace\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/d519edaac12048f2ad817e18fa1ede57/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo regulamento TFG tribunal número de miembros tutor pode ser membro tribunal Enxeñaría Aeroespacial\", \"numResults\": 8}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"numResults\": 5, \"query\": \"EEAE normativa TFG \\\"CARC\\\" Comisión Académica designa tribunal Universidade de Vigo\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

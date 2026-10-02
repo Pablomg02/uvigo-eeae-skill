@@ -1,0 +1,119 @@
+{
+  "eval_id": 2,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?",
+  "respuesta": "Según la **Normativa de dedicación e recoñecementos docentes da Universidade de Vigo** del POD 2026/27 (CG 24/11/2025, mod. 25/03/2026):\n\n> \"A dedicación docente máxima de cada un dos membros do PDI permanente a tempo completo... e profesorado axudante doutor será de **240 horas, agás no caso do profesorado axudante doutor LOSU que será de 180 horas**. A capacidade docente mínima do PDI establécese en 120 horas lectivas.\"\n\nPor tanto, depende de tu modalidad contractual:\n\n- **Ayudante doctor LOSU** (figura actual, art. 78 LOSU): máximo **180 h**. Las 210 h se pasan en **30 h**.\n- **Ayudante doctor LOU** (contrato anterior, transitorio): máximo 240 h, pero con un reconocimiento de \"Adaptación do profesorado axudante doutor LOU\" de **40 h**, por lo que tu capacidad efectiva sería **200 h**. Las 210 también se pasarían.\n\nAdemás, ese máximo puede ser **menor** si tienes sexenios, cargos de gobierno/representación o actividades reconocidas (tablas 1-4). El centro (EEAE) no altera el límite, que se fija por categoría.\n\nConclusión: salvo que tu contrato sea LOU y no te corresponda aplicar la reducción de 40 h, **te están asignando por encima del máximo**; te corresponderían 180 h (LOSU) o 200 h (LOU con adaptación). Fuente: [POD 2026/27 - normativa](https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2026-27/normativa_dedicacion_reconecementos.pdf).",
+  "herramientas": [
+    "bash",
+    "read",
+    "websearch",
+    "webfetch"
+  ],
+  "tokens": {
+    "input": 93111,
+    "output": 2161,
+    "reasoning": 4789,
+    "cache_read": 485632,
+    "cache_write": 0,
+    "total": 585693
+  },
+  "coste_usd": 0.01959355,
+  "duracion_s": 72.16,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T17:36:02+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/home/workspace && echo \\\"---\\\" && find /tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/home/workspace -maxdepth 3 -type f | head -100\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"find /tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223 -maxdepth 4 | head -200\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/home/workspace/opencode.json\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"ls -la /tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/xdg-data/opencode/repos/; echo \\\"---config---\\\"; cat /tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/xdg-config/opencode/opencode.jsonc; echo \\\"---log tail---\\\"; tail -50 /tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe87"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo POD 2026/2027 profesor ayudante doctor horas docencia máximo EEAE\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "websearch",
+        "entrada_resumen": "{\"query\": \"UVigo Plan Ordenación Docente dedicación profesorado horas ayudante doctor tiempo completo\", \"numResults\": 10}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/uv/web/normativa/public/show/664\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"url\": \"https://www.uvigo.gal/en/study/academic-organization/academic-organisation-plan\", \"format\": \"markdown\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/opencode && curl -sL -o pod2627.pdf \\\"https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2026-27/normativa_dedicacion_reconecementos.pdf\\\" && ls -la pod2627.pdf && (which pdftotext || echo \\\"no pdftotext\\\")\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"text\", \"url\": \"https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2026-27/normativa_dedicacion_reconecementos.pdf\"}"
+      },
+      {
+        "herramienta": "webfetch",
+        "entrada_resumen": "{\"format\": \"text\", \"url\": \"https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2024-25/horas-docencia-maximas.pdf\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -o pod_annex_2425.pdf \\\"https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2024-25/horas-docencia-maximas.pdf\\\"; ls -la; command -v pdftotext || echo \\\"no-pdftotext\\\"\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"pdftotext -layout pod_annex_2425.pdf - 2>/dev/null | head -200\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -o pod_norm_2627.pdf \\\"https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2026-27/normativa_dedicacion_reconecementos.pdf\\\"; curl -sL -o pod_emenda_2627.pdf \\\"https://www.uvigo.gal/sites/uvigo.gal/files/docs/estudar/organizacionacademica/POD/2026"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/xdg-data/opencode/tool-output/tool_0fd41a09a001BIC6D1v93HXmv3\", \"limit\": 200}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"pdftotext -layout pod_norm_2627.pdf norm2627.txt 2>/dev/null; pdftotext -layout pod_emenda_2627.pdf emenda2627.txt 2>/dev/null; wc -l norm2627.txt emenda2627.txt\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/home/workspace/emenda2627.txt\"}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/dd9001d2d07543929e0c9056fe875223/home/workspace/norm2627.txt\", \"offset\": 200, \"limit\": 166}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "eval_id": 8,
+  "grupo": "nuevas",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?",
+  "respuesta": "**Respuesta corta:** No. El tablón del pasillo es una zona común: las cualificacións solo se publican en la plataforma interna/aula virtual; excepcionalmente en un taboleiro **pechado con chave e fóra das zonas comúns**, y solo si es realmente imposible lo primero.\n\n**Fundamento**\n- **Regulamento de estudantes da UVigo** (Claustro; estado «Validada», comprobado hoy sin cambios en el portal), art. 11.1: «Todas as cualificacións... publicaranse na plataforma interna ou na aula virtual oficial... Excepcionalmente, e por motivos xustificados, no caso de non ser posible, poderanse publicar as cualificacións en taboleiros físicos pechados con chave, sempre que non se encontren nas zonas comúns dos centros». [show/460](https://secretaria.uvigo.gal/uv/web/normativa/public/show/460)\n- **Regulamento de avaliación** (565, versión consolidada; sin cambios en el portal), art. 34.3-5: reproduce la misma regla y añade que las listas se mantengan expuestas «durante o tempo preciso... e, en todo caso, respectando os prazos de reclamación». [show/565](https://secretaria.uvigo.gal/uv/web/normativa/public/show/565)\n- **Instrución conxunta 5/2019** (Xerencia e Secretaría Xeral), apartado XI: inclúe expresamente «os listados que elabore o PDI coas cualificacións, sexan provisorias, sexan definitivas» y remite al art. 11 del Regulamento de estudantes. [show/560](https://secretaria.uvigo.gal/uv/web/normativa/public/show/560)\n- **LOPDGDD** (LO 3/2018), art. 11.2 del Regulamento de estudantes lo cita como marco: los datos se limitan al nombre y apellidos y la nota; si hay homónimos, se añaden los cuatro dígitos 4.ª-7.ª del DNI/NIE/pasaporte. La Instrución 5/2019 prohíbe en todo caso publicar nombre y apellidos junto con el número **completo** del documento.\n\n**Qué puedes publicar y dónde**\n- **Datos:** solo **nombre y apellidos + cualificación**. Nada de DNI completo, correo, teléfono ni notas de otros compañeros más allá de lo permitido. Si hay homónimos, los 4 dígitos (4.ª-7.ª) del documento.\n- **Dónde:** lo ordinario es Faitic/aula virtual con acceso limitado al profesorado y al alumnado matriculado. Si de verdad Faitic falla, la vía excepcional es un **taboleiro físico cerrado con chave y situado fuera de zonas comunes** (no el pasillo), y con motivo justificado. Un tablón abierto en el pasillo incumple el art. 11.1.\n- **Tiempo:** expuesto solo el tiempo necesario y respetando los plazos de reclamación/revisión (art. 11.3 y art. 35 de 565).\n\n**Nota de interpretación (no es cita):** una avería de Faitic puede ser «motivo xustificado», pero no convierte en válido un tablón del pasillo; habría que usar otro medio telemático o el taboleiro pechado que habilite el centro. Conviene que el centro documente la incidencia.\n\n**Siguiente paso:** consulta en la EEAE (Secretaría/Dirección) si dispone de un taboleiro pechado fuera de zonas comunes para estas publicaciones, y ante dudas de protección de datos, a la delegada de protección de datos: **dpd@uvigo.gal** (Ana Garriga Domínguez).\n\n**Qué no he podido verificar:** no consta en el corpus una instrucción específica de la EEAE sobre ubicación de taboleiros de notas; se aplica la normativa general de la UVigo.",
+  "herramientas": [
+    "skill",
+    "bash",
+    "read"
+  ],
+  "tokens": {
+    "input": 32957,
+    "output": 2497,
+    "reasoning": 1202,
+    "cache_read": 194048,
+    "cache_write": 0,
+    "total": 230704
+  },
+  "coste_usd": 0.00774509,
+  "duracion_s": 43.48,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:33:56+02:00",
+  "comando": [
+    "opencode",
+    "run",
+    "-m",
+    "opencode-go/deepseek-v4.1-flash",
+    "--format",
+    "json",
+    "--auto",
+    "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": null,
+    "num_turnos": null,
+    "tool_uses": [
+      {
+        "herramienta": "skill",
+        "entrada_resumen": "{\"name\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"protección de datos\\\" -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"publicidade cualificacións\\\" -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"publicación notas datos personales\\\" -n 8\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py --ver 460 --art 11 2>/dev/null; echo \\\"=====565 art34=====\\\"; python3 scripts/buscar.py --ver 565 --art 34 2>/dev/null\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && sed -n '1,120p' references/jerarquia.md\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"taboleiro cualificacións nome apelidos\\\" -n 5; echo ====; python3 scripts/buscar.py \\\"datos de carácter persoal\\\" -n 6\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && ls normativa/uvigo/ | grep -i \\\"560\\\\|instruc\\\" ; echo ----; grep -rl \\\"cualificaci\\\" normativa/uvigo/ | head -20\"}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"publicación cualificacións taboleiro Instrución 5/2019\\\" -n 6; echo ====; python3 scripts/buscar.py \\\"cualificacións\\\" --ambito uvigo -n 12 2>/dev"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && grep -rn -i \\\"taboleiro\\\\|cualifica\\\\|exposici\\\\|listax\\\" normativa/uvigo/560-*.md | head -20; echo \\\"==cabecera==\\\"; sed -n '1,12p' normativa/uvigo/565-regulamento-sobre-a-a"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae/normativa/uvigo/560-repositorio-de-normativa-de-tratamento-de-datos-de-cara-doc1.md\", \"offset\": 615, \"limit\": 50}"
+      },
+      {
+        "herramienta": "read",
+        "entrada_resumen": "{\"filePath\": \"/tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae/normativa/uvigo/560-repositorio-de-normativa-de-tratamento-de-datos-de-cara-doc1.md\", \"limit\": 40, \"offset\": 663}"
+      },
+      {
+        "herramienta": "bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-plan/runs/dee9edfe4c0d4126a4f98366667a5a9e/home/workspace/.opencode/skills/normativa-uvigo-eeae && timeout 60 python3 scripts/comprobar.py 460 565 2>&1 | head -40\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

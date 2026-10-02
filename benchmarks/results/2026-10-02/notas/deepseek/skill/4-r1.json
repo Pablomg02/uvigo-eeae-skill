@@ -1,0 +1,85 @@
+{
+  "eval_id": 4,
+  "grupo": "desarrollo",
+  "modelo": "deepseek",
+  "condicion": "skill",
+  "rep": 1,
+  "juez": "claude-opus-5-5",
+  "resultado": {
+    "assertions": [
+      {
+        "indice": 0,
+        "resultado": "pass",
+        "cita": "RD 103/2019 (EPIF), art. 4.2: el predoctoral puede colaborar en docencia «hasta un máximo de 180 horas durante la extensión total del contrato predoctoral, y sin que en ningún caso se puedan superar las 60 horas anuales»."
+      },
+      {
+        "indice": 1,
+        "resultado": "pass",
+        "cita": "No puedes dar 70 h: el tope del contrato FPU es **60 h por año** (y 180 h en todo el contrato)"
+      },
+      {
+        "indice": 2,
+        "resultado": "pass",
+        "cita": "Art. 27: si no depositas, «a CAPD podería autorizar a súa prórroga, logo da solicitude do/a doutorando/a. A prórroga sería dun ano nos estudos de doutoramento a tempo completo…»"
+      },
+      {
+        "indice": 3,
+        "resultado": "pass",
+        "cita": "solicitud motivada por la Secretaría Virtual, informe del director/tutor y autorización de la CAPD"
+      },
+      {
+        "indice": 4,
+        "resultado": "fail",
+        "cita": "Solo se amplía el cómputo por las interrupciones del art. 6.2 (IT, maternidad/paternidad, conciliación, etc.) o por reclamación de dirección (art. 6.3, hasta 4 meses)"
+      },
+      {
+        "indice": 5,
+        "resultado": "fail",
+        "cita": "si tu fecha límite de presentación de tesis está entre **1-nov-2026 y 30-mar-2027**, solicita del **2 al 13-nov-2026**; si está entre **1-abr-2027 y 15-may-2028**, del **5 al 16-abr-2027**."
+      }
+    ],
+    "comentario": "Acierta con el tope docente del RD 103/2019 y con la prórroga de un año que autoriza la CAPD, y distingue bien la prórroga de estudios del contrato. No distingue la prórroga de la baja temporal del art. 28. Además da plazos y requisitos concretos que los textos aportados no permiten verificar, y algunos son incoherentes, como el plazo de dic-2025 a ene-2026 para el POD 2026/2027, aunque al final remite a la EIDO y al programa."
+  },
+  "prompt_juez": "Eres un corrector objetivo de respuestas sobre normativa universitaria. No sabes qué modelo ha respondido: evalúa solo el contenido de la respuesta.\n\nPREGUNTA PLANTEADA:\nTengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?\n\nRESPUESTA DE REFERENCIA (orientativa, puede estar incompleta):\nDocencia: RD 103/2019 art. 4.2: máximo de 60 horas anuales y 180 en el total del contrato predoctoral, por lo que 70 horas superan el tope anual. Prórroga: Regulamento de doutoramento (625) art. 27: un año a tiempo completo (dos a tiempo parcial), solicitada de forma motivada y autorizada por la CAPD a instancia del doctorando; no es una baja temporal (art. 28) ni una ampliación del contrato. Los plazos y el procedimiento concreto deben consultarse en la convocatoria y en la EIDO o en la web del programa.\n\nTEXTOS NORMATIVOS CITADOS (úsalos para comprobar cifras, plazos y atribuciones; no dependas de tu memoria):\n### rd-103-2019-epif art. 4\n# Real Decreto 103/2019, de 1 de marzo, por el que se aprueba el Estatuto del personal investigador predoctoral en formación.  [rd-103-2019-epif]\n# documento: \n# fuente: https://www.boe.es/buscar/act.php?id=BOE-A-2019-3700\n# original: \n# estado:   \n\n## Artículo 4. Objeto del contrato predoctoral.\n1. El contrato predoctoral tendrá por objeto la realización simultánea por parte del personal investigador predoctoral en formación, por un lado, de tareas de investigación en un proyecto específico y novedoso y, por otro, del conjunto de actividades, integrantes del programa de doctorado, conducentes a la adquisición de las competencias y habilidades necesarias para la obtención del título universitario oficial de Doctorado, sin que pueda exigírsele la realización de cualquier otra actividad que desvirtúe la finalidad investigadora y formativa del contrato.\nAsimismo, el contrato tendrá por objeto la orientación postdoctoral por un período máximo de doce meses. En cualquier caso, la duración del contrato no podrá exceder de las duraciones máximas indicadas en el artículo 6.\n2. El personal investigador predoctoral en formación podrá colaborar en tareas docentes sin que suponga una merma de la carga docente del departamento que asigne la colaboración hasta un máximo de 180 horas durante la extensión total del contrato predoctoral, y sin que en ningún caso se puedan superar las 60 horas anuales.\nLos departamentos universitarios de la universidad en la que el personal investigador predoctoral en formación se encuentre matriculado en un Programa de doctorado oficial facilitarán a dicho personal investigador que lo solicite, en igualdad de oportunidades, y en la medida en que sea posible dentro de los límites anteriormente establecidos, la realización de estas colaboraciones en tareas docentes.\nSe modifica el apartado 1 por el art. único.2 del Real Decreto 1251/2024, de 10 de diciembre. Ref. BOE-A-2024-25795\nTéngase en cuenta para su aplicación lo que establece la disposición transitoria única del citado Real Decreto.\n### 625 art. 27\n# Regulamento de Estudos de Doutoramento da Universidade de Vigo 20240620  [625-regulamento-de-estudos-de-doutoramento-da-universidade-doc1]\n# documento: Regulamento de Estudos de Doutoramento da Uvigo\n# fuente: https://secretaria.uvigo.gal/uv/web/normativa/public/show/625\n# original: normativa/uvigo/_originales/625-regulamento-de-estudos-de-doutoramento-da-universidade-doc1.pdf\n# estado: Validada  \n\nArtigo 27. Prórrogas para realizar estudos de doutoramento a tempo completo e a tempo\nparcial\nSe a solicitude do depósito da tese de doutoramento non se presenta despois de transcorrer o\nprazo establecido, a CAPD podería autorizar a súa prórroga, logo da solicitude do/a\ndoutorando/a. A prórroga sería dun ano nos estudos de doutoramento a tempo completo e de\ndous anos nos estudos de doutoramento a tempo parcial. A solicitude de autorización da citada\nprórroga farase de forma motivada e de acordo coa normativa da Universidade de Vigo.\n### 625 art. 28\n# Regulamento de Estudos de Doutoramento da Universidade de Vigo 20240620  [625-regulamento-de-estudos-de-doutoramento-da-universidade-doc1]\n# documento: Regulamento de Estudos de Doutoramento da Uvigo\n# fuente: https://secretaria.uvigo.gal/uv/web/normativa/public/show/625\n# original: normativa/uvigo/_originales/625-regulamento-de-estudos-de-doutoramento-da-universidade-doc1.pdf\n# estado: Validada  \n\nArtigo 28. Baixa temporal nun programa de doutoramento\nDistínguense dous tipos de baixa temporal, que non computarán en relación co tempo mínimo e\nmáximo de permanencia nos estudos de doutoramento:\na) Por situacións de incapacidade temporal, nacemento, adopción, garda con fins de\nadopción, acollemento, risco durante o embarazo, risco durante a lactación, atención a\npersoas dependentes, violencia de xénero, circunstancias xeopolíticas ou calquera outra\nsituación contemplada na normativa vixente. As peticións deberán ser acreditadas\ndocumentalmente e dirixidas ao Servizo de Xestión Académica, quen resolverá a\nsolicitude e informará á CAPD. A duración da baixa será determinada pola causa\ndaquela, segundo as directrices marcadas polo Servizo de Xestión Académica.\nb) A petición propia. A persoa doutoranda poderá solicitar baixa temporal no programa de\ndoutoramento, e o cómputo global de todas as solicitudes non excederá os dous anos de\nduración.\nA aprobación dunha baixa temporal requirirá a aprobación previa pola CAPD do plan de\ninvestigación e formación da persoa doutoranda. As solicitudes de baixas temporais\ndeberán ser dirixidas e xustificadas ante a CAPD, a cal se pronunciará sobre a súa\nprocedencia.\nAs actividades desenvoltas durante a baixa temporal non poderán incluírse no documento de\nactividades e os períodos de baixa temporal no programa non computarán no prazo de\ndesenvolvemento da tese ao que se refire o artigo 26 deste regulamento.\n\nASERCIONES A EVALUAR (cada una se refiere a la respuesta evaluada):\n0. Cita el RD 103/2019 art. 4.2: máximo de 60 horas anuales y 180 en el total del contrato predoctoral.\n1. Concluye que 70 horas superan el tope anual y no se pueden realizar tal cual.\n2. Cita el Regulamento de doutoramento (625) art. 27: la prórroga es de un año a tiempo completo (dos a tiempo parcial) y se solicita de forma motivada.\n3. Indica que la prórroga la autoriza la CAPD a solicitud del doctorando, no el director.\n4. Distingue la prórroga de la baja temporal (625 art. 28), que no computa en los plazos de permanencia y responde a otras causas.\n5. No inventa plazos ni requisitos no previstos y remite a la convocatoria y a la EIDO o al programa para el procedimiento concreto.\n\nRESPUESTA EVALUADA:\n\"\"\"\n**Respuesta corta:** No puedes dar 70 h: el tope del contrato FPU es **60 h por año** (y 180 h en todo el contrato), y además debes impartirlas en simultaneidad con un profesor responsable. Para seguir matriculada sin depositar, sí puedes pedir una **prórroga de estudios de 1 año** (no del contrato: el FPU no se prorroga más allá de 4 años, salvo interrupciones legales).\n\n**Fundamento (docencia)**\n- Ley 14/2011 de la Ciencia, art. 21.c: el contrato predoctoral «no podrá ser inferior a un año, ni exceder de cuatro años». [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2011-9617)\n- RD 103/2019 (EPIF), art. 4.2: el predoctoral puede colaborar en docencia «hasta un máximo de 180 horas durante la extensión total del contrato predoctoral, y sin que en ningún caso se puedan superar las 60 horas anuales». [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3700)\n- POD UVigo 2026/2027 (709), Anexo II: para FPU/ministerio (BFPU) la tabla fija **60 h de docencia anual máximo**; el predoctoral «ten a obriga de simultanear a docencia» con un profesor supervisor y «non poderá, en ningún caso, ter asignadas horas de docencia en teoría, titorías, prácticas externas, procesos de avaliación, nin coordinar materias, asinar actas ou formar parte dos tribunais de TFG ou TFM». [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/709)\n- Página oficial FPU (MICIU): la colaboración docente tiene «un mínimo de 90 y un máximo de 180 horas» en toda la ayuda. [ciencia.gob.es](https://www.ciencia.gob.es/Universidades/FPU.html) (consultado 02-10-2026)\n\nOjo: si por «prácticas» tu director se refiere a **prácticas externas**, el Anexo II las excluye expresamente; si son prácticas de laboratorio/aula de una materia, cuentan dentro de las 60 h anuales y en simultaneidad.\n\n**Fundamento (prórroga)**\n- 625, Regulamento de Estudos de Doutoramento, art. 26: máximo **4 años** a tiempo completo hasta el depósito. Art. 27: si no depositas, «a CAPD podería autorizar a súa prórroga, logo da solicitude do/a doutorando/a. A prórroga sería dun ano nos estudos de doutoramento a tempo completo…». [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/625)\n- Procedimiento concreto: Convocatoria de matrícula 2026/2027, **Anexo XV corregido** — solicitud motivada por la Secretaría Virtual, informe del director/tutor y autorización de la CAPD. [Convocatoria](https://secretaria.uvigo.gal/uv/web/convocatoria/public/show/1785) (consultado 02-10-2026)\n\n**Condiciones y plazos**\n- Las 70 h se reparten así: máximo 60 en el año; pide en el POD las horas dentro de ese intervalo (la solicitud se hace al elaborar el POD o del **20-dic-2025 al 20-ene-2026** para el 2º cuatrimestre, o cuando surjan necesidades sobrevenidas).\n- Prórroga (Anexo XV): si tu fecha límite de presentación de tesis está entre **1-nov-2026 y 30-mar-2027**, solicita del **2 al 13-nov-2026**; si está entre **1-abr-2027 y 15-may-2028**, del **5 al 16-abr-2027**. Director informa y CAPD resuelve. La prórroga es de **1 año**.\n- **Clave:** la prórroga de estudios no prorroga el contrato FPU. El contrato se extingue al llegar a los 4 años (RD 103/2019 arts. 6.1 y 9.1.b). Solo se amplía el cómputo por las interrupciones del art. 6.2 (IT, maternidad/paternidad, conciliación, etc.) o por reclamación de dirección (art. 6.3, hasta 4 meses): si has tenido alguno de esos periodos, el contrato se alarga por el tiempo equivalente.\n\n**Qué no he podido verificar**\n- Si ya has consumido horas docentes este año (reduce el margen disponible) y si has tenido periodos de interrupción que amplíen el contrato.\n- La convocatoria FPU concreta de tu año no está en el corpus; las cifras de docencia las tomo del RD 103/2019 y de la web oficial del programa. Corpus descargado el 2026-10-01; RD 103/2019, 625 y 709 figuran sin cambios.\n\n**Siguiente paso**\n- Docencia: habla con el departamento/POD; pide 60 h como máximo (y en simultaneidad). Si son prácticas externas, no pueden asignártelas.\n- Prórroga: pide cita con la secretaría de tu programa/CAPD y con la EIDO (eido@uvigo.gal) y solicítala en el plazo que corresponda a tu fecha límite. La renovación de matrícula 2026/27 está abierta hasta el **10-oct-2026**.\n- Contrato: consulta con el Serviço de Xestión de Estudos de Posgrao y con la Vicerreitoría de Profesorado si tienes interrupciones que amplíen el FPU; si no, ese año de prórroga no lleva contrato FPU.\n\"\"\"\n\nInstrucciones:\n- Para cada aserción decide \"pass\" (la respuesta la cumple de forma clara) o \"fail\" (no la cumple, la contradice o no es verificable en la respuesta).\n- En \"cita\" copia un fragmento LITERAL de la respuesta evaluada que justifique el resultado. No puede estar vacía. Si el resultado es \"fail\" porque la respuesta omite algo, cita el fragmento más cercano que demuestre la omisión, o la frase completa si la respuesta no menciona nada relevante.\n- \"comentario\": una o dos frases de valoración global.\n- Devuelve SOLO un objeto JSON válido, sin texto adicional ni bloques de código, con este esquema exacto:\n{\n  \"assertions\": [\n    {\"indice\": 0, \"resultado\": \"pass\" | \"fail\", \"cita\": \"fragmento literal de la respuesta evaluada\"}\n  ],\n  \"comentario\": \"una o dos frases\"\n}",
+  "tokens_juez": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 6518,
+    "cache_read_input_tokens": 4762,
+    "output_tokens": 1284,
+    "output_tokens_details": {
+      "thinking_tokens": 541
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 6518,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1284,
+        "cache_read_input_tokens": 4762,
+        "cache_creation_input_tokens": 6518,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6518
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "coste_usd_juez": 0.0787844,
+  "duracion_juez_s": 12.82,
+  "duracion_s": 12.82,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T17:40:13+02:00"
+}
