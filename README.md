@@ -5,6 +5,10 @@
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/Pablomg02/uvigo-eeae-skill)](https://github.com/Pablomg02/uvigo-eeae-skill/releases)
 [![Python 3](https://img.shields.io/badge/python-3-3776AB.svg?logo=python&logoColor=white)](#requisitos)
+[![Juez: Claude Opus 5.5 (IA)](https://img.shields.io/badge/juez-Claude%20Opus%205.5%20%28IA%29-orange.svg)](#benchmarks)
+
+> [!NOTE]
+> **Resumen.** Skill de agentes de IA para consultar la normativa de la Universidade de Vigo aplicable al profesorado de la EEAE y al doctorado (EIDO): corpus local, respuesta en español con cita de artículo y fuente, y comprobación de vigencia en directo. En el benchmark del 2026-10-02 el acierto mejora **+26,7 pp** con DeepSeek V4.1 Flash (58,3 % → 85,0 %) y **+31,7 pp** con Claude Opus 5.5 (60,0 % → 91,7 %); la corrección la hizo un juez de IA (Claude Opus 5.5), no verificada al 100 % ([detalles y limitaciones](#benchmarks)).
 
 La skill responde dudas normativas del profesorado de la Escola de Enxeñaría Aeronáutica e do Espazo (EEAE) y de quien realiza el doctorado en la Universidade de Vigo: exámenes, guías docentes, POD y dedicación, permisos, contratos, tesis, art. 83, incompatibilidades, protección de datos y régimen disciplinario.
 
@@ -139,6 +143,9 @@ Si el plan (Business, Enterprise, Healthcare o Edu) incluye Skills: **Skills →
 
 Tanda reducida del 2 de octubre de 2026: **10 preguntas × 2 condiciones (con y sin skill) × 1 repetición**, con dos modelos, 40 ejecuciones en total, corregidas a ciegas por el juez **Claude Opus 5.5**. El prompt y las herramientas son idénticos en las dos condiciones; solo cambia que la skill esté instalada.
 
+> [!WARNING]
+> **Corrección hecha por un modelo de IA, no verificada al 100 %.** El juez es **Claude Opus 5.5**, que además es uno de los modelos evaluados y podría favorecer su propio estilo (el juez no sabe qué respuesta evalúa, pero es el mismo modelo). La auditoría manual posterior cubre por ahora solo las respuestas de DeepSeek (96,7 % de acuerdo y 2 `fail` injustos detectados); las de Opus están sin auditar. Las cifras son orientativas, no un resultado certificado.
+
 | Modelo | CLI | Esfuerzo de razonamiento | Sin skill | Con skill | Mejora |
 |---|---|---|---|---|---|
 | DeepSeek V4.1 Flash | OpenCode | por defecto del proveedor (sin `--variant`) | 58,3 % | **85,0 %** | **+26,7 pp** |
@@ -156,7 +163,7 @@ Por pregunta, la skill mejora en 15 de los 20 casos pregunta-modelo, iguala en 4
 
 Opus cuesta unas 26 veces más por respuesta (≈0,37 $ frente a ≈0,014 $ con skill). Con la skill, DeepSeek supera con holgura a Opus sin ella.
 
-Con una sola repetición, el `±` y estas diferencias reflejan la dispersión entre preguntas, no la varianza entre ejecuciones; y Opus 5.5 es a la vez juez y modelo evaluado. La metodología, el aislamiento, el coste real, la auditoría del juez y las limitaciones están en [`benchmarks/README.md`](benchmarks/README.md).
+Con una sola repetición, el `±` y estas diferencias reflejan la dispersión entre preguntas, no la varianza entre ejecuciones; y Opus 5.5 es a la vez juez y modelo evaluado, de modo que la corrección automática no está verificada al 100 % por revisión humana. La metodología, el aislamiento, el coste real, la auditoría del juez y las limitaciones están en [`benchmarks/README.md`](benchmarks/README.md).
 
 ## Alcance y adaptación
 
