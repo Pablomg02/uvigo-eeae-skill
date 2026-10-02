@@ -1,0 +1,71 @@
+{
+  "eval_id": 6,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?",
+  "respuesta": "No he encontrado ninguna escuela de doctorado que se llame «EEAE» y no tengo acceso a su normativa interna. Por eso separo lo que fija la normativa estatal, que es igual para todas las universidades españolas, de lo que depende de tu escuela y tienes que comprobar allí.\n\n## 1. ¿Te valen las dos estancias?\n\nLa norma estatal (art. 15 del RD 99/2011) pide una estancia mínima de **3 meses fuera de España**, en una universidad o centro de investigación de prestigio. Tiene que estar avalada por el responsable del centro de acogida, autorizada por la Comisión Académica del programa e incorporada a tu documento de actividades.\n\nEn tu caso:\n- **El total es justo.** Dos meses y medio más tres semanas son unos 96 días, apenas por encima de los 3 meses. El cómputo se hace con las fechas exactas de los certificados de estancia, así que cualquier ajuste de fechas puede dejarte por debajo. Hay escuelas que cuentan por días o por horas: la de la Universidade de Vigo, por ejemplo, exige 3 meses o 480 horas.\n- **Que la estancia esté dividida depende de tu escuela.** Muchas escuelas permiten sumar varias estancias, pero suelen exigir una duración mínima para cada una (a menudo un mes o cuatro semanas). Si tu escuela pide eso, **las tres semanas en Francia no contarían** y te quedarías en dos meses y medio. Esto es lo primero que debes confirmar.\n- Pide que la Comisión Académica autorice **las dos estancias antes de hacerlas**, o como indique tu escuela.\n\n## 2. Otros requisitos estatales\n\n- **Idioma:** al menos el resumen y las conclusiones tienen que estar redactados y presentarse en una lengua habitual de comunicación científica que no sea oficial en España. Con alemán, francés o inglés lo cumples. Esta exigencia no se aplica si las estancias, los informes y los expertos proceden de un país hispanohablante.\n- **Informes:** necesitas **dos informes favorables** de doctores expertos que pertenezcan a instituciones de educación superior o centros de investigación **no españoles**. Lo habitual es entregarlos antes del depósito o junto con él.\n- **Tribunal:** debe incluir **al menos un doctor de una institución no española**, distinto de la persona que te supervisó en la estancia. Los dos informantes tampoco pueden formar parte del tribunal.\n\n## 3. Plazos tras el depósito\n\nEl RD 99/2011 **no fija plazos concretos** para la exposición pública ni para la defensa. Los marca cada universidad. Como referencia, en la Universidade de Vigo la exposición pública dura **10 días lectivos**. En otras universidades son 10 o 15 días hábiles, y suele haber un plazo máximo para defender una vez autorizada la defensa. Para saber tus plazos exactos tienes que consultar el reglamento de doctorado de tu universidad.\n\n## Qué hacer ahora\n\n1. Pregunta en la secretaría de tu escuela si se pueden sumar estancias, qué duración mínima se exige a cada una y si se computa por días o por horas.\n2. Si la de Francia no cuenta, intenta alargarla hasta el mínimo exigido o ampliar la de Alemania.\n3. Contacta ya con los dos informantes extranjeros y elige al miembro internacional del tribunal, que no puede ser tu supervisor en Alemania.\n\nSi me dices tu universidad o me pasas el reglamento, te concreto los plazos y si te valen las estancias.\n\nFuentes:\n- [Mención internacional – Escuela de Doctorado EHU](https://www.ehu.eus/es/web/doktorego-eskola/mencion-doctorado-internacional)\n- [Doctorado Internacional – USAL](https://doctorado.usal.es/es/doctorado-internacional)\n- [Mención internacional – EIDUA (Alicante)](https://eidua.ua.es/es/7-menciones/mencion-internacional.html)\n- [Guía rápida de tesis – EIDO Universidade de Vigo](https://eido.uvigo.gal/gl/teses/guia-rapida)\n- [Tesis en depósito – EIDO Universidade de Vigo](https://eido.uvigo.gal/es/tesis/tesis-en-deposito)",
+  "herramientas": [
+    "Bash",
+    "ToolSearch",
+    "WebSearch"
+  ],
+  "tokens": {
+    "input": 10,
+    "output": 2905,
+    "cache_creation": 8966,
+    "cache_read": 71745,
+    "total": 83626
+  },
+  "coste_usd": 0.189441,
+  "duracion_s": 45.97,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:04:56+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 5,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"find . -type f | head -100\", \"description\": \"List workspace files\"}"
+      },
+      {
+        "herramienta": "ToolSearch",
+        "entrada_resumen": "{\"query\": \"select:WebSearch,WebFetch\", \"max_results\": 2}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"EEAE Escola de Doutoramento mención internacional estancia depósito exposición pública tesis Universidade de Vigo\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"\\\"EEAE\\\" escuela doctorado mención internacional estancias\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

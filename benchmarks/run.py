@@ -56,20 +56,23 @@ MODELOS = {
     "deepseek": {
         "cli": "opencode",
         "modelo_cli": "opencode-go/deepseek-v4.1-flash",
+        # Sin "variant": OpenCode no envía reasoningEffort y el proveedor usa su
+        # esfuerzo por defecto (variantes disponibles: low, high, max).
         "reps": 3,
-        "etiqueta": "DeepSeek V4.1 Flash (OpenCode)",
+        "etiqueta": "DeepSeek V4.1 Flash (OpenCode, effort por defecto)",
     },
     "sonnet": {
         "cli": "claude",
         "modelo_cli": "claude-sonnet-5-5",
         "reps": 1,
-        "etiqueta": "Claude Sonnet 5.5",
+        "etiqueta": "Claude Sonnet 5.5 (Claude Code, effort por defecto)",
     },
     "opus": {
         "cli": "claude",
         "modelo_cli": "claude-opus-5-5",
+        "effort": "medium",
         "reps": 1,
-        "etiqueta": "Claude Opus 5.5",
+        "etiqueta": "Claude Opus 5.5 (Claude Code, effort medium)",
     },
 }
 
@@ -198,11 +201,13 @@ def preparar_entorno(modelo: str, condicion: str) -> tuple[Path, Path, dict]:
 def construir_comando(modelo: str, prompt: str, max_turns: int) -> list[str]:
     info = MODELOS[modelo]
     if info["cli"] == "claude":
+        esfuerzo = ["--effort", info["effort"]] if info.get("effort") else []
         return [
             "claude",
             "-p",
             "--model",
             info["modelo_cli"],
+            *esfuerzo,
             "--output-format",
             "stream-json",
             "--verbose",
@@ -216,11 +221,13 @@ def construir_comando(modelo: str, prompt: str, max_turns: int) -> list[str]:
             json.dumps(AJUSTES_CLAUDE, ensure_ascii=False),
             prompt,
         ]
+    variante = ["--variant", info["variant"]] if info.get("variant") else []
     return [
         "opencode",
         "run",
         "-m",
         info["modelo_cli"],
+        *variante,
         "--format",
         "json",
         "--auto",

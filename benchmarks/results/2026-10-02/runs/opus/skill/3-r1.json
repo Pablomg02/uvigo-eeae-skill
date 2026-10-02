@@ -1,0 +1,72 @@
+{
+  "eval_id": 3,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?",
+  "respuesta": "**Respuesta corta:** El tribunal lo nombra la Comisión Académica e de Recoñecemento de Créditos (CARC) de la Escola. Tiene 3 miembros titulares (presidente/a, secretario/a y vocal) y al menos un suplente. Tú no puedes formar parte del tribunal que evalúe a tu alumno. Un mismo tribunal puede evaluar como máximo 5 trabajos, salvo casos excepcionales que autorice la CARC.\n\n**Fundamento**\n\n- **Normativa para a realización do TFG de la UVigo** (Consello de Goberno, consolidada a 31-10-2022), art. 8 bis.1: «A Xunta de Centro ou a comisión en quen delegue nomeará, en base a criterios públicos e motivados, o tribunal de avaliación colexiado […] Este estará constituído polo menos por tres persoas que exercerán presidencia, secretaría e vogal». En el art. 8 bis.3 deja a cada centro definir el papel del tutor: «As persoas titoras poderán estar presentes con dereito a voz no acto de defensa». [secretaria.uvigo.gal/…/show/550](https://secretaria.uvigo.gal/uv/web/normativa/public/show/550)\n- **Regulamento de TFG e TFM da EEAE** (19-12-2018), art. 13:\n  - Quién nombra: «o tribunal avaliador dos TFG será designado pola CARC».\n  - Miembros, apartados 1 y 2: «tres membros […] Presidente/a, Secretario/a, Vogal» y «cando menos un/ha suplente».\n  - Máximo de trabajos, apartado 3: «Un mesmo tribunal non avaliará máis de 5 traballos, salvo casos excepcionais autorizados polas comisións delegadas».\n  - Tutor en el tribunal, apartado 7: «O/a titor/a e cotitor/a dun TFG ou TFM non poderán pertencer ao tribunal que avalíe ao seu estudantado titorizado».\n  \n  [aero.uvigo.es – normativa](https://aero.uvigo.es/docs/escuela/normativa/TFG-TFM_EEAE.pdf)\n- **RRI de la EEAE** (2017), art. 60: entre las funciones de la CARC está «Aprobar os títulos e tribunais de Traballos Fin de Grao».\n\n**Condiciones y aspectos útiles para ti como tutor**\n\n- **Quién puede estar en el tribunal** (art. 13.4 EEAE): profesorado que da clase en el grado. También puede estar profesorado de otras titulaciones del centro si ese curso tutoriza algún TFG o TFM. La Escola intenta que un mismo profesor no sea titular en más de una convocatoria por curso.\n- **Lo que sí haces como tutor:**\n  - Pones el 25 % de la nota con el informe del Anexo III y la rúbrica vigente. El tribunal pone el 75 % (art. 15 EEAE).\n  - Puedes intervenir en la defensa cuando acabe la ronda de preguntas del tribunal (art. 16.2 EEAE).\n- **Composición ampliada:** la norma de la UVigo permite más de un vocal y, excepcionalmente, miembros externos (art. 8 bis.2). La de la Escola fija 3 miembros. Mi lectura, que es interpretación y no texto de la norma: en la EEAE el tribunal ordinario es de 3.\n\n**Qué no he podido verificar:** el reglamento de la Escola es de 2018, anterior a la última modificación de la norma de la UVigo (2022). He comprobado hoy (2-10-2026) que los dos textos publicados coinciden con mi copia y que en estos puntos no se contradicen. No he revisado si la CARC tiene acuerdos posteriores sobre tribunales para este curso.\n\n**Siguiente paso:** para saber las fechas de defensa y la composición concreta de los tribunales de cada convocatoria, consulta los acuerdos de la CARC o pregunta en la Secretaría de la Escola.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 10,
+    "output": 2375,
+    "cache_creation": 23359,
+    "cache_read": 101912,
+    "total": 127656
+  },
+  "coste_usd": 0.25479440000000003,
+  "duracion_s": 26.47,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:01:35+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Voy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 6,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\", \"args\": \"TFG Grao en Enxeñaría Aeroespacial: quién nombra el tribunal, cuántos miembros, puede el tutor formar parte del tribunal de su alumno, máximo de trabajos por tribunal\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/408168ba77594496a366162cb20f0fa1/home/workspace/.claude/skills/normativa-uvigo-eeae && grep -n -i -A8 \\\"tfg\\\" references/temas.md | head -40; python3 scripts/buscar.py \\\"tribunal tfg\\\" -n 8; python3 scripts/buscar.py \\\"tribunal traballo fin de grao membros\\\" -n "
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver tfg-tfm-eeae --art 13; python3 scripts/buscar.py --ver 550 --art 12 ; python3 scripts/buscar.py \\\"tribunal titor non poderá formar parte\\\" -n 5 --ambito uvigo\", \"description\": \"Read full articles\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 550 --art \\\"8 bis\\\"; python3 scripts/buscar.py --ver 550 --art 8 | head -40; python3 scripts/comprobar.py 550 tfg-tfm-eeae 2>&1 | tail -15\", \"description\": \"Read UVigo TFG articles and check validity\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

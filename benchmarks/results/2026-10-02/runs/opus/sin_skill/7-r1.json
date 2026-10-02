@@ -1,0 +1,57 @@
+{
+  "eval_id": 7,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?",
+  "respuesta": "No he encontrado documentos de tu universidad en el espacio de trabajo, así que te respondo con el marco legal general. Doy por hecho que la EEAE es la Escola de Enxeñaría Aeronáutica e do Espazo de la Universidade de Vigo. Antes de firmar nada, compruébalo con la normativa interna de la UVigo.\n\n## Respuesta corta\n\n- **El contrato de I+D (art. 83 LOU, hoy art. 60 LOSU): sí puedes asumirlo.** No necesitas autorización de compatibilidad, porque es actividad propia de la universidad. Solo tiene que tramitarse a través de ella.\n- **El asesoramiento externo retribuido a título personal: casi seguro que no**, y menos con la misma empresa. Lo razonable es meterlo también dentro de un contrato del art. 60 LOSU.\n\n## 1. Contrato de investigación (art. 60 LOSU, el antiguo art. 83)\n\n- La Ley Orgánica 2/2023 del Sistema Universitario (LOSU), en su art. 60, sustituyó al art. 83 de la LOU. Permite que los grupos, departamentos, institutos y el profesorado firmen contratos con empresas para trabajos científicos, técnicos o artísticos.\n- Estos trabajos no se consideran una \"segunda actividad\" a efectos de la Ley 53/1984 de incompatibilidades. Por eso no piden autorización de compatibilidad.\n- Lo que sí hace falta:\n  - Firmar y gestionar el contrato a través de la universidad (en la UVigo, el servicio de gestión de la investigación o transferencia, OTRI).\n  - Cumplir su normativa interna: la retención o *overhead* institucional y los límites de retribución que fije la UVigo.\n  - Que lo apruebe el órgano que corresponda, normalmente el Rector o la persona en quien delegue.\n\n## 2. Asesoramiento externo retribuido a título personal\n\nAquí está el problema. Como profesor permanente laboral te aplica la Ley 53/1984 (art. 2.1) y además el convenio colectivo del PDI laboral de las universidades públicas gallegas.\n\n1. **Hace falta autorización previa de compatibilidad para actividad privada** (art. 14 de la Ley 53/1984). La resuelve el Rector, tramitada por el servicio o vicerrectorado de profesorado/PDI. Si ejerces sin ella, cometes una falta disciplinaria grave.\n2. **A tiempo completo es muy difícil conseguirla.** El art. 16 de la Ley 53/1984 impide autorizar actividades privadas a quien cobra un complemento específico o equivalente, y el profesorado a tiempo completo lo percibe. Las excepciones son limitadas y muchas universidades deniegan estas solicitudes casi siempre. La salida habitual es pasar a tiempo parcial, que también pide autorización, o canalizar la actividad por el art. 60.\n3. **Hay conflicto de intereses al ser la misma empresa.** El art. 11 de la Ley 53/1984 y el art. 12 de su reglamento (RD 598/1985) prohíben las actividades privadas relacionadas con asuntos en los que intervienes por tu puesto. Asesorar a título personal a la empresa con la que tu grupo tiene un contrato es exactamente ese supuesto. Aunque tuvieras dedicación parcial, lo normal es que te lo denieguen.\n4. **Excepciones del art. 19 de la Ley 53/1984.** No hace falta autorización para actividades puntuales como impartir conferencias o cursos ocasionales, publicaciones, producción literaria o artística, o participar en tribunales. Un contrato de asesoramiento continuado y retribuido no entra ahí.\n\n## Qué te recomiendo\n\n- **Mete el asesoramiento en el contrato del art. 60**, ya sea ampliando el contrato de I+D o con otro contrato de asistencia técnica o asesoramiento firmado por la universidad. Así la empresa obtiene lo que busca, tú cobras dentro de la legalidad y no necesitas compatibilidad.\n- Si aun así quieres hacerlo a título personal, **pide antes la compatibilidad al Rector**, por el servicio de PDI, y explica que la empresa es la misma del contrato. No empieces a trabajar ni firmes nada hasta tener la resolución.\n- **Consulta antes** al servicio de gestión de la investigación/OTRI y al servicio de PDI de la UVigo. Pregúntales por los límites de retribución de los contratos del art. 60 y por los criterios de compatibilidad que aplican al PDI laboral.\n\nEsto es una orientación general, no asesoramiento jurídico vinculante. La normativa interna de la UVigo y el convenio del PDI laboral pueden matizar algunos puntos. Si me pasas esos textos, puedo revisarlos y concretar más la respuesta.",
+  "herramientas": [
+    "Bash"
+  ],
+  "tokens": {
+    "input": 4,
+    "output": 3491,
+    "cache_creation": 5101,
+    "cache_read": 22796,
+    "total": 31392
+  },
+  "coste_usd": 0.1152032,
+  "duracion_s": 40.21,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:04:56+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 2,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"find . -type f | head -100\", \"description\": \"List workspace files\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

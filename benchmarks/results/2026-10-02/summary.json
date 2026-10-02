@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generado": "2026-10-02T18:07:17+02:00",
+    "generado": "2026-10-02T20:12:29+02:00",
     "results_dir": "benchmarks/results/2026-10-02",
     "n_evals": 10,
     "grupos": {
@@ -9,16 +9,24 @@
     },
     "modelos": {
       "deepseek": {
-        "etiqueta": "DeepSeek V4.1 Flash (OpenCode)",
+        "etiqueta": "DeepSeek V4.1 Flash (OpenCode, effort por defecto)",
         "cli": "opencode",
         "id_cli": "opencode-go/deepseek-v4.1-flash",
+        "esfuerzo": null,
+        "repeticiones": 1
+      },
+      "opus": {
+        "etiqueta": "Claude Opus 5.5 (Claude Code, effort medium)",
+        "cli": "claude",
+        "id_cli": "claude-opus-5-5",
+        "esfuerzo": "medium",
         "repeticiones": 1
       }
     },
     "juez": "claude-opus-5-5",
-    "n_ejecuciones": 20,
-    "n_notas": 20,
-    "nota_metodologica": "DeepSeek V4.1 Flash (OpenCode): 1 repetición por pregunta, así que el ± recoge la dispersión entre las preguntas de cada condición (no entre repeticiones). La comparación válida es con skill frente a sin skill dentro de cada modelo."
+    "n_ejecuciones": 40,
+    "n_notas": 40,
+    "nota_metodologica": "DeepSeek V4.1 Flash (OpenCode, effort por defecto): 1 repetición por pregunta, así que el ± recoge la dispersión entre las preguntas de cada condición (no entre repeticiones). Claude Opus 5.5 (Claude Code, effort medium): 1 repetición por pregunta, así que el ± recoge la dispersión entre las preguntas de cada condición (no entre repeticiones). La comparación válida es con skill frente a sin skill dentro de cada modelo."
   },
   "tasas": {
     "deepseek": {
@@ -39,6 +47,25 @@
         "orientativo_n1": false
       },
       "mejora_puntos": 26.7
+    },
+    "opus": {
+      "skill": {
+        "media_pct": 91.7,
+        "sd_pct": 11.8,
+        "n_ejecuciones": 10,
+        "n_con_nota": 10,
+        "n_repeticiones": 1,
+        "orientativo_n1": false
+      },
+      "sin_skill": {
+        "media_pct": 60.0,
+        "sd_pct": 31.6,
+        "n_ejecuciones": 10,
+        "n_con_nota": 10,
+        "n_repeticiones": 1,
+        "orientativo_n1": false
+      },
+      "mejora_puntos": 31.7
     }
   },
   "grupos": {
@@ -50,6 +77,16 @@
       "sin_skill": {
         "desarrollo": 55.6,
         "nuevas": 62.5
+      }
+    },
+    "opus": {
+      "skill": {
+        "desarrollo": 88.9,
+        "nuevas": 95.8
+      },
+      "sin_skill": {
+        "desarrollo": 61.1,
+        "nuevas": 58.3
       }
     }
   },
@@ -79,11 +116,37 @@
         "8": 83.3,
         "9": 83.3
       }
+    },
+    "opus": {
+      "skill": {
+        "0": 100.0,
+        "1": 83.3,
+        "2": 83.3,
+        "3": 100.0,
+        "4": 100.0,
+        "5": 66.7,
+        "6": 100.0,
+        "7": 83.3,
+        "8": 100.0,
+        "9": 100.0
+      },
+      "sin_skill": {
+        "0": 100.0,
+        "1": 16.7,
+        "2": 66.7,
+        "3": 100.0,
+        "4": 50.0,
+        "5": 33.3,
+        "6": 33.3,
+        "7": 66.7,
+        "8": 33.3,
+        "9": 100.0
+      }
     }
   },
   "uso_skill": {
-    "n_ejecuciones_skill": 10,
-    "n_skill_usada": 10,
+    "n_ejecuciones_skill": 20,
+    "n_skill_usada": 20,
     "pct_skill_usada": 100.0
   },
   "costes": {
@@ -101,18 +164,32 @@
           "coste_total_usd": 0.1338,
           "duracion_media_s": 64.5
         }
+      },
+      "opus": {
+        "skill": {
+          "n_con_coste": 10,
+          "coste_medio_usd": 0.36609,
+          "coste_total_usd": 3.6609,
+          "duracion_media_s": 47.9
+        },
+        "sin_skill": {
+          "n_con_coste": 10,
+          "coste_medio_usd": 0.29112,
+          "coste_total_usd": 2.9112,
+          "duracion_media_s": 52.5
+        }
       }
     },
     "global": {
       "runs": {
-        "n_con_coste": 10,
-        "coste_medio_usd": 0.01392,
-        "coste_total_usd": 0.1392,
-        "duracion_media_s": 81.7
+        "n_con_coste": 20,
+        "coste_medio_usd": 0.19,
+        "coste_total_usd": 3.8001,
+        "duracion_media_s": 64.8
       },
-      "runs_total_usd": 0.273,
-      "juez_total_usd": 2.5726,
-      "juez_duracion_media_s": 12.9
+      "runs_total_usd": 6.8452,
+      "juez_total_usd": 5.1999,
+      "juez_duracion_media_s": 12.6
     }
   },
   "incidencias": {
@@ -124,7 +201,8 @@
     "generado": true,
     "ficheros": [
       "docs/img/bench-aciertos.png",
-      "docs/img/bench-mapa-calor.png"
+      "docs/img/bench-por-pregunta.png",
+      "docs/img/bench-coste.png"
     ],
     "motivo": null
   }

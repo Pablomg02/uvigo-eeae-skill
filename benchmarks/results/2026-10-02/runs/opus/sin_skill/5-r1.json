@@ -1,0 +1,104 @@
+{
+  "eval_id": 5,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?",
+  "respuesta": "He revisado el Reglamento de evaluación de la UVigo y la guía docente 2026/27 de *Sistemas de propulsión* (O07G410V01945, Grado en Ingeniería Aeroespacial). Te resumo qué dice cada uno y te propongo respuestas.\n\n## 1. El alumno que tiene un congreso el día del examen de enero\n\n**Lo que dice la normativa:**\n- **Art. 25.2:** el calendario de exámenes, aprobado por la Junta de Centro, no se puede modificar salvo circunstancias excepcionales. Esas las resuelve la dirección del centro, no el profesor.\n- **Art. 26:** se puede hacer el examen otro día solo si la falta se justifica por una de las causas del **art. 15.2** y **el centro valida la justificación**. En ese caso tú fijas la nueva fecha, a ser posible de acuerdo con el alumno, y con al menos 48 h de aviso.\n- **Art. 15.2:** la lista no incluye la asistencia a congresos. Las causas son exámenes oficiales, representación estudiantil o de la UVigo, enfermedad, hospitalización, fallecimiento o enfermedad grave de un familiar, deber público, emergencias, huelga y deportistas de élite. La única vía posible es la letra **j) \"cualquier otra causa sobrevenida, a juicio del profesorado responsable\"**. Un congreso que se conoce con meses de antelación difícilmente es \"sobrevenido\".\n\nAntes de contestar, conviene preguntarle si **presenta una comunicación en nombre de la UVigo**. En ese caso podría encajar en la letra b) (\"representación de la Universidade de Vigo\"). Si va como asistente, no encaja.\n\n**Respuesta propuesta:**\n> Hola, [nombre]:\n> Según el Reglamento de evaluación de la UVigo, las fechas de examen las aprueba la Junta de Centro y solo se puede hacer la prueba en otra fecha por las causas justificadas del art. 15.2, con validación del centro (art. 26). La asistencia a un congreso no figura entre ellas, y al conocerse con antelación tampoco se considera causa sobrevenida. Por eso no puedo cambiarte la fecha del examen de enero.\n> Si vas al congreso en representación de la Universidade de Vigo (por ejemplo, presentando un trabajo con afiliación UVigo), envíame la acreditación y la trasladamos a la dirección del centro para que valore si se puede justificar. En cualquier caso, tienes la segunda oportunidad (julio).\n> Un saludo.\n\n## 2. El alumno que pregunta si aún puede pedir la evaluación global\n\n**Lo que dice la normativa:**\n- **Art. 20.4:** el alumno puede elegir la evaluación global en el plazo y por el procedimiento que fije el centro. Al elegirla renuncia a las actividades de evaluación continua que queden y a la nota de las que ya haya hecho.\n- La guía de la asignatura dice que el plazo es el que establezca el centro y que \"no podrá ser superior a un mes\".\n- **Ojo:** si después de ese plazo sigue haciendo pruebas de evaluación continua, ya no puede figurar como \"No presentado\" (art. 30).\n\nNo he podido confirmar la fecha exacta del plazo de la EEAE para el primer cuatrimestre de 2026/27, porque la web del centro no la publica en abierto. Si las clases empezaron a principios o mediados de septiembre, lo más probable es que el plazo siga abierto hoy o cierre en estos días. Compruébalo en Secretaría o en aero.info@uvigo.gal antes de contestar.\n\n**Respuesta propuesta (si el plazo sigue abierto):**\n> Hola, [nombre]:\n> Sí, todavía puedes solicitar la evaluación global. Tienes que hacerlo por el procedimiento del centro antes del [fecha], [vía: formulario/Secretaría]. Ten en cuenta que al elegirla renuncias a la evaluación continua: lo que hayas hecho hasta ahora no contará y tu nota será la del examen final (100 %, con mínimo de 5,0).\n> Un saludo.\n\nSi el plazo ya está cerrado, la respuesta sería que no puede cambiar de modalidad y que, si no supera la evaluación continua, podrá presentarse en la segunda oportunidad.\n\nFuentes:\n- [Reglamento sobre la evaluación de la UVigo](https://www.uvigo.gal/sites/uvigo.gal/files/contents/paragraph-file/2024-03/regulamento-avaliacion.pdf)\n- [Guía docente 2026/27, Sistemas de propulsión](https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?centre=107&ensenyament=O07G410V01&assignatura=O07G410V01945&fitxa_apartat=7&idioma=cast&any_academic=2026_27)\n- [Exámenes EEAE](https://aero.uvigo.es/es/docencia/examenes)",
+  "herramientas": [
+    "Bash",
+    "ToolSearch",
+    "WebSearch",
+    "WebFetch"
+  ],
+  "tokens": {
+    "input": 24,
+    "output": 4681,
+    "cache_creation": 19050,
+    "cache_read": 245842,
+    "total": 269597
+  },
+  "coste_usd": 0.4514354,
+  "duracion_s": 74.9,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:05:14+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 13,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"find . -type f | head -100; ls /tmp/uvigo-bench/runs/6c69bf6b5ecd4f659f801cf70dca069f/claude-config/projects/*/memory/ 2>/dev/null\", \"description\": \"List workspace files and memory\"}"
+      },
+      {
+        "herramienta": "ToolSearch",
+        "entrada_resumen": "{\"query\": \"select:WebSearch,WebFetch\", \"max_results\": 2}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo regulamento avaliación renuncia avaliación continua prazo cambio data exame causas xustificadas\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"Sistemas de propulsión guía docente Universidade de Vigo Enxeñaría Aeroespacial avaliación global\"}"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://www.uvigo.gal/sites/uvigo.gal/files/contents/paragraph-file/2024-03/regulamento-avaliacion.pdf\", \"prompt\": \"Cita textualmente (con número de artigo): 1) o prazo e procedemento para optar pola avaliación global / renunciar á avaliación continua; 2) os supostos e causas xustificadas p"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp && f=$(ls /tmp/uvigo-bench/runs/6c69bf6b5ecd4f659f801cf70dca069f/claude-config/projects/*/*/tool-results/webfetch-*.pdf | head -1); pdftotext -layout \\\"$f\\\" /tmp/reg.txt && grep -n -i -E \\\"global|xustificad|congres|outra data|data alternativa|un mes|prazo\\\" /tmp/reg.txt | head -"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"sed -n 720,780p /tmp/reg.txt; echo ----; sed -n 900,1010p /tmp/reg.txt; echo ----; sed -n 1150,1170p /tmp/reg.txt\", \"description\": \"Read relevant regulation sections\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"grep -n \\\"Artigo 15\\\" /tmp/reg.txt; n=$(grep -n \\\"Artigo 15\\\\.\\\" /tmp/reg.txt | head -1 | cut -d: -f1); sed -n \\\"${n},$((n+70))p\\\" /tmp/reg.txt | grep -v '^\\\\s*[A-Z ]\\\\{0,12\\\\}$'; sed -n 1140,1160p /tmp/reg.txt | grep -v '^\\\\s*[A-Z ]\\\\{0,12\\\\}$'\", \"description\": \"Read article 15 on just"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?consulta=assignatures&ensenyament=O07G410V01&idioma=cast\", \"prompt\": \"Lista las asignaturas cuyo nombre contenga \\\"propulsión\\\" con su código y enlace (URL completa).\"}"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?centre=107&ensenyament=O07G410V01&assignatura=O07G410V01945&fitxa_apartat=7&idioma=cast&any_academic=2026_27\", \"prompt\": \"Copia literalmente toda la sección de evaluación: pesos, evaluación continua vs global, plazos para renunciar a la"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"aero.uvigo.es avaliación global prazo solicitude renuncia avaliación continua 2026-2027\"}"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://aero.uvigo.es/es/docencia/examenes\", \"prompt\": \"¿Hay información sobre el plazo/procedimiento para solicitar la evaluación global (renuncia a evaluación continua) en el curso 2026/27, primer cuatrimestre? ¿Y sobre fechas de exámenes de enero 2027 y cambios de fecha? Cita literalment"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "eval_id": 5,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?",
+  "respuesta": "## 1. El alumno que se va a un congreso el día del examen de enero\n\n**Respuesta corta:** No tiene derecho a examinarse otro día. Un viaje a un congreso no es una de las faltas justificadas que recoge el reglamento. Puedes contestarle que el examen se mantiene en su fecha.\n\n**Fecha del examen:** Sistemas de propulsión (4º, 1.º cuatrimestre), **viernes 22/01/2027, 16:00, aula CA 2.8**. Sale del calendario oficial de exámenes 2026/27. He comprobado hoy que el PDF publicado en aero.uvigo.es coincide con el que usé.\n\n**Fundamento**\n- Regulamento de avaliación UVigo (Claustro 18-04-2023 y 22-12-2023), art. 26.1–2: el derecho a hacer el examen «noutra data fixada polo profesorado responsable» solo existe por las causas del art. 15. [secretaria.uvigo.gal/uv/web/normativa/public/show/565](https://secretaria.uvigo.gal/uv/web/normativa/public/show/565)\n- Art. 15.2: la lista cerrada de causas es exámenes oficiales, órganos colegiados, consultas o ingreso médico, enfermedad, enfermedad grave o fallecimiento de un familiar, deber público, emergencias, huelga y deportistas. Los congresos no aparecen. Hay una cláusula final, «j. Calquera outra causa sobrevida».\n- Art. 25.1–2: el calendario de exámenes lo aprueba la Xunta de Centro, se publica antes de la matrícula y «non poderá modificarse salvo circunstancias excepcionais», que decide la Dirección.\n\n**Interpretación (no lo dice la norma literalmente):** «Sobrevida» significa algo imprevisto. Un congreso suele saberse con antelación y la fecha del examen es pública desde antes de la matrícula, así que es difícil que encaje. Además, el art. 19.5 obliga a aplicar la evaluación «dun xeito homoxéneo» a todo el alumnado. Por eso no es recomendable dar otra fecha por cortesía sin una causa justificada.\n\n**Si el alumno no está de acuerdo:** según el art. 15.3, la discrepancia entre profesor y alumno la decide la Dirección de la Escola. Si alega algo concreto (por ejemplo, que va en representación de la UVigo o que el viaje surgió de forma imprevista), pídele que lo acredite por escrito y valóralo con ese documento.\n\n**Opciones que sí tiene:** presentarse el 22/01 o dejar la materia para la 2.ª oportunidad.\n\n## 2. El alumno que pregunta si aún puede pedir la evaluación global\n\n**Respuesta corta:** Sí, pero solo hasta el **8 de octubre de 2026**.\n\n**Fundamento**\n- Regulamento 565, art. 19.4: el alumno elige la evaluación global «segundo o procedemento e o prazo establecido polo centro, que non poderá ser inferior a un mes». Al elegirla renuncia a la evaluación continua que quede pendiente y a la nota que lleve acumulada.\n- Calendario académico EEAE 2026/27: «Solicitude avaliación global — 1ºC: 8 setembro a 8 outubro». [aero.uvigo.es/docs/docencia/calendario/Calendario_EEAE_2026-27.pdf](https://aero.uvigo.es/docs/docencia/calendario/Calendario_EEAE_2026-27.pdf)\n- Guía docente 2026/27 de Sistemas de propulsión (O07G410V01945): con la evaluación global, el examen vale el 100 % de la nota y hace falta **un mínimo de 5,0**. Puede incluir una parte en sala de ordenadores o laboratorio y entra toda la materia, incluidas las prácticas y los trabajos. [Guía en DOCNET](https://secretaria.uvigo.gal/docnet-nuevo/guia_docent/?centre=107&ensenyament=O07G410V01&assignatura=O07G410V01945&any_academic=2026_27&idioma=gal), consultada el 02/10/2026.\n\n**Conviene avisarle de dos cosas:**\n- La solicitud se presenta por el procedimiento de la Escola, no con un correo al profesor. Que lo confirme en la Secretaría o la Subdirección.\n- Según el art. 32.1.b, si sigue en actividades de evaluación continua después del plazo, ya no podrá figurar como «Non presentado».\n\n**Una errata en tu guía:** dice que el plazo de la Escola «non poderá ser superior a un mes». El art. 19.4 dice «non poderá ser inferior». Prevalece el reglamento. Te recomiendo corregirla en la guía del curso que viene, porque el art. 19.5 impide cambiar los criterios una vez empezado el curso.\n\n**Siguiente paso:** contesta al primero que el examen se mantiene el 22/01 y que, si quiere alegar una causa justificada, la acredite (si no os ponéis de acuerdo, decide la Dirección). Al segundo dile que tiene de plazo hasta el 8 de octubre y que lo tramite por la Escola.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 26,
+    "output": 4861,
+    "cache_creation": 26896,
+    "cache_read": 352325,
+    "total": 384108
+  },
+  "coste_usd": 0.38295700000000005,
+  "duracion_s": 58.12,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:02:45+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Hoy es 2 de octubre de 2026. Un alumno de Sistemas de propulsión me escribe que el examen de enero le coincide con un viaje de un congreso y me pide hacerlo otro día. Además, otro me pregunta si aún puede pedir la evaluación global. ¿Qué les contesto?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 14,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/7e9484907cd94b5ab619ada46c632bf8/home/workspace/.claude/skills/normativa-uvigo-eeae && python3 scripts/guia.py \\\"Sistemas de propulsión\\\" --lista 2>&1 | head -30; python3 scripts/buscar.py --ver 565 --art 15; python3 scripts/buscar.py --ver 565 --art 26\", \"descr"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/guia.py --lista 2>&1 | grep -i propul; python3 scripts/buscar.py \\\"avaliación global solicitude prazo renuncia avaliación continua\\\" -n 6\", \"description\": \"Find subject and global evaluation rules\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 565 --art 19 | sed -n '18,60p'; python3 scripts/buscar.py --ver 565 --art 25 | tail -20; python3 scripts/guia.py \\\"O07G410V01945\\\" --curso 2026_27 2>&1 | head -150\", \"description\": \"Read art 19, 25 and subject guide\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/guia.py \\\"O07G410V01945\\\" --curso 2026_27 2>&1 | sed -n '/Avaliación/,/Fontes de informaci/p' | head -90\", \"description\": \"Show evaluation section of guide\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"avaliación global prazo solicitude\\\" --ambito eeae -n 4 | head -60; python3 scripts/buscar.py \\\"avaliación global\\\" --ambito curso -n 4 | head -50; python3 scripts/buscar.py --lista --ambito curso\", \"description\": \"Search EEAE global evaluation deadline\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout calendario-eeae-2026-27 2>&1 | grep -iE -B2 -A2 \\\"global|renuncia|exame|avalia\\\" | head -60; python3 scripts/buscar.py --layout exames-aero-2026-27 2>&1 | grep -iE -B3 -A3 \\\"propul|xaneiro|enero\\\" | head -60\", \"description\": \"Check calendar and exam da"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout calendario-eeae-2026-27 2>&1 | head -80; echo ======; python3 scripts/buscar.py --layout exames-aero-2026-27 2>&1 | head -100\", \"description\": \"Show calendar and exam layouts\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout calendario-eeae-2026-27 --grep \\\"lobal\\\" 2>&1 | head -60; echo ======; python3 scripts/buscar.py --layout exames-aero-2026-27 --grep \\\"ropulsi\\\" 2>&1 | head -60\", \"description\": \"Grep calendar and exam layouts\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout exames-aero-2026-27 --grep \\\" SP\\\" 2>&1 | head -80; python3 scripts/comprobar.py 565 exames-aero calendario-eeae 2>&1 | tail -15\", \"description\": \"Find SP exam date and check validity\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"pdftotext -layout -f 2 -l 2 normativa/curso/_originales/Exames_Aero_2026-27.pdf - | grep -n -iE \\\"xaneiro|enero|SP |semana|data|lun|mar\\\" | head -30; pdftotext -layout -f 2 -l 2 normativa/curso/_originales/Exames_Aero_2026-27.pdf - | head -15\", \"description\": \"Read exam calendar page 2 "
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"for p in 2 3; do echo \\\"== p$p\\\"; pdftotext -layout -f $p -l $p normativa/curso/_originales/Exames_Aero_2026-27.pdf - | grep -nE \\\"/20|SP |^ *[A-Z ]{5,}$\\\" ; done\", \"description\": \"Map SP rows to dates\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

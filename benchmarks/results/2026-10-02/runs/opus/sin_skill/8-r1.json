@@ -1,0 +1,57 @@
+{
+  "eval_id": 8,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?",
+  "respuesta": "**Respuesta corta:** sí puedes, pero con condiciones. Publicar en papel en un pasillo por donde pasa cualquiera es la opción menos recomendable. Si lo haces, publica solo lo imprescindible y durante el tiempo justo.\n\n## Base legal\n\n- No necesitas el consentimiento de los estudiantes. Publicar notas forma parte de la función docente y de evaluación, que es una misión de interés público (RGPD art. 6.1.e). La normativa universitaria también prevé que los resultados se publiquen y que el estudiante tenga derecho a revisión.\n- Aun así, se aplica el **principio de minimización**: publicar solo lo necesario, ante el público mínimo y durante el tiempo mínimo.\n\n## Qué datos puedes publicar\n\n**Sí:**\n- Nombre y apellidos, o bien nombre y apellidos con cuatro cifras aleatorias del DNI si hay homónimos. Es el criterio de la disposición adicional 7ª de la LOPDGDD.\n- La nota del parcial, o \"No presentado\".\n- La fecha, el lugar y el horario de la revisión.\n\n**No:**\n- El DNI completo, el email, el teléfono o la foto.\n- Información sensible: adaptaciones por discapacidad o NEAE, exenciones, motivos de un \"no presentado\", sanciones por copiar, etc. Eso se comunica de forma individual.\n- Comentarios o rankings que no hagan falta.\n\n## Dónde publicarlo\n\n1. **Lo preferible es un canal de acceso restringido.** La AEPD recomienda que las notas se publiquen en entornos a los que solo accedan los interesados.\n   - Por cierto, en la UVigo **Faitic se sustituyó por Moovi** hace años. Si te refieres a Moovi, puedes subir las notas como documento visible solo para los matriculados, o usar el libro de calificaciones, donde cada alumno ve solo la suya.\n   - Si la plataforma falla, puedes mandar las notas por **correo institucional** (@alumnos.uvigo.es), de forma individual o con un PDF a la lista de la materia. Si envías un correo masivo, pon a los destinatarios en **CCO**.\n2. **Si usas el tablón físico:**\n   - Mejor un tablón interno del departamento o de la zona docente que uno en un pasillo de paso abierto al público.\n   - Pon solo los datos mínimos indicados arriba.\n   - **Quítalo al terminar el plazo de revisión.** No lo dejes semanas.\n   - No lo publiques nunca en espacios exteriores ni en webs abiertas sin autenticación.\n\n## Recomendación práctica\n\nComo la incidencia es técnica, abre un ticket en el CAU / ATIC de la UVigo para que arreglen Moovi. Mientras tanto, envía las notas por correo institucional. Si de todos modos prefieres el tablón, publica solo nombre, apellidos y nota, y retíralo tras la revisión.\n\nSi tienes dudas concretas, consulta al **Delegado de Protección de Datos de la UVigo** (dpd@uvigo.gal) y revisa la normativa de evaluación de la Universidade de Vigo. Puede tener alguna indicación propia sobre cómo publicar las calificaciones.\n\n*Nota: esto es orientación general basada en el RGPD, la LOPDGDD y los criterios de la AEPD, no asesoramiento jurídico vinculante. No he podido comprobar en línea la versión vigente de la normativa interna de la UVigo.*",
+  "herramientas": [
+    "Bash"
+  ],
+  "tokens": {
+    "input": 4,
+    "output": 2569,
+    "cache_creation": 5235,
+    "cache_read": 22739,
+    "total": 30547
+  },
+  "coste_usd": 0.09782379999999999,
+  "duracion_s": 32.01,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:05:02+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 2,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"ls -la && find . -maxdepth 3 -type f | head -50\", \"description\": \"List workspace contents\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

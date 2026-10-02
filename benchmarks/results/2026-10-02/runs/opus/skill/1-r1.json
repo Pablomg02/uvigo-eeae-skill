@@ -1,0 +1,80 @@
+{
+  "eval_id": 1,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?",
+  "respuesta": "**Respuesta corta:** No como vacaciones. Lo que sí puedes usar son tus **días de asuntos particulares** (o los de conciliación). No necesitan justificación, pero tienes que **comunicárselo a la dirección de tu departamento** y dejar cubiertas tus clases. No hay ningún permiso específico por la boda de un familiar.\n\n**Por qué no como vacaciones**\n- **II Convenio colectivo del PDI laboral (DOG 14/04/2011), art. 36:** «El período de vacaciones se disfrutará en el mes de agosto. […] De modo excepcional, se podrán autorizar en otro periodo en el que el trabajador no tenga asignada docencia, en intervalos mínimos de cinco días hábiles consecutivos.» Tu caso no cumple ninguna de las dos condiciones: en octubre tienes docencia y pides 3 días, no 5. [DOG](https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html)\n- La **Instrución de vacacións 2025 de la Vicerreitoría de Profesorado (655), ap. 2.1** dice lo mismo. Las vacaciones se disfrutan «preferentemente no mes de agosto, podendo autorizarse noutro mes sempre que as obrigas docentes e investigadoras o permitan». [Portal](https://secretaria.uvigo.gal/uv/web/normativa/public/show/655)\n\n**No hay permiso por la boda de un familiar**\n- **Convenio, art. 37.1.a:** la licencia de 15 días es solo por **tu propio** matrimonio. El **Estatuto de los Trabajadores, art. 37.3.a** («Quince días naturales en caso de matrimonio o registro de pareja de hecho») tampoco incluye la boda de un familiar.\n- El acta de la Comisión Paritaria del 7-feb-2025 actualiza el art. 37, pero no añade este supuesto.\n\n**Lo que puedes usar**\n- **Convenio, art. 37.1.l:** asuntos particulares «sin justificación y atendiendo siempre a las necesidades del servicio, nueve días […] que no podrán acumularse en ningún caso a los periodos de vacaciones anuales. Estos permisos se disfrutarán preferentemente fuera de las jornadas en las que el personal tenga obligaciones docentes.»\n- **Instrución 655, ap. 3:** fija **seis días** de asuntos particulares. Los interesados «teñen a obriga de comunicarllo á dirección do departamento, sen xustificación e atendendo sempre ás necesidades do servizo».\n- **Instrución 655, ap. 4:** suma «ata 3 días ao longo do ano por razóns de conciliación da vida laboral coa familiar e persoal, que se xestionarán como os días de asuntos particulares». Con esos 3 días, la Instrución llega a los nueve del convenio.\n\n**Condiciones**\n- **Mi interpretación, no lo dice la norma literalmente:** «preferentemente fuera de las jornadas con docencia» no prohíbe usar los días en semana lectiva, pero obliga a atender las necesidades del servicio. En la práctica tienes que organizar la cobertura de tus clases con el departamento y, si hace falta, con la coordinación de las materias. Las clases deben quedar sustituidas o recuperadas y los estudiantes informados.\n- No puedes unir estos días a las vacaciones (art. 37.1.l). En octubre no habría problema.\n- Si es domingo y no hay un día hábil de por medio, revisa también si el viaje cae en un puente o en el día del patrón del centro (Instrución 655, ap. 4.2). Así podrías gastar menos días.\n\n**Qué no he podido verificar**\n- La Instrución de vacaciones **de 2026** no está publicada en el portal (lo he comprobado hoy, 2-oct-2026). Cito la de 2025 como orientativa. Las cifras y el trámite de 2026 podrían ser distintos; manda siempre el convenio.\n- El texto consolidado oficial del convenio no existe, y el III Convenio está en negociación. He leído el de 2011 junto con el acta paritaria de 2025 (corpus descargado el 1-oct-2026).\n\n**Siguiente paso:** comunícaselo cuanto antes a la **dirección de tu departamento**, por el medio que use el departamento o desde la sede electrónica si hay formulario. Indica que son días de asuntos particulares o de conciliación y cómo quedan cubiertas tus clases. Si quieres confirmar cuántos días te quedan este año, pregunta en el **Servizo de PDI / Vicerreitoría de Profesorado**.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 14,
+    "output": 3243,
+    "cache_creation": 33384,
+    "cache_read": 181761,
+    "total": 218402
+  },
+  "coste_usd": 0.36834020000000006,
+  "duracion_s": 54.16,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:02:03+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 8,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\", \"args\": \"Contratado doctor (PDI laboral) en la EEAE quiere coger 3 días en octubre (periodo lectivo) para la boda de un familiar. ¿Puede cogerlos como vacaciones? ¿A quién pedirlo y qué norma lo ampara?\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/32c41bc41ff147d19224d390e5554104/home/workspace/.claude/skills/normativa-uvigo-eeae && grep -n -i -A8 \\\"vacacion\\\\|permis\\\" references/temas.md | head -60; cat references/huecos.md | head -60\", \"description\": \"Read routing for vacations and permissions\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver convenio-pdi-laboral-ii-2011 --art 36; python3 scripts/buscar.py --ver convenio-pdi-laboral-ii-2011 --art 37; python3 scripts/buscar.py \\\"vacacións período lectivo\\\" -n 6\", \"description\": \"Read convenio arts 36, 37 and search\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 655 | sed -n 1,200p; echo ====; python3 scripts/buscar.py --ver convenio-pdi-laboral-acta-paritaria-2025-02-07 | grep -n -i -B2 -A12 \\\"36\\\\|37\\\\|vacacion\\\\|asuntos\\\\|matrimonio\\\" | head -120\", \"description\": \"Read vacation instruction and paritaria act\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"timeout 90 python3 scripts/comprobar.py 655 convenio-pdi-laboral-ii-2011 convenio-pdi-laboral-acta-paritaria-2025-02-07 2>&1 | tail -15; timeout 90 python3 scripts/comprobar.py --novedades 2>&1 | grep -i -E \\\"vacac|libre disp|instru\\\" | head\", \"description\": \"Check live validity and new"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver estatuto-trabajadores --art 37 | sed -n '/^3\\\\./,/^4\\\\./p' | head -20\", \"description\": \"Read Workers' Statute art 37.3\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

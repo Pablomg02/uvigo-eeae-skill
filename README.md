@@ -135,13 +135,28 @@ Si el plan (Business, Enterprise, Healthcare o Edu) incluye Skills: **Skills →
 
 ## Benchmarks
 
-![Acierto de DeepSeek V4.1 Flash con y sin la skill](docs/img/bench-aciertos.png)
+![La skill sube el acierto en DeepSeek V4.1 Flash y en Claude Opus 5.5](docs/img/bench-aciertos.png)
 
-**DeepSeek V4.1 Flash** (vía OpenCode), 2 de octubre de 2026: 10 preguntas × 2 condiciones (con y sin skill) × 1 repetición por pregunta = **20 ejecuciones**, corregidas por el juez **Claude Opus 5.5**. Con la skill, el acierto pasa de **58,3 % a 85,0 %** (**+26,7 puntos porcentuales**). Por grupos, en las 6 preguntas de desarrollo sube de 55,6 % a 80,6 %, y en las 4 nuevas —redactadas sin consultar `SKILL.md`— de 62,5 % a 91,7 %. La skill se activó en el 100 % de las ejecuciones con skill; la excepción es el eval 0, donde la respuesta sin skill (83,3 %) superó a la respuesta con skill (50,0 %) por fallos reales de esta última, documentados en la auditoría del juez.
+Tanda reducida del 2 de octubre de 2026: **10 preguntas × 2 condiciones (con y sin skill) × 1 repetición**, con dos modelos, 40 ejecuciones en total, corregidas a ciegas por el juez **Claude Opus 5.5**. El prompt y las herramientas son idénticos en las dos condiciones; solo cambia que la skill esté instalada.
 
-![Acierto por pregunta, con y sin skill](docs/img/bench-mapa-calor.png)
+| Modelo | CLI | Esfuerzo de razonamiento | Sin skill | Con skill | Mejora |
+|---|---|---|---|---|---|
+| DeepSeek V4.1 Flash | OpenCode | por defecto del proveedor (sin `--variant`) | 58,3 % | **85,0 %** | **+26,7 pp** |
+| Claude Opus 5.5 | Claude Code | `medium` (`--effort medium`) | 60,0 % | **91,7 %** | **+31,7 pp** |
 
-El arnés permite incorporar Sonnet 5.5 y Opus 5.5 con `python3 benchmarks/run.py --models deepseek,sonnet,opus`, pero esta tanda se ejecutó solo con DeepSeek por coste. La metodología, el aislamiento, el coste real y las limitaciones están documentados en [`benchmarks/README.md`](benchmarks/README.md).
+- **Generaliza:** en las 4 preguntas *nuevas* —redactadas sin consultar `SKILL.md`— el acierto pasa de 62,5 % a 91,7 % (DeepSeek) y de 58,3 % a 95,8 % (Opus). En las 6 de *desarrollo*, de 55,6 % a 80,6 % y de 61,1 % a 88,9 %.
+- **Pesa más la skill que el modelo:** sin la skill, los dos rondan el 60 %, aunque Opus sea mucho más caro y ambos puedan buscar en la web. Con ella, Opus acierta más que DeepSeek (91,7 % frente a 85,0 %).
+- **La skill se usó de verdad en las 20 ejecuciones con skill** y ninguna ejecución sin skill la vio (0 contaminadas).
+
+![Acierto por pregunta, con y sin skill, en cada modelo](docs/img/bench-por-pregunta.png)
+
+Por pregunta, la skill mejora en 15 de los 20 casos pregunta-modelo, iguala en 4 (todos al 100 %) y empeora en 1: el eval 0 de DeepSeek, donde la respuesta con skill (50 %) omitió el órgano ante el que se pide la segunda evaluación y la composición del tribunal (fallos reales, documentados en la auditoría del juez). Opus resolvió esa misma pregunta al 100 % en las dos condiciones.
+
+![Acierto frente a coste por respuesta](docs/img/bench-coste.png)
+
+Opus cuesta unas 26 veces más por respuesta (≈0,37 $ frente a ≈0,014 $ con skill). Con la skill, DeepSeek supera con holgura a Opus sin ella.
+
+Con una sola repetición, el `±` y estas diferencias reflejan la dispersión entre preguntas, no la varianza entre ejecuciones; y Opus 5.5 es a la vez juez y modelo evaluado. La metodología, el aislamiento, el coste real, la auditoría del juez y las limitaciones están en [`benchmarks/README.md`](benchmarks/README.md).
 
 ## Alcance y adaptación
 

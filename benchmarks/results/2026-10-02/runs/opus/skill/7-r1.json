@@ -1,0 +1,92 @@
+{
+  "eval_id": 7,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?",
+  "respuesta": "**Respuesta corta:** Sí al contrato de I+D, que no necesita compatibilidad. No al asesoramiento retribuido como actividad privada mientras sigas a tiempo completo: la ley no permite autorizarlo. Lo que sí puedes hacer es tramitar ese asesoramiento por la Universidade, como un «informe» del art. 60 LOSU (el antiguo art. 83 LOU), y cobrarlo por esa vía.\n\n**Fundamento**\n\n- **Ley 53/1984 de Incompatibilidades.** Se te aplica como PDI laboral: lo dice el art. 2.2 («cualquiera que sea la naturaleza jurídica de la relación de empleo») y lo repite el convenio, art. 24.\n  - **Art. 4.3:** «La dedicación del profesorado universitario será en todo caso compatible con la realización de los trabajos a que se refiere el artículo 11 de la Ley de Reforma Universitaria». Ese artículo de la LRU es hoy el art. 60 LOSU; esta equivalencia es mi interpretación. Por eso el contrato de investigación no requiere autorización de compatibilidad.\n  - **Art. 16.2:** «la dedicación del profesorado universitario a tiempo completo tiene la consideración de especial dedicación». Esto activa la prohibición del art. 16.1.\n  - **Art. 16.3:** la excepción para «actividades de investigación o asesoramiento a que se refiere el artículo 6.º» no vale «para el personal docente universitario a tiempo completo».\n  - **Art. 14:** «El ejercicio de actividades profesionales […] fuera de las Administraciones Públicas requerirá el previo reconocimiento de compatibilidad».\n  - **Art. 12.1.a:** prohíbe en todo caso las actividades privadas «en los asuntos en que esté interviniendo […] o tenga que intervenir por razón del puesto público». Aquí la empresa es la misma con la que firmas el contrato de I+D, así que, aunque pasaras a tiempo parcial, un asesoramiento privado sobre lo mismo chocaría con este artículo.\n  - [BOE-A-1985-151](https://www.boe.es/buscar/act.php?id=BOE-A-1985-151)\n- **LOSU, art. 60.1:** el profesorado, a través de los grupos o departamentos, «podrán celebrar contratos con […] entidades públicas y privadas para la realización de trabajos de carácter científico, tecnológico…». [BOE-A-2023-7500](https://www.boe.es/buscar/act.php?id=BOE-A-2023-7500)\n- **II Convenio PDI laboral (DOG 14/04/2011), art. 24:** «se le aplicará el régimen de incompatibilidades, de acuerdo con las normas básicas contenidas en la Ley de incompatibilidades».\n- **Normativa UVigo de contratos art. 60 LOSU (621), aprobada en Consello de Goberno el 20/06/2024.** [Portal, id 621](https://secretaria.uvigo.gal/uv/web/normativa/public/show/621)\n  - **Art. 2.1.b:** cuenta como actividad contratada el «asesoramento científico-tecnolóxico», que la norma llama «Informes». Por eso el asesoramiento cabe aquí.\n  - **Art. 2.2.c:** solo quedan fuera las «actividades profesionais alleas á Universidade do profesorado acollidos ao réxime de dedicación a tempo parcial».\n  - **Art. 5.2:** la autorización de la Universidade «non poderá ser considerada como dispensa dos requisitos recollidos na Lei 53/84».\n  - **Art. 21:** la remuneración máxima «aterase aos limites establecidos no Real decreto 1930/1984». Lo que pase de ese límite va al grupo, a la Acción Estratéxica de Investigación.\n- **Regulamento de profesorado (512), art. 30.1:** el profesorado, «calquera que sexa a súa dedicación», puede celebrar estos contratos. [Portal, id 512](https://secretaria.uvigo.gal/uv/web/normativa/public/show/512)\n\n**Condiciones y quién autoriza**\n\n1. **Contrato de I+D:** no necesitas compatibilidad, pero sí la autorización interna de la Universidade antes de firmar (621, arts. 12–15):\n   - Presenta el impreso normalizado y el presupuesto en la Oficina de I+D.\n   - El director o directora de tu grupo de investigación da su visto bueno. Si no perteneces a un grupo, lo da el departamento.\n   - Firma el vicerrector o vicerrectora con competencias en transferencia. Si el contrato supera 400.000 € (IVA incluido), lo decide el Rector previo informe de la Comisión de Transferencia.\n   - El contrato no puede durar más de 3 años con prórrogas (art. 8).\n2. **Asesoramiento:**\n   - **Por la Universidade:** si la empresa lo encarga como «informe» del art. 60, se tramita igual que el punto 1. No necesitas compatibilidad y cobras con los límites del RD 1930/1984.\n   - **Como contrato privado contigo:** solo se podría plantear pasando a tiempo parcial (512, art. 25.2) y obteniendo antes el reconocimiento de compatibilidad (art. 14). Aun así, te lo impediría el art. 12.1.a mientras trabajes con esa empresa en el proyecto.\n3. **Propiedad de los resultados:** los resultados son de la Universidade salvo que el contrato diga otra cosa (621, art. 7).\n\n**Qué no he podido verificar**\n\n- Que el art. 16.4 (excepción para quien cobra complementos que no superan el 30 %) no te salve se basa en jurisprudencia del Tribunal Supremo que conozco, pero no he leído aquí. Tómalo como conocimiento general.\n- No he leído en la fuente qué órgano de la UVigo resuelve la compatibilidad ni cuál es el procedimiento. El art. 14 habla del «órgano competente de la Comunidad Autónoma»; en las universidades suele ser el Rector, a propuesta del área de PDI.\n- No he consultado el texto del RD 598/1985 ni las cifras concretas del RD 1930/1984, porque no están en mi copia local.\n- La instrucción de gestión de la UVigo (147) es un documento escaneado y no la he leído.\n- Las normas citadas estaban vigentes al comprobarlas hoy en el portal de la UVigo y en el BOE (corpus descargado el 01/10/2026).\n\n**Siguiente paso:** pide a la empresa que formalice todo, proyecto y asesoramiento, como contratos o informes del art. 60 a través de la Oficina de I+D (Vicerreitoría de Investigación, Transferencia e Innovación). Antes de firmar cualquier cosa a título personal, confirma por escrito con el Servizo de PDI o la Vicerreitoría de Profesorado que no es posible por la vía privada.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 20,
+    "output": 5930,
+    "cache_creation": 45910,
+    "cache_read": 335632,
+    "total": 387492
+  },
+  "coste_usd": 0.5530864,
+  "duracion_s": 68.7,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:03:12+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy profesor permanente laboral a tiempo completo en la EEAE. Una empresa quiere firmar con mi grupo un contrato de investigación para un proyecto de I+D (de los que llamamos del artículo 83) y, además, me ofrece un contrato de asesoramiento externo retribuido. ¿Puedo asumir las dos cosas? ¿Necesito alguna autorización de compatibilidad y de quién?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 11,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\", \"args\": \"Profesor permanente laboral a tiempo completo en la EEAE: contrato art. 83 con empresa + contrato de asesoramiento externo retribuido con la misma empresa. ¿Compatibles? ¿Autorización de compatibilidad, de quién?\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/cc4128e093984ee4a9758a39d2686a7c/home/workspace/.claude/skills/normativa-uvigo-eeae && grep -n -i -A8 \\\"incompatib\\\\|art. 83\\\\|artigo 83\\\" references/temas.md | head -60; python3 scripts/buscar.py \\\"compatibilidade actividade privada asesoramento\\\" -n 8; python3"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver incompatibilidades --art 19; python3 scripts/buscar.py --ver incompatibilidades --art 4; python3 scripts/buscar.py --ver incompatibilidades --art 11; python3 scripts/buscar.py --ver incompatibilidades --art 12; python3 scripts/buscar.py --ver incompatibil"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"f=$(ls normativa/estatal/incompatibilidades*); for a in \\\"Artículo cuarto\\\" \\\"Artículo once\\\" \\\"Artículo doce\\\" \\\"Artículo dieciséis\\\" \\\"Artículo diecinueve\\\" \\\"Artículo sexto\\\" \\\"Artículo segundo\\\"; do awk -v h=\\\"## $a.\\\" 'index($0,h)==1{p=1;print;next} p&&/^## /{p=0} p' $f; done\", \"de"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista | grep -E \\\"^ *(621|512|435|147)\\\\b|convenio\\\" ; python3 scripts/buscar.py --ver convenio-pdi-laboral-ii-2011 --art 24 2>/dev/null | head -60; ls normativa/galicia normativa/uvigo | grep -i conven\", \"description\": \"List relevant norms and convenio art 2"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --lista | grep -E \\\"\\\\] (621|512|435|147)[ -]\\\"; python3 scripts/buscar.py \\\"compatibilidade tempo completo contratos 83\\\" --ambito uvigo -n 6; python3 scripts/buscar.py --ver 512 --art 30\", \"description\": \"Search UVigo rules on art. 83 and compatibility\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"f=normativa/uvigo/621-*.md; head -12 $f; grep -n -i -B2 -A8 \\\"incompatib\\\\|compatib\\\\|autoriza\\\\|reitor\\\\|asinar\\\\|subscri\\\\|límite\\\\|retribuci\\\" $f | head -200\", \"description\": \"Read UVigo art. 83 rules (621)\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"f=$(ls normativa/uvigo/621-*.md); sed -n 84,112p $f; grep -n -i -A12 \\\"Artigo 2[0-9]\\\\|retribuci\\\\|percepci\\\\|límite\\\\|real decreto 1930\\\" $f | sed -n 1,120p\", \"description\": \"Read scope and remuneration limits of 621\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"timeout 90 python3 scripts/comprobar.py 621 512 incompatibilidades losu convenio-pdi-laboral-ii-2011 2>&1 | tail -20; grep -n -i \\\"incompat\\\\|621\\\\|83\\\" references/huecos.md | head\", \"description\": \"Check live validity of cited norms\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "eval_id": 3,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "juez": "claude-opus-5-5",
+  "resultado": {
+    "assertions": [
+      {
+        "indice": 0,
+        "resultado": "pass",
+        "cita": "**tres titulares**, con los papeles que fija la comisión: presidente/a, secretario/a y vocal"
+      },
+      {
+        "indice": 1,
+        "resultado": "pass",
+        "cita": "la **Comisión Académica e de Recoñecemento de Créditos (CARC)** de la EEAE, que es la comisión delegada responsable de los TFG. Lo designa para cada una de las fechas de defensa establecidas (art. 13)."
+      },
+      {
+        "indice": 2,
+        "resultado": "pass",
+        "cita": "El tutor y el cotutor no pueden formar parte del tribunal que evalúa a su propio alumnado (art. 13.7)."
+      },
+      {
+        "indice": 3,
+        "resultado": "pass",
+        "cita": "**5 TFG**, salvo casos excepcionales que autorice la comisión delegada (art. 13.3)."
+      },
+      {
+        "indice": 4,
+        "resultado": "pass",
+        "cita": "Además, cada tribunal tiene **al menos un suplente** (art. 13.1 y 13.2)."
+      },
+      {
+        "indice": 5,
+        "resultado": "pass",
+        "cita": "**tres titulares**, con los papeles que fija la comisión: presidente/a, secretario/a y vocal"
+      }
+    ],
+    "comentario": "La respuesta recoge correctamente todos los puntos del art. 13 (designación por la CARC, tres miembros con sus roles, suplente, límite de 5 trabajos e incompatibilidad del tutor) sin contradecir la norma. Incluye datos adicionales (reparto 25 %/75 %, art. 16.2, fecha de revisión, coordinador y teléfono) que no se pueden verificar con el texto aportado; no mencionar que la CAM designa el tribunal de TFM es una omisión menor, ya que la pregunta se refiere a un TFG."
+  },
+  "prompt_juez": "Eres un corrector objetivo de respuestas sobre normativa universitaria. No sabes qué modelo ha respondido: evalúa solo el contenido de la respuesta.\n\nPREGUNTA PLANTEADA:\nVoy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?\n\nRESPUESTA DE REFERENCIA (orientativa, puede estar incompleta):\nRegulamento de TFG/TFM de la EEAE art. 13: tribunal de tres miembros (presidente/a, secretario/a, vogal), designado por la CARC en el caso de los TFG (y por la CAM en los TFM); al menos un suplente; un mismo tribunal no evalúa más de cinco trabajos salvo casos excepcionales autorizados por las comisiones delegadas; el tutor o cotutor no puede pertenecer al tribunal que evalúe a su estudiantado.\n\nTEXTOS NORMATIVOS CITADOS (úsalos para comprobar cifras, plazos y atribuciones; no dependas de tu memoria):\n### tfg-tfm-eeae art. 13\n# Regulamento de Traballo de Fin de Grao e de Máster da EEAE  [tfg-tfm-eeae]\n# documento: \n# fuente: https://aero.uvigo.es/gl/o-centro/normativa-e-formularios/\n# original: normativa/eeae/_originales/TFG-TFM_EEAE.pdf\n# estado:   \n\nArtigo 13. Nomeamento e composición do tribunal avaliador\nEn cada unha das datas establecidas o tribunal avaliador dos TFG será designado pola CARC e o\ntribunal avaliador dos TFM será designado pola CAM do xeito seguinte:\n1. Cada tribunal estará formado por tres membros cos seguintes roles, determinados polas comisións delegadas:\nPresidente/a\nSecretario/a\nVogal\n2. Cada tribunal terá cando menos un/ha suplente.\n3. Un mesmo tribunal non avaliará máis de 5 traballos, salvo casos excepcionais autorizados\npolas comisións delegadas.\n4. Os tribunais comporanse de profesorado que imparta docencia no título do cal se efectúa a\ndefensa de TFG/TFM. Tamén poderá ser membro do tribunal profesorado doutros títulos\ndo centro que sexa titor de TFG/TFM nese curso académico. Co obxecto de garantir a\ndistribución máis homoxénea posible de profesorado en tribunais, establecerase un\nmecanismo que permita ao profesorado elixido, na medida do posible, que un mesmo\nprofesor non esté en máis dunha convocatoria de TFG/TFM nun mesmo curso como\nmembro titular.\n5. De ser necesaria a substitución dalgún dos membros dos tribunais, as comisións pertinentes\npoderán propor un/ha suplente.\n6. Os tribunais de avaliación do TFG e TFM constituiranse formalmente coa debida publicidade\ne antelación ao acto de defensa.\n7. O/a titor/a e cotitor/a dun TFG ou TFM non poderán pertencer ao tribunal que avalíe ao\nseu estudantado titorizado.\n\nASERCIONES A EVALUAR (cada una se refiere a la respuesta evaluada):\n0. Indica que el tribunal tiene tres miembros con los roles de presidencia, secretaría y vocalía.\n1. Indica que el tribunal de TFG lo designa la CARC (y el de TFM la CAM).\n2. Indica que el tutor o cotutor no puede pertenecer al tribunal que evalúe a su estudiantado.\n3. Indica que un mismo tribunal no evalúa más de cinco trabajos, salvo casos excepcionales autorizados por las comisiones delegadas.\n4. Indica que cada tribunal cuenta al menos con un suplente.\n5. No inventa una composición, un número de miembros ni un límite de trabajos distintos de los de la norma.\n\nRESPUESTA EVALUADA:\n\"\"\"\nSegún el **Regulamento de TFG/TFM de la Escola de Enxeñaría Aeronáutica e do Espazo (EEAE)**, en su versión revisada en Xunta de Escola el 7 de julio de 2025, artículos 2 y 13:\n\n1. **Quién nombra el tribunal:** la **Comisión Académica e de Recoñecemento de Créditos (CARC)** de la EEAE, que es la comisión delegada responsable de los TFG. Lo designa para cada una de las fechas de defensa establecidas (art. 13).\n\n2. **Cuántos miembros tiene:** **tres titulares**, con los papeles que fija la comisión: presidente/a, secretario/a y vocal. Además, cada tribunal tiene **al menos un suplente** (art. 13.1 y 13.2).\n\n3. **¿Puede estar usted en el tribunal de su alumno?** **No.** El tutor y el cotutor no pueden formar parte del tribunal que evalúa a su propio alumnado (art. 13.7). Su papel en la evaluación es otro:\n   - Usted pone el **25 % de la nota** mediante el informe del Anexo III, siguiendo la rúbrica vigente. El tribunal pone el 75 % restante (art. 15).\n   - Puede intervenir en la defensa **cuando el tribunal termine su ronda de preguntas** (art. 16.2).\n\n4. **Número máximo de trabajos por tribunal:** **5 TFG**, salvo casos excepcionales que autorice la comisión delegada (art. 13.3).\n\nOtros detalles del mismo artículo:\n- El tribunal lo forma profesorado que da clase en la titulación. También puede incluir profesorado de otras titulaciones del centro que tutorice algún TFG/TFM ese curso.\n- Se procura que un mismo profesor no sea titular en más de una convocatoria por curso.\n\nEste reglamento complementa la [normativa general de TFG de la Universidade de Vigo](https://secretaria.uvigo.gal/uv/web/normativa/public/show/550), que se modificó por última vez el 31/10/2022. Para dudas concretas, el coordinador de TFG del centro es Daniele Tommasini (988 387 243).\n\nFuentes:\n- [Regulamento TFG/TFM EEAE (PDF)](https://aero.uvigo.es/docs/escuela/normativa/TFG-TFM_EEAE.pdf)\n- [Página de TFG de la EEAE](https://aero.uvigo.es/gl/docencia/traballo-fin-de-grao)\n- [Normativa TFG Universidade de Vigo](https://secretaria.uvigo.gal/uv/web/normativa/public/show/550)\n\"\"\"\n\nInstrucciones:\n- Para cada aserción decide \"pass\" (la respuesta la cumple de forma clara) o \"fail\" (no la cumple, la contradice o no es verificable en la respuesta).\n- En \"cita\" copia un fragmento LITERAL de la respuesta evaluada que justifique el resultado. No puede estar vacía. Si el resultado es \"fail\" porque la respuesta omite algo, cita el fragmento más cercano que demuestre la omisión, o la frase completa si la respuesta no menciona nada relevante.\n- \"comentario\": una o dos frases de valoración global.\n- Devuelve SOLO un objeto JSON válido, sin texto adicional ni bloques de código, con este esquema exacto:\n{\n  \"assertions\": [\n    {\"indice\": 0, \"resultado\": \"pass\" | \"fail\", \"cita\": \"fragmento literal de la respuesta evaluada\"}\n  ],\n  \"comentario\": \"una o dos frases\"\n}",
+  "tokens_juez": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4721,
+    "cache_read_input_tokens": 531,
+    "output_tokens": 736,
+    "output_tokens_details": {
+      "thinking_tokens": 124
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4721,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 736,
+        "cache_read_input_tokens": 531,
+        "cache_creation_input_tokens": 4721,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4721
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "coste_usd_juez": 0.0526022,
+  "duracion_juez_s": 8.11,
+  "duracion_s": 8.11,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:06:36+02:00"
+}

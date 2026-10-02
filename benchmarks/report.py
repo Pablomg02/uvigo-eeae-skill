@@ -26,14 +26,33 @@ import run
 
 REPO = Path(__file__).resolve().parent.parent
 
-PALETA = {"skill": "#1f6f8b", "sin_skill": "#b45309"}
+# Paleta categórica validada (slots 1-3; CVD y contraste comprobados) y tintas neutras.
 COLORES_MODELO = {
-    "deepseek": "#1f6f8b",
-    "sonnet": "#b45309",
-    "opus": "#4d7c0f",
+    "deepseek": "#2a78d6",
+    "opus": "#eb6834",
+    "sonnet": "#1baf7a",
+}
+GRIS_SIN = "#a3a29b"
+TINTA = {
+    "primaria": "#0b0b0b",
+    "secundaria": "#52514e",
+    "tenue": "#8a8984",
+    "rejilla": "#e6e5e0",
+    "fondo": "#ffffff",
 }
 ETIQUETAS_CORTAS = {"skill": "con skill", "sin_skill": "sin skill"}
-ETIQUETAS_HEATMAP = {"deepseek": "DeepSeek", "sonnet": "Sonnet", "opus": "Opus"}
+ETIQUETAS_EVAL = {
+    0: "Revisión de examen",
+    1: "Días por boda en periodo lectivo",
+    2: "Horas de docencia (POD)",
+    3: "Tribunal de TFG",
+    4: "FPU: docencia y prórroga",
+    5: "Cambio de fecha de examen",
+    6: "Mención internacional",
+    7: "Contratos art. 83",
+    8: "Publicar notas en el tablón",
+    9: "III Convenio (trampa)",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -262,6 +281,7 @@ def calcular_summary(results_dir: Path, evals: dict[int, dict]) -> dict:
             "etiqueta": run.MODELOS.get(modelo, {}).get("etiqueta", modelo),
             "cli": run.MODELOS.get(modelo, {}).get("cli"),
             "id_cli": run.MODELOS.get(modelo, {}).get("modelo_cli"),
+            "esfuerzo": run.MODELOS.get(modelo, {}).get("effort") or run.MODELOS.get(modelo, {}).get("variant"),
             "repeticiones": reps,
         }
 
@@ -429,22 +449,36 @@ def cargar_matplotlib():
 
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
-
-        return plt
+        from matplotlib import font_manager
     except ImportError:
         return None
+    fuentes = {f.name for f in font_manager.fontManager.ttflist}
+    plt.rcParams.update({
+        "font.family": "Inter" if "Inter" in fuentes else "DejaVu Sans",
+        "font.size": 9,
+        "text.color": TINTA["primaria"],
+        "axes.edgecolor": TINTA["rejilla"],
+        "axes.labelcolor": TINTA["secundaria"],
+        "xtick.color": TINTA["secundaria"],
+        "ytick.color": TINTA["secundaria"],
+        "figure.facecolor": TINTA["fondo"],
+        "axes.facecolor": TINTA["fondo"],
+        "savefig.facecolor": TINTA["fondo"],
+    })
+    return plt
 
 
-def anotar_barra(ax, barra, valor: float, *, fuente: int, error: float = 0.0) -> None:
-    centro = barra.get_x() + barra.get_width() / 2
-    y = valor + error
-    bbox = {"boxstyle": "round,pad=0.1", "fc": "#ffffff", "ec": "none", "alpha": 0.75} if error else None
-    if y > 94:
-        ax.annotate(f"{valor:.1f}", (centro, valor), textcoords="offset points",
-                    xytext=(0, -6), ha="center", va="top", fontsize=fuente, color="#ffffff")
-    else:
-        ax.annotate(f"{valor:.1f}", (centro, y), textcoords="offset points",
-                    xytext=(0, 4), ha="center", va="bottom", fontsize=fuente, color="#1f2937", bbox=bbox)
+def num_es(valor: float, decimales: int = 1) -> str:
+    """Número con coma decimal, como en el README."""
+    return f"{valor:.{decimales}f}".replace(".", ",")
+
+
+def nombre_corto(meta: dict, modelo: str) -> str:
+    return meta["modelos"].get(modelo, {}).get("etiqueta", modelo).split(" (")[0]
+
+
+def texto_esfuerzo(meta: dict, modelo: str) -> str:
+    return f"effort {meta['modelos'].get(modelo, {}).get('esfuerzo') or 'por defecto'}"
 
 
 def nota_pie_grafica(summary: dict) -> str:
@@ -465,212 +499,251 @@ def nota_pie_grafica(summary: dict) -> str:
     )
 
 
-def graficar_barras(summary: dict, img_dir: Path, plt) -> str | None:
-    tasas = summary["tasas"]
-    meta = summary["meta"]
-    modelos = [m for m in tasas if tasas[m]["skill"]["media_pct"] is not None or tasas[m]["sin_skill"]["media_pct"] is not None]
-    if not modelos:
-        return None
-    etiquetas = [meta["modelos"].get(m, {}).get("etiqueta", m).split(" (")[0] for m in modelos]
-    vals_skill = [tasas[m]["skill"]["media_pct"] or 0 for m in modelos]
-    vals_sin = [tasas[m]["sin_skill"]["media_pct"] or 0 for m in modelos]
-    reps = [meta["modelos"].get(m, {}).get("repeticiones") or 0 for m in modelos]
-    hay_error = any(r > 1 for r in reps)
-    err_skill = [tasas[m]["skill"]["sd_pct"] if r > 1 else 0 for m, r in zip(modelos, reps)]
-    err_sin = [tasas[m]["sin_skill"]["sd_pct"] if r > 1 else 0 for m, r in zip(modelos, reps)]
+def _guardar(fig, plt, ruta: Path) -> str:
+    fig.savefig(ruta, dpi=200)
+    plt.close(fig)
+    return str(ruta.relative_to(REPO)) if ruta.is_relative_to(REPO) else str(ruta)
 
-    mejoras = [m for m in modelos if tasas[m]["mejora_puntos"] is not None]
-    if len(modelos) == 1 and mejoras:
-        mejora = tasas[modelos[0]]["mejora_puntos"]
-        titulo = (f"{etiquetas[0]}: {mejora:+.1f} pp con la skill "
-                  f"({vals_skill[0]:.1f} % frente a {vals_sin[0]:.1f} %)")
-    elif mejoras:
-        mejora_media = sum(tasas[m]["mejora_puntos"] for m in mejoras) / len(mejoras)
-        if mejora_media >= 0:
-            titulo = f"La skill sube el acierto en {len(mejoras)} de {len(modelos)} modelos (+{mejora_media:.1f} pp de media)"
-        else:
-            titulo = f"Sin mejora media con la skill ({mejora_media:+.1f} pp)"
-    else:
-        titulo = "Tasa de aserciones superadas con y sin skill"
 
-    fig, ax = plt.subplots(figsize=(6.8, 4.8), dpi=150)
-    fig.patch.set_facecolor("#ffffff")
-    ax.set_facecolor("#ffffff")
-
-    if len(modelos) == 1:
-        barras = ax.bar(
-            [0, 1], [vals_skill[0], vals_sin[0]], width=0.56,
-            color=[PALETA["skill"], PALETA["sin_skill"]], zorder=3,
+def _pesa(ax, y: float, sin: float, con: float, color: str, *, fuente: float, grueso: bool = False) -> None:
+    """Dibuja una «pesa»: sin skill (hueco, gris) unido a con skill (relleno, color del modelo)."""
+    ax.plot([sin, con], [y, y], color=color, alpha=0.35, lw=2.5, solid_capstyle="round", zorder=2)
+    ax.scatter([sin], [y], s=46, facecolor=TINTA["fondo"], edgecolor=GRIS_SIN, linewidths=1.8, zorder=3)
+    ax.scatter([con], [y], s=58, color=color, edgecolor=TINTA["fondo"], linewidths=1.2, zorder=4)
+    izq, der = (sin, con) if sin <= con else (con, sin)
+    lados = ((der, "left", 7),) if sin == con else ((izq, "right", -7), (der, "left", 7))
+    for x, ha, dx in lados:
+        valor = x
+        es_con = x == con
+        ax.annotate(
+            num_es(valor, 0 if fuente < 8 else 1) + (" =" if sin == con else ""), (x, y), textcoords="offset points", xytext=(dx, 0),
+            ha=ha, va="center", fontsize=fuente,
+            color=TINTA["primaria"] if es_con else TINTA["secundaria"],
+            fontweight="semibold" if es_con and grueso else "normal",
         )
-        for barra, valor in zip(barras, (vals_skill[0], vals_sin[0])):
-            anotar_barra(ax, barra, valor, fuente=10)
-        ax.set_xticks([0, 1])
-        ax.set_xticklabels(["con skill", "sin skill"], fontsize=10, color="#374151")
-        ax.tick_params(axis="x", length=0)
-        ax.set_xlim(-0.65, 1.65)
-    else:
-        x = list(range(len(modelos)))
-        ancho = 0.36
-        pos_skill = [i - ancho / 2 for i in x]
-        pos_sin = [i + ancho / 2 for i in x]
-        barras_skill = ax.bar(pos_skill, vals_skill, ancho, yerr=err_skill, capsize=4, color=PALETA["skill"],
-                              label="con skill", error_kw={"ecolor": "#333333", "lw": 1}, zorder=3)
-        barras_sin = ax.bar(pos_sin, vals_sin, ancho, yerr=err_sin, capsize=4, color=PALETA["sin_skill"],
-                            label="sin skill", error_kw={"ecolor": "#333333", "lw": 1}, zorder=3)
-        for barras, valores, errores in ((barras_skill, vals_skill, err_skill), (barras_sin, vals_sin, err_sin)):
-            for barra, valor, error in zip(barras, valores, errores):
-                anotar_barra(ax, barra, valor, fuente=8, error=error or 0.0)
-        ax.set_xticks(x)
-        ax.set_xticklabels(etiquetas, fontsize=9)
 
-    ax.set_ylabel("% de aserciones superadas", fontsize=9)
-    ax.set_ylim(0, 100)
-    ax.set_yticks([0, 20, 40, 60, 80, 100])
-    ax.set_title(titulo, fontsize=10.5, color="#111827", loc="left", pad=10)
-    ax.grid(axis="y", color="#e5e7eb", linewidth=0.8)
+
+def _leyenda(destino, **kwargs) -> None:
+    from matplotlib.lines import Line2D
+
+    asas = [
+        Line2D([], [], ls="", marker="o", ms=6.5, mfc=TINTA["fondo"], mec=GRIS_SIN, mew=1.8, label="sin skill"),
+        Line2D([], [], ls="", marker="o", ms=7, mfc=TINTA["secundaria"], mec=TINTA["fondo"], label="con skill (color del modelo)"),
+    ]
+    destino.legend(handles=asas, ncol=2, frameon=False, fontsize=8, handletextpad=0.3,
+                   columnspacing=1.4, labelcolor=TINTA["secundaria"], **kwargs)
+
+
+def _ejes_pct(ax) -> None:
+    ax.set_xlim(-4, 104)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.set_xticklabels(["0", "25", "50", "75", "100 %"], fontsize=7.5)
+    ax.xaxis.set_ticks_position("top")
+    ax.tick_params(axis="x", length=0, pad=2, colors=TINTA["tenue"])
+    ax.tick_params(axis="y", length=0)
+    ax.grid(axis="x", color=TINTA["rejilla"], lw=0.8)
     ax.set_axisbelow(True)
-    ax.tick_params(labelsize=8)
-    for lado in ("top", "right"):
+    for lado in ("top", "right", "left", "bottom"):
         ax.spines[lado].set_visible(False)
 
-    pie = nota_pie_grafica(summary)
-    if hay_error:
-        pie += ("\nBarras de error: ±1 desviación típica entre ejecuciones; "
-                "solo en modelos con más de una repetición")
-    else:
-        pie += ". Sin barras de error (1 repetición)"
-    fig.text(0.5, 0.025, pie, ha="center", fontsize=7, color="#4b5563", linespacing=1.5)
-    fig.subplots_adjust(left=0.10, right=0.98, top=0.88, bottom=0.20)
-    ruta = img_dir / "bench-aciertos.png"
-    fig.savefig(ruta, facecolor=fig.get_facecolor())
-    plt.close(fig)
-    return str(ruta.relative_to(REPO)) if ruta.is_relative_to(REPO) else str(ruta)
 
+def graficar_barras(summary: dict, img_dir: Path, plt) -> str | None:
+    """Acierto global y por grupo, con y sin skill, para cada modelo (gráfico de pesas)."""
+    from matplotlib.transforms import blended_transform_factory
 
-def _luminancia(color) -> float:
-    """Luminancia relativa (WCAG) de un color RGBA."""
-    def canal(c: float) -> float:
-        return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
-
-    r, g, b = (canal(c) for c in color[:3])
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b
-
-
-def graficar_mapa_calor(summary: dict, img_dir: Path, plt) -> str | None:
-    filas = sorted({int(e) for modelo in summary["por_eval"].values() for cond in modelo.values() for e in cond})
-    columnas = []
-    for modelo in summary["por_eval"]:
-        for condicion in ("skill", "sin_skill"):
-            columnas.append((modelo, condicion))
-    if not filas or not columnas:
+    tasas, grupos, meta = summary["tasas"], summary["grupos"], summary["meta"]
+    modelos = [m for m in tasas if tasas[m]["skill"]["media_pct"] is not None and tasas[m]["sin_skill"]["media_pct"] is not None]
+    if not modelos:
         return None
-    etiquetas_filas = [f"Eval {e}" for e in filas]
-    etiquetas_columnas = [
-        f"{ETIQUETAS_HEATMAP.get(m, summary['meta']['modelos'].get(m, {}).get('etiqueta', m))}\n{ETIQUETAS_CORTAS[c]}"
-        for m, c in columnas
-    ]
-    datos = []
-    for eval_id in filas:
-        fila = []
-        for modelo, condicion in columnas:
-            valor = summary["por_eval"].get(modelo, {}).get(condicion, {}).get(str(eval_id))
-            fila.append(float("nan") if valor is None else valor)
-        datos.append(fila)
 
-    import numpy as np
-    from matplotlib.colors import LinearSegmentedColormap, Normalize
+    filas = []  # (y, tipo, modelo, etiqueta, sin, con)
+    y = 0.0
+    for modelo in modelos:
+        filas.append((y, "cabecera", modelo, None, None, None))
+        y -= 1
+        filas.append((y, "global", modelo, "Global", tasas[modelo]["sin_skill"]["media_pct"], tasas[modelo]["skill"]["media_pct"]))
+        y -= 1
+        for grupo, n in meta["grupos"].items():
+            sin = grupos.get(modelo, {}).get("sin_skill", {}).get(grupo)
+            con = grupos.get(modelo, {}).get("skill", {}).get(grupo)
+            if sin is not None and con is not None:
+                filas.append((y, "grupo", modelo, f"{grupo.capitalize()} ({n})", sin, con))
+                y -= 1
+        y -= 0.5
 
-    matriz = np.array(datos, dtype=float)
-    enmascarada = np.ma.masked_invalid(matriz)
+    alto = 1.75 + 0.33 * (-y)
+    fig, ax = plt.subplots(figsize=(7.6, alto))
+    fig.subplots_adjust(left=0.22, right=0.84, top=1 - 1.3 / alto, bottom=0.42 / alto)
+    _ejes_pct(ax)
+    ax.set_ylim(y + 0.6, 0.6)
+    ax.set_yticks([])
+    trans = blended_transform_factory(ax.transAxes, ax.transData)
 
-    cmap = LinearSegmentedColormap.from_list("bench", ["#eef4f7", "#0f4c5c"])
-    cmap.set_bad("#f0f0f0")
-    norm = Normalize(vmin=0, vmax=100)
-    fig, ax = plt.subplots(figsize=(7.6, 5.2), dpi=150)
-    fig.patch.set_facecolor("#ffffff")
-    imagen = ax.imshow(enmascarada, cmap=cmap, vmin=0, vmax=100, aspect="auto")
-    for i in range(len(filas)):
-        for j in range(len(columnas)):
-            valor = matriz[i, j]
-            texto = "—" if math.isnan(valor) else f"{valor:.0f}"
-            if math.isnan(valor):
-                color = "#6b7280"
-            else:
-                color = "#ffffff" if _luminancia(cmap(norm(valor))) < 0.2 else "#1f2937"
-            ax.text(j, i, texto, ha="center", va="center", fontsize=8.5, color=color)
-    ax.set_xticks(range(len(columnas)))
-    ax.set_xticklabels(etiquetas_columnas, fontsize=8)
-    ax.set_yticks(range(len(filas)))
-    ax.set_yticklabels(etiquetas_filas, fontsize=8)
-    ax.set_xlabel("Modelo y condición", fontsize=9)
-    ax.set_title("% de aserciones superadas por eval, modelo y condición", fontsize=10.5, color="#111827", loc="left", pad=10)
-    barra = fig.colorbar(imagen, ax=ax, fraction=0.035, pad=0.02)
-    barra.set_label("% superadas", fontsize=8)
-    barra.ax.tick_params(labelsize=8)
-    fig.text(0.5, 0.015, nota_pie_grafica(summary), ha="center", fontsize=7, color="#4b5563")
-    fig.subplots_adjust(left=0.10, right=0.90, top=0.90, bottom=0.14)
-    ruta = img_dir / "bench-mapa-calor.png"
-    fig.savefig(ruta, facecolor=fig.get_facecolor())
-    plt.close(fig)
-    return str(ruta.relative_to(REPO)) if ruta.is_relative_to(REPO) else str(ruta)
+    for fy, tipo, modelo, etiqueta, sin, con in filas:
+        color = COLORES_MODELO.get(modelo, TINTA["secundaria"])
+        if tipo == "cabecera":
+            ax.plot([-0.285], [fy], marker="s", ms=7, color=color, transform=trans, clip_on=False)
+            ax.text(-0.265, fy, nombre_corto(meta, modelo), transform=trans, ha="left", va="center",
+                    fontsize=9.5, fontweight="semibold")
+            ax.text(1.02, fy, texto_esfuerzo(meta, modelo), transform=trans, ha="left", va="center",
+                    fontsize=7.5, color=TINTA["tenue"])
+            continue
+        grueso = tipo == "global"
+        ax.text(-0.265, fy, etiqueta, transform=trans, ha="left", va="center", fontsize=8.5,
+                color=TINTA["primaria"] if grueso else TINTA["secundaria"])
+        _pesa(ax, fy, sin, con, color, fuente=8, grueso=grueso)
+        ax.text(1.02, fy, f"{'+' if con - sin >= 0 else '−'}{num_es(abs(con - sin))} pp", transform=trans,
+                ha="left", va="center", fontsize=8.5 if grueso else 8,
+                fontweight="semibold" if grueso else "normal",
+                color=TINTA["primaria"] if grueso else TINTA["secundaria"])
+
+    mejoras = [tasas[m]["mejora_puntos"] for m in modelos]
+    if len(modelos) == 1:
+        titulo = f"La skill sube el acierto {num_es(mejoras[0])} puntos"
+    elif all(d > 0 for d in mejoras):
+        titulo = f"La skill sube el acierto en los {len(modelos)} modelos"
+    else:
+        titulo = f"La skill sube el acierto en {sum(d > 0 for d in mejoras)} de {len(modelos)} modelos"
+    fig.text(0.03, 1 - 0.22 / alto, titulo, fontsize=12, fontweight="semibold", va="top")
+    fig.text(0.03, 1 - 0.52 / alto, "% de aserciones superadas · a la derecha, mejora en puntos porcentuales",
+             fontsize=8.5, color=TINTA["secundaria"], va="top")
+    _leyenda(fig, loc="upper left", bbox_to_anchor=(0.025, 1 - 0.68 / alto))
+    fig.text(0.03, 0.12 / alto, nota_pie_grafica(summary), fontsize=7, color=TINTA["tenue"])
+    return _guardar(fig, plt, img_dir / "bench-aciertos.png")
+
+
+def graficar_por_pregunta(summary: dict, img_dir: Path, plt) -> str | None:
+    """Acierto por pregunta, con y sin skill: un panel de pesas por modelo."""
+    from matplotlib.transforms import blended_transform_factory
+
+    meta, por_eval = summary["meta"], summary["por_eval"]
+    modelos = [m for m in por_eval if por_eval[m].get("skill") and por_eval[m].get("sin_skill")]
+    if not modelos:
+        return None
+    evals = run.cargar_evals()["evals"]
+    grupos = list(dict.fromkeys(ev.get("grupo") for ev in evals))
+
+    filas = []  # (y, tipo, eval_id, etiqueta)
+    y = 0.0
+    for grupo in grupos:
+        filas.append((y, "grupo", None, (grupo or "otros").capitalize()))
+        y -= 1
+        for ev in evals:
+            if ev.get("grupo") == grupo:
+                filas.append((y, "eval", ev["id"], f"{ev['id']} · {ETIQUETAS_EVAL.get(ev['id'], 'Eval')}"))
+                y -= 1
+        y -= 0.35
+
+    alto = 2.0 + 0.28 * (-y)
+    fig, ejes = plt.subplots(1, len(modelos), figsize=(3.0 + 2.9 * len(modelos), alto), sharey=True, squeeze=False)
+    fig.subplots_adjust(left=0.235 if len(modelos) > 1 else 0.36, right=0.95, top=1 - 1.45 / alto,
+                        bottom=0.42 / alto, wspace=0.3)
+    mejoras = empates = total = 0
+    for k, (ax, modelo) in enumerate(zip(ejes[0], modelos)):
+        color = COLORES_MODELO.get(modelo, TINTA["secundaria"])
+        _ejes_pct(ax)
+        ax.set_ylim(y + 0.5, 0.6)
+        ax.set_yticks([])
+        trans = blended_transform_factory(ax.transAxes, ax.transData)
+        cabecera = 1.0 + 0.42 / (alto * ax.get_position().height)
+        ax.plot([0.0], [cabecera], marker="s", ms=7, color=color, transform=ax.transAxes, clip_on=False)
+        ax.text(0.045, cabecera, f"{nombre_corto(meta, modelo)}  ·  {texto_esfuerzo(meta, modelo)}",
+                transform=ax.transAxes, ha="left", va="center", fontsize=9.5, fontweight="semibold")
+        for fy, tipo, eval_id, etiqueta in filas:
+            if tipo == "grupo":
+                if k == 0:
+                    ax.text(-0.04, fy, etiqueta.upper(), transform=trans, ha="right", va="center",
+                            fontsize=7, color=TINTA["tenue"], fontweight="semibold")
+                continue
+            if k == 0:
+                ax.text(-0.04, fy, etiqueta, transform=trans, ha="right", va="center", fontsize=8,
+                        color=TINTA["secundaria"])
+            sin = por_eval[modelo]["sin_skill"].get(str(eval_id))
+            con = por_eval[modelo]["skill"].get(str(eval_id))
+            if sin is None or con is None:
+                continue
+            total += 1
+            mejoras += con > sin
+            empates += con == sin
+            _pesa(ax, fy, sin, con, color, fuente=7)
+
+    peores = total - mejoras - empates
+    titulo = f"Con la skill mejora en {mejoras} de {total} casos pregunta-modelo"
+    sub = f"{empates} igual{'es' if empates != 1 else ''}, {peores} peor{'es' if peores != 1 else ''} · % de aserciones superadas por pregunta"
+    fig.text(0.02, 1 - 0.22 / alto, titulo, fontsize=12, fontweight="semibold", va="top")
+    fig.text(0.02, 1 - 0.52 / alto, sub, fontsize=8.5, color=TINTA["secundaria"], va="top")
+    _leyenda(fig, loc="upper right", bbox_to_anchor=(0.985, 1 - 0.14 / alto))
+    fig.text(0.02, 0.12 / alto, nota_pie_grafica(summary), fontsize=7, color=TINTA["tenue"])
+    return _guardar(fig, plt, img_dir / "bench-por-pregunta.png")
 
 
 def graficar_coste(summary: dict, img_dir: Path, plt) -> str | None:
-    puntos = []
+    """Acierto frente a coste medio por respuesta (escala logarítmica en el coste)."""
+    meta = summary["meta"]
+    puntos = {}
     for modelo, condiciones in summary["costes"]["por_modelo_condicion"].items():
-        tasa_skill = summary["tasas"].get(modelo, {}).get("skill", {}).get("media_pct")
-        tasa_sin = summary["tasas"].get(modelo, {}).get("sin_skill", {}).get("media_pct")
-        for condicion, bloque in condiciones.items():
-            coste = bloque.get("coste_medio_usd")
-            valor = tasa_skill if condicion == "skill" else tasa_sin
-            if coste is None or valor is None:
-                continue
-            puntos.append((modelo, condicion, coste, valor))
-    if len(puntos) < 3:
+        par = {}
+        for condicion in ("sin_skill", "skill"):
+            coste = condiciones.get(condicion, {}).get("coste_medio_usd")
+            valor = summary["tasas"].get(modelo, {}).get(condicion, {}).get("media_pct")
+            if coste and valor is not None:
+                par[condicion] = (coste, valor)
+        if len(par) == 2:
+            puntos[modelo] = par
+    if len(puntos) < 2:
         return None
-    puntos.sort(key=lambda p: p[2])
-    min_x, max_x = puntos[0][2], puntos[-1][2]
-    if max_x <= 0 or (max_x - min_x) < 0.15 * max_x:
-        return None
-    if len({round(p[3]) for p in puntos}) < 3:
-        return None
-    margen = max((max_x - min_x) * 0.08, 1e-6)
-    fig, ax = plt.subplots(figsize=(6.8, 4.4), dpi=150)
-    fig.patch.set_facecolor("#ffffff")
-    ax.set_facecolor("#ffffff")
-    colocados: list[float] = []
-    for modelo, condicion, coste, valor in puntos:
-        color = COLORES_MODELO.get(modelo, "#555555")
-        marcador = "o" if condicion == "skill" else "s"
-        ax.scatter(coste, valor, s=60, color=color, marker=marcador, edgecolors="#ffffff", linewidths=0.6, zorder=3)
-        etiqueta = f"{summary['meta']['modelos'].get(modelo, {}).get('etiqueta', modelo).split(' (')[0]} · {ETIQUETAS_CORTAS[condicion]}"
-        rango = sum(1 for v in colocados if abs(v - valor) < 4)
-        colocados.append(valor)
-        if coste <= min_x + margen:
-            dx, dy = (8, 6 - 13 * rango)
-        elif coste >= max_x - margen:
-            dx, dy = (-8, 6 - 13 * rango)
-        else:
-            dx, dy = ((8, 6 - 13 * rango) if rango == 0 else (-8, 6 - 13 * rango))
-        ax.annotate(etiqueta, (coste, valor), textcoords="offset points", xytext=(dx, dy),
-                    ha="left" if dx > 0 else "right", fontsize=7, color="#333333",
-                    bbox={"boxstyle": "round,pad=0.12", "fc": "#ffffff", "ec": "none", "alpha": 0.75})
-    ax.set_xlabel("Coste medio por respuesta (USD)")
-    ax.set_ylabel("% de aserciones superadas")
-    ax.set_ylim(0, 100)
-    ax.set_title("Acierto frente a coste por respuesta", fontsize=11, color="#222222")
-    ax.grid(color="#e5e5e5", linewidth=0.8)
+
+    import math as _m
+
+    costes = [c for par in puntos.values() for c, _ in par.values()]
+    valores = [v for par in puntos.values() for _, v in par.values()]
+    fig, ax = plt.subplots(figsize=(7.4, 4.2))
+    fig.subplots_adjust(left=0.10, right=0.96, top=0.78, bottom=0.2)
+    ax.set_xscale("log")
+    lo, hi = min(costes) / 2.2, max(costes) * 2.2
+    ax.set_xlim(lo, hi)
+    marcas = [t for t in (0.003, 0.01, 0.03, 0.1, 0.3, 1, 3) if lo <= t <= hi]
+    ax.set_xticks(marcas)
+    ax.set_xticklabels([f"{num_es(t, 3 if t < 0.01 else 2 if t < 1 else 0)} $" for t in marcas], fontsize=8)
+    ax.xaxis.set_minor_locator(plt.NullLocator())
+    piso = max(0, 10 * _m.floor((min(valores) - 12) / 10))
+    ax.set_ylim(piso, 100)
+    ax.set_yticks(range(piso, 101, 10))
+    ax.set_yticklabels([f"{v}" if v < 100 else "100 %" for v in range(piso, 101, 10)], fontsize=8)
+    ax.tick_params(length=0, colors=TINTA["tenue"])
+    ax.grid(color=TINTA["rejilla"], lw=0.8)
     ax.set_axisbelow(True)
-    for lado in ("top", "right"):
+    for lado in ("top", "right", "left"):
         ax.spines[lado].set_visible(False)
-    ax.text(0.5, -0.2, "Círculo: con skill; cuadrado: sin skill.", transform=ax.transAxes, ha="center",
-            fontsize=7, color="#666666")
-    fig.text(0.5, 0.02, nota_pie_grafica(summary), ha="center", fontsize=7, color="#4b5563")
-    fig.subplots_adjust(left=0.12, right=0.97, top=0.90, bottom=0.22)
-    ruta = img_dir / "bench-coste.png"
-    fig.savefig(ruta, facecolor=fig.get_facecolor())
-    plt.close(fig)
-    return str(ruta.relative_to(REPO)) if ruta.is_relative_to(REPO) else str(ruta)
+    ax.spines["bottom"].set_color(TINTA["tenue"])
+    ax.set_xlabel("Coste medio por respuesta (USD, escala logarítmica)", fontsize=8.5, color=TINTA["secundaria"])
+
+    for modelo, par in puntos.items():
+        color = COLORES_MODELO.get(modelo, TINTA["secundaria"])
+        (cs, vs), (cc, vc) = par["sin_skill"], par["skill"]
+        ax.annotate("", (cc, vc), (cs, vs), arrowprops={
+            "arrowstyle": "-|>", "color": color, "alpha": 0.45, "lw": 2, "shrinkA": 6, "shrinkB": 7,
+            "mutation_scale": 11,
+        }, zorder=2)
+        ax.scatter([cs], [vs], s=52, facecolor=TINTA["fondo"], edgecolor=GRIS_SIN, linewidths=1.8, zorder=3)
+        ax.scatter([cc], [vc], s=64, color=color, edgecolor=TINTA["fondo"], linewidths=1.2, zorder=4)
+        ax.annotate(f"{num_es(vs)} % · {num_es(cs, 3)} $", (cs, vs), textcoords="offset points",
+                    xytext=(0, -13), ha="center", va="top", fontsize=7.5, color=TINTA["secundaria"])
+        ax.annotate(f"{nombre_corto(meta, modelo)}\n{num_es(vc)} % · {num_es(cc, 3)} $", (cc, vc),
+                    textcoords="offset points", xytext=(0, 11), ha="center", va="bottom", fontsize=8,
+                    color=TINTA["primaria"], linespacing=1.25)
+
+    con = sorted(((par["skill"][0], m) for m, par in puntos.items()))
+    barato, caro = con[0][1], con[-1][1]
+    ratio = puntos[caro]["skill"][0] / puntos[barato]["skill"][0]
+    fig.text(0.03, 0.95, f"{nombre_corto(meta, caro)} cuesta ~{ratio:.0f}× más por respuesta que "
+             f"{nombre_corto(meta, barato)}", fontsize=12, fontweight="semibold", va="top")
+    fig.text(0.03, 0.875, "% de aserciones superadas frente a coste medio por respuesta · la flecha va de sin skill a con skill",
+             fontsize=8.5, color=TINTA["secundaria"], va="top")
+    _leyenda(ax, loc="lower right")
+    fig.text(0.03, 0.025, nota_pie_grafica(summary) + " · " + "; ".join(
+        f"{nombre_corto(meta, m)}: {texto_esfuerzo(meta, m)}" for m in puntos), fontsize=7, color=TINTA["tenue"])
+    return _guardar(fig, plt, img_dir / "bench-coste.png")
 
 
 # ---------------------------------------------------------------------------
@@ -719,7 +792,7 @@ def main(argv: list[str] | None = None) -> int:
             print("Aviso: matplotlib no está instalado; se genera el resumen sin gráficas.")
         else:
             img_dir.mkdir(parents=True, exist_ok=True)
-            for funcion in (graficar_barras, graficar_mapa_calor, graficar_coste):
+            for funcion in (graficar_barras, graficar_por_pregunta, graficar_coste):
                 try:
                     ruta = funcion(summary, img_dir, plt)
                     if ruta:

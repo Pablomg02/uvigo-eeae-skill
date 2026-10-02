@@ -1,0 +1,80 @@
+{
+  "eval_id": 2,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?",
+  "respuesta": "**Respuesta corta:** Depende de la ley con la que firmaste el contrato. Si es un contrato de ayudante doctor **LOSU** (firmado desde abril de 2023, que es lo normal si eres ayudante doctor en 2026/27), el máximo es **180 horas lectivas**, así que **210 horas superan el límite en 30**. Si es un contrato **LOU** firmado antes de la LOSU y todavía vigente, el máximo es **240 horas** y 210 estaría dentro.\n\n**Fundamento**\n- **LOSU (Ley Orgánica 2/2023), art. 78.c):** «Las Profesoras y Profesores Ayudantes Doctores desarrollarán tareas docentes hasta un máximo de 180 horas lectivas por curso académico, de forma que la actividad docente resulte compatible con el desarrollo de tareas de investigación […]». Su disposición transitoria quinta.1 dice que a quien tuviera contrato temporal al entrar en vigor la ley se le siguen aplicando «las normas específicas que correspondan a cada una de las modalidades contractuales vigentes en el momento en que se concertó su contrato». https://www.boe.es/buscar/act.php?id=BOE-A-2023-7500\n- **Acta de la Comisión Paritaria del II Convenio PDI laboral (7-feb-2025, DOG 14-mar-2025), acuerdo quinto.2.c):** repite el límite para ayudantes doctores LOSU: «ata un máximo de 180 horas lectivas por curso académico». Para los contratados con la LOU (acuerdo quinto.1) se mantienen las normas que tenían al firmar.\n- **Normativa del POD 2026/2027 de la UVigo (id. 709), anexo I, tabla «Capacidade docente máxima e mínima por categoría docente»:**\n  - Profesorado axudante doutor LOU: mínimo 120, máximo 240, 6 h semanales de tutorías.\n  - Profesorado axudante doutor LOSU: mínimo 120, máximo 180, 4 h semanales de tutorías.\n\n  https://secretaria.uvigo.gal/uv/web/normativa/public/show/709\n\n**Condiciones y excepciones**\n- Para saber si tu contrato es LOU o LOSU, mira la fecha de firma y la ley que cita el contrato.\n- La capacidad que te toca de verdad puede ser **menor** que el máximo. El POD dice que la Universidade «modifica esta marxe tendo en conta a normativa de dedicación e recoñecementos docentes 2026/2027» para calcular la capacidad efectiva. Las reducciones (por cargos, sexenios, permisos, etc.) bajan las horas que te pueden asignar, nunca las suben por encima del máximo.\n- Mi interpretación: el límite de 180 se aplica a las **horas lectivas**. Antes de reclamar, comprueba en tu POD si las 210 horas son todas de docencia o si incluyen reconocimientos y otras actividades que no son clase.\n\n**Qué no he podido verificar**\n- La normativa de dedicación y reconocimientos docentes 2026/27 (aprobada en Consello de Goberno el 24-nov-2025) no está publicada en el portal, así que no puedo calcular tus reducciones concretas.\n- He supuesto que no tienes reducción de jornada ni otra circunstancia especial.\n- Hoy (2-oct-2026) he comprobado en línea que la LOSU y la norma 709 no han cambiado. Del acta del convenio solo he podido confirmar que el texto publicado en el DOG sigue igual; no he buscado acuerdos posteriores de la Comisión Paritaria.\n\n**Siguiente paso**\n1. Comprueba en tu contrato si es LOU o LOSU.\n2. Si es LOSU, pide a la dirección del departamento que corrija la asignación. El consejo de departamento reparte la docencia y debe comprobar que el POD de cada profesor es correcto (norma 709). Cita el art. 78.c) de la LOSU y el anexo I del POD.\n3. Si no lo corrigen, dirígete a la Vicerreitoría de Profesorado e Ordenación Académica. Pídeles también el texto de la normativa de dedicación 2026/27 para saber tu capacidad efectiva.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 14,
+    "output": 3050,
+    "cache_creation": 29172,
+    "cache_read": 175028,
+    "total": 207264
+  },
+  "coste_usd": 0.3294376,
+  "duracion_s": 38.41,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:01:47+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Este curso 2026/27 soy profesor ayudante doctor a tiempo completo en la EEAE y me han asignado 210 horas de docencia en el POD. ¿Es correcto o me están pasando de horas? ¿Cuál es el máximo que me corresponde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 8,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\", \"args\": \"Profesor ayudante doctor a tiempo completo en la EEAE, curso 2026/27, asignadas 210 horas de docencia en el POD. ¿Es correcto? ¿Cuál es el máximo?\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/0906adfbe96b4d8eac98566303ea3a87/home/workspace/.claude/skills/normativa-uvigo-eeae && cat references/huecos.md; grep -n -i -A8 \\\"dedicaci\\\\|POD\\\" references/temas.md | head -60\", \"description\": \"Read gaps and topic routing\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py \\\"axudante doutor capacidade docente horas\\\" -n 8; python3 scripts/buscar.py \\\"profesorado axudante doutor dedicación docente 180\\\" -n 6\", \"description\": \"Search teaching load for ayudante doctor\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout 709 --grep \\\"Capacidade docente\\\" 2>&1 | head -60; python3 scripts/buscar.py --ver losu --art 78 | head -50\", \"description\": \"Read POD table layout and LOSU art. 78\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --layout 709 --grep \\\"axudante doutor LOSU\\\" 2>&1 | grep -v \\\"^\\\\s*$\\\" | head -60; python3 scripts/buscar.py \\\"disposición transitoria ayudantes doctores Ley Orgánica 6/2001 contratos vigentes\\\" --ambito estatal -n 3 | head -60\", \"description\": \"Read POD table "
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"timeout 90 python3 scripts/comprobar.py 709 losu convenio-pdi-laboral-acta-paritaria-2025-02-07 2>&1 | tail -15; python3 scripts/buscar.py --ver 709 2>/dev/null | grep -m3 -E \\\"^# (fuente|url|documento)\\\"\", \"description\": \"Check live validity of cited norms\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

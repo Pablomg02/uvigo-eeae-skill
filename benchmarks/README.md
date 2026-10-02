@@ -23,12 +23,23 @@ EEAE y del doctorado de la UVigo. Solo usa la biblioteca estándar de Python 3
   Flash (`opencode-go/deepseek-v4.1-flash` vía OpenCode) con 3 repeticiones y
   Claude Sonnet 5.5 y Claude Opus 5.5 (vía Claude Code) con 1, como referencia
   orientativa: 100 ejecuciones—, configurable con `--models` y `--reps`.
-  **La tanda publicada el 2026-10-02 se ejecutó solo con DeepSeek y 1 repetición
-  por pregunta** (decisión de coste): 20 ejecuciones. Las cifras de esa tanda,
-  por tanto, no permiten estimar la varianza entre repeticiones; en la tabla, el
-  `±` de cada condición es la dispersión entre las 10 preguntas. Para repetir la
-  matriz completa: `python3 benchmarks/run.py --models deepseek,sonnet,opus
-  --reps deepseek=3,sonnet=1,opus=1`.
+  **La tanda publicada el 2026-10-02 es reducida** (decisión de coste): DeepSeek
+  V4.1 Flash y Claude Opus 5.5, con 1 repetición por pregunta: 40 ejecuciones.
+  Las cifras de esa tanda, por tanto, no permiten estimar la varianza entre
+  repeticiones; en la tabla, el `±` de cada condición es la dispersión entre
+  las 10 preguntas. Para repetir la matriz completa: `python3 benchmarks/run.py
+  --models deepseek,sonnet,opus --reps deepseek=3,sonnet=1,opus=1`.
+- **Esfuerzo de razonamiento** (fijado en `MODELOS` de `run.py`):
+
+  | Modelo | CLI | Esfuerzo | Cómo se fija |
+  |---|---|---|---|
+  | DeepSeek V4.1 Flash | OpenCode | por defecto del proveedor | sin `--variant`: OpenCode no envía `reasoningEffort` (variantes disponibles: `low`, `high`, `max`) |
+  | Claude Opus 5.5 | Claude Code | `medium` | `--effort medium` (campo `effort`) |
+  | Claude Sonnet 5.5 | Claude Code | por defecto de Claude Code | sin `--effort` |
+
+  Para cambiarlo, añade `"effort"` (Claude Code) o `"variant"` (OpenCode) a la
+  entrada del modelo; el valor queda registrado en `summary.json`
+  (`meta.modelos.<modelo>.esfuerzo`).
 
 ## Aislamiento (crítico)
 
@@ -78,8 +89,8 @@ fallidas.
 # 1. Prueba de aislamiento (4 ejecuciones baratas)
 python3 benchmarks/run.py --isolation-check
 
-# 2. Tanda de la que salen las cifras del README (20 ejecuciones, ~8 min con --jobs 4)
-python3 benchmarks/run.py --models deepseek --reps deepseek=1
+# 2. Tanda de la que salen las cifras del README (40 ejecuciones, ~13 min con --jobs 4)
+python3 benchmarks/run.py --models deepseek,opus --reps deepseek=1,opus=1
 
 # 2b. Matriz completa por defecto (100 ejecuciones: DeepSeek ×3, Sonnet ×1, Opus ×1)
 python3 benchmarks/run.py
@@ -87,7 +98,7 @@ python3 benchmarks/run.py
 # 3. Corrección con el juez (Claude Opus 5.5)
 python3 benchmarks/grade.py
 
-# 4. Resumen y gráficas
+# 4. Resumen y gráficas (las gráficas necesitan matplotlib)
 python3 benchmarks/report.py
 ```
 
@@ -127,8 +138,21 @@ cuenta como `fail` (anotado como `cita_vacia`).
 
 ## Coste y duración reales (tanda del 2026-10-02)
 
-Tanda ejecutada: DeepSeek V4.1 Flash, 10 evals × 2 condiciones × 1 repetición =
-**20 ejecuciones**, con `--jobs 4`.
+Tanda ejecutada: 10 evals × 2 condiciones × 1 repetición con dos modelos =
+**40 ejecuciones**, con `--jobs 4`. Las dos partes se lanzaron por separado
+sobre la misma carpeta de resultados.
+
+| Modelo | Ejecuciones | Pared | Coste respuestas | Coste juez | Total |
+|---|---|---|---|---|---|
+| DeepSeek V4.1 Flash (effort por defecto) | 20 | 452,8 s | $0,273 | $2,573 | $2,85 |
+| Claude Opus 5.5 (effort `medium`) | 20 | 297,6 s | $6,572 | $2,627 | $9,20 |
+| **Total** | **40** | | **$6,845** | **$5,200** | **$12,05** |
+
+Coste medio por respuesta: DeepSeek ≈$0,014 (con y sin skill); Opus ≈$0,366
+con skill y ≈$0,291 sin skill. Duración media: DeepSeek 82 s con skill y 65 s
+sin ella; Opus 48 s y 53 s.
+
+### DeepSeek V4.1 Flash
 
 - **Ejecuciones:** 20/20 correctas, 0 contaminadas, skill usada de verdad en las
   10 ejecuciones con skill (100 %). Pared de la tanda: **452,8 s**.
@@ -141,19 +165,31 @@ Tanda ejecutada: DeepSeek V4.1 Flash, 10 evals × 2 condiciones × 1 repetición
   adicional de ≈**$0,43** ($0,05 de respuestas + $0,37 de juez). Contando esa
   repetición, el benchmark completo costó ≈**$3,3**.
 - La prueba de aislamiento cuesta ≈ **$0,03** (4 ejecuciones baratas).
-- Cifras completas y verificables en
-  `benchmarks/results/2026-10-02/summary.json`.
+
+### Claude Opus 5.5 (effort `medium`)
+
+- **Ejecuciones:** 20/20 correctas, 0 contaminadas, skill usada de verdad en las
+  10 ejecuciones con skill (100 %). Pared: **297,6 s**.
+- **Corrección (juez Claude Opus 5.5):** 20/20 correctas, 0 fallos. Pared:
+  **65,0 s**.
+- Coste de las respuestas: **$6,572** (≈$0,33 por respuesta). Coste del juez:
+  **$2,627**. Total: **$9,20**. No hubo que repetir ninguna ejecución.
+
+Cifras completas y verificables en
+`benchmarks/results/2026-10-02/summary.json`.
 
 ## Limitaciones
 
-- **n pequeño:** la tanda publicada tiene 1 repetición por pregunta y un solo
-  modelo (DeepSeek V4.1 Flash), así que no permite estimar la varianza entre
-  repeticiones ni generalizar a otros modelos; el `±` es la dispersión entre
-  preguntas de cada condición.
-- **El juez es también uno de los modelos evaluados** (Opus 5.5) cuando se corre
-  la matriz completa; en esta tanda solo actuó como juez. Por eso se
-  audita a mano una muestra estratificada; el resultado se documenta en
-  «Auditoría del juez».
+- **n pequeño:** la tanda publicada tiene 1 repetición por pregunta y dos
+  modelos, así que no permite estimar la varianza entre repeticiones; el `±` es
+  la dispersión entre preguntas de cada condición.
+- **Esfuerzo distinto entre modelos:** DeepSeek corre con el esfuerzo por
+  defecto del proveedor y Opus con `medium`. Otra razón más para comparar solo
+  con frente a sin skill dentro de cada modelo.
+- **El juez es también uno de los modelos evaluados** (Opus 5.5). El juez no
+  sabe qué modelo ni condición respondió, pero podría favorecer el estilo de
+  sus propias respuestas. La auditoría manual («Auditoría del juez») cubre por
+  ahora solo las respuestas de DeepSeek; las de Opus están sin auditar.
 - **Herramientas distintas entre CLIs**, sobre todo de búsqueda web: Claude
   Code usa `WebSearch`/`WebFetch` y OpenCode las suyas. Por eso solo se compara
   con frente a sin skill dentro de cada modelo.
@@ -163,8 +199,10 @@ Tanda ejecutada: DeepSeek V4.1 Flash, 10 evals × 2 condiciones × 1 repetición
   calendarios) corresponden al corpus incluido en el repo en su fecha.
 - **`matplotlib` no está instalado en el entorno por defecto de la máquina de
   referencia:** `report.py` avisa y genera `summary.json`/`summary.md` sin
-  gráficas. Las de `docs/img/` se generaron con matplotlib 3.11.2 en un venv
-  temporal (`pip install matplotlib`).
+  gráficas. Las de `docs/img/` (`bench-aciertos.png`, `bench-por-pregunta.png`
+  y `bench-coste.png`) se generaron con matplotlib 3.11.2 en un venv temporal
+  (`pip install matplotlib`), con la fuente Inter si está instalada (si no,
+  DejaVu Sans).
 - En la condición `sin_skill` el arnés oculta también las skills internas de
   cada CLI (`design`/`doctor` en Claude, `customize-opencode` en OpenCode) para
   que la única diferencia entre condiciones sea `normativa-uvigo-eeae`.
@@ -269,8 +307,7 @@ errores son `fail` injustos en aserciones negativas «no inventa plazos» cuya
 Solo a efectos ilustrativos: con esos dos `pass`, `skill` subiría de 85,0 % a
 88,3 % (eval 0 a 66,7 %, eval 4 a 83,3 %) y `sin_skill` seguiría en 58,3 %.
 
-**Limitaciones:** muestra de 60 aserciones y 1 repetición por eval; la tanda
-solo contiene DeepSeek, así que la estratificación es por condición y nota, no
+**Limitaciones:** muestra de 60 aserciones y 1 repetición por eval; la auditoría se hizo cuando la tanda solo contenía DeepSeek, así que la estratificación es por condición y nota, no
 por modelo; los dos falsos `fail` se explican porque el juez no recibe las
 fuentes externas que la respuesta cita (convocatoria 1785, 709) y las evalúa de
 memoria; las aserciones compuestas admiten matices (eval 4 A2 y eval 6 A1

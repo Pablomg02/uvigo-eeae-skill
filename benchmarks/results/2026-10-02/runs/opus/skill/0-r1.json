@@ -1,0 +1,76 @@
+{
+  "eval_id": 0,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?",
+  "respuesta": "Ya tengo los artículos aplicables y he comprobado que siguen vigentes. Esta es la respuesta.\n\n**Respuesta corta:** Depende de si publicaste una fecha de revisión junto con las notas. Si la publicaste y ya pasó, no estás obligado a abrir otra revisión fuera de plazo. Si no la publicaste, el incumplimiento es tuyo y deberías ofrecerle la revisión.\n\n**Fundamento**\n- **RD 1791/2010, Estatuto del Estudiante Universitario, art. 29.2**: «Junto a las calificaciones, se hará público el horario, lugar y fecha en que se celebrará la revisión». **Art. 30.3**: «El período de revisión finalizará en un plazo anterior al establecido por la universidad para la publicación y cierre de actas». [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2010-20147)\n- **Regulamento de avaliación UVigo (565), consolidado (Claustro 18-04-2023 e 22-12-2023)**, [enlace](https://secretaria.uvigo.gal/uv/web/normativa/public/show/565):\n  - **art. 35.1**: «o profesorado responsable da materia publicará xunto coas cualificacións, a data, hora e lugar para revisar cada proba de avaliación».\n  - **art. 35.3**: entre la publicación de las notas y la revisión «deberá transcorrer un período entre dous e sete días hábiles e sempre que se respecten os prazos de peche de actas».\n  - **art. 35.4**: después de la revisión publicas la nota definitiva, que «non pode ser inferior á provisional, agás erro material, aritmético ou de feito».\n- **Regulamento de estudantes UVigo (460), art. 13.2**: el estudiante tiene derecho a revisar en tutoría individualizada «antes de que as súas cualificacións sexan definitivas».\n\n**Los dos casos posibles**\n1. **Publicaste fecha, hora y lugar, y el alumno no fue.** Tu obligación era abrir esa ventana y ya lo hiciste. La norma no te obliga a darle otra revisión diez días después. *Interpretación:* puedes atenderlo voluntariamente si las actas siguen abiertas, sobre todo si tiene una causa justificada. Si las actas ya están cerradas, cambiar la nota exige un trámite de modificación de actas.\n2. **No publicaste fecha de revisión.** Has incumplido el art. 35.1 de 565 y el art. 29.2 del RD 1791/2010. Si ahora te niegas, le estarías quitando un derecho que la norma le reconoce. Lo prudente es darle una fecha cuanto antes.\n\n**Qué puede reclamar el alumno**\n- **Tribunal (565 art. 37):** puede pedir al director de la Escola una «segunda avaliación ante un tribunal» en un plazo de «dez días hábiles» desde el cierre de actas, si se trata de la nota final. El departamento nombra un tribunal de 3 PDI en el que tú no puedes estar. El tribunal revisa todas las pruebas y resuelve en 5 días hábiles. Un requisito importante: «é necesario que a/o estudante acudise previamente á revisión».\n  - *Interpretación:* en el caso 1, ese requisito le cierra esta vía. En el caso 2, es muy probable que se considere que no se le puede exigir, porque fuiste tú quien no le ofreció la revisión.\n- **Recurso de alzada ante la Reitoría (565 arts. 37.8 y 61):** si la reclamación sale en su contra, tiene 10 días hábiles. Revisa el caso la Valedoría Universitaria, que puede incluso nombrar un tribunal externo. La resolución agota la vía administrativa. Después solo queda el contencioso-administrativo (esto es conocimiento general, no lo dice el reglamento).\n- **Queja** ante la Dirección de la Escola, el buzón QSP (565 art. 60.b) o la Valedoría Universitaria. No he analizado si un incumplimiento así podría tener consecuencias disciplinarias para ti.\n\n**Condiciones**\n- **Custodia del examen (565 art. 30.1):** debes guardar el examen al menos durante los tres últimos cursos cerrados. Si hay reclamación, hasta que haya una «resolución firme».\n- **Cómputo del plazo:** los «diez días» del alumno: si son naturales, equivalen a unos 6–8 días hábiles. Eso puede quedar dentro de la ventana de 2–7 días hábiles, según la fecha exacta que hubieras fijado. Compruébalo antes de contestarle.\n\n**Qué no he podido verificar**\n- No sé si publicaste fecha de revisión ni de qué enero se trata. La copia local del calendario de la Escola es del curso 2026-27 y no recoge la fecha de cierre de actas de enero de 2026. Mírala en aero.uvigo.es.\n- No he consultado la guía docente de tu materia, porque no regula la revisión: la regula 565.\n- 565 y el RD 1791/2010 están comprobados hoy (2-oct-2026) y no han cambiado.\n\n**Siguiente paso:** contesta al alumno por escrito.\n- En el caso 1, indícale la fecha de revisión que publicaste.\n- En el caso 2, dale una fecha de revisión y, si la pide, una acreditación firmada de que la revisión se hizo (565 art. 36).\n\nSi las actas ya están cerradas, consulta primero con la Secretaría de la Escola.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 12,
+    "output": 4031,
+    "cache_creation": 24989,
+    "cache_read": 130254,
+    "total": 159286
+  },
+  "coste_usd": 0.30663080000000004,
+  "duracion_s": 47.17,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:01:56+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial me escribe diez días después de publicar las notas de la convocatoria de enero pidiendo que le revise el examen. ¿Estoy obligado a hacerle la revisión? ¿Y si no lo hago qué puede reclamar él?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 7,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\", \"args\": \"Profesor ayudante doctor en la EEAE. Un alumno de Aeroespacial le pide revisión del examen diez días después de publicar las notas de la convocatoria de enero. ¿Está obligado a hacer la revisión? ¿Qué puede reclamar el alumno si no la hace?\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/d8925fc3b27a4210bb700f19c51595a1/home/workspace/.claude/skills/normativa-uvigo-eeae && grep -n -i -A8 \\\"revis\\\" references/temas.md | head -40; python3 scripts/buscar.py \\\"revisión exames prazo cualificacións\\\" -n 6; python3 scripts/buscar.py \\\"revisión exame re"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 565 --art 35; python3 scripts/buscar.py --ver 565 --art 37; python3 scripts/buscar.py --ver 565 --art 38; python3 scripts/buscar.py \\\"revisión calificaciones\\\" --ambito estatal -n 3; grep -n -i \\\"revis\\\\|565\\\" references/huecos.md | head\", \"description\": "
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver rd-1791-2010-estatuto-estudiante --art 30; python3 scripts/buscar.py --ver rd-1791-2010-estatuto-estudiante --art 29 | tail -5; python3 scripts/buscar.py --ver 565 --art 30; python3 scripts/buscar.py \\\"queixa incumprimento profesorado avaliación\\\" -n 4 --"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"for a in 44 45 61; do python3 scripts/buscar.py --ver 565 --art $a | sed -n '7,30p'; done; timeout 90 python3 scripts/comprobar.py 565 rd-1791-2010-estatuto-estudiante 2>&1 | tail -15\", \"description\": \"Read appeal articles and verify validity\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

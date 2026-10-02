@@ -1,0 +1,72 @@
+{
+  "eval_id": 8,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?",
+  "respuesta": "**Respuesta corta:** En el tablón del pasillo, no. Ahí solo se pueden publicar las notas en un tablón físico **cerrado con llave** y **que no esté en una zona común** del centro. Además, esto es una excepción que hay que justificar: solo vale si no es posible publicarlas en la plataforma oficial. En cuanto a los datos, puedes poner nombre, apellidos y nota, y nada más.\n\n**Fundamento**\n- **Regulamento de avaliación da UVigo (565)**, versión consolidada (Claustro 18-04-2023 y 22-12-2023), **art. 34.3**: «Todas as cualificacións obtidas polo estudantado publicaranse na plataforma interna ou na aula virtual oficial da Universidade de Vigo co acceso limitado ao profesorado da materia e a todo o estudantado matriculado nela […]. Excepcionalmente, e por motivos xustificados, no caso de non ser posible, poderanse publicar as cualificacións en taboleiros físicos pechados con chave, sempre que non se encontren nas zonas comúns dos centros.» [secretaria.uvigo.gal/uv/web/normativa/public/show/565](https://secretaria.uvigo.gal/uv/web/normativa/public/show/565)\n- **565, art. 34.4**: «Os datos para publicar as cualificacións limitaranse ao nome e apelidos do estudantado e á cualificación obtida. No caso de que houbese estudantes cos mesmos nomes e apelidos, publicaranse para eles os catro díxitos que ocupen as posicións 4a, 5a, 6a e 7a do documento nacional de identidade […]».\n- **565, art. 34.5**: las listas se mantienen expuestas «durante o tempo preciso que garanta o seu coñecemento por todo o estudantado e, en todo caso, respectando os prazos de reclamación».\n- **Regulamento de estudantes da UVigo (460), art. 11.1–3**: dice lo mismo, casi con las mismas palabras. [show/460](https://secretaria.uvigo.gal/uv/web/normativa/public/show/460)\n- **LOPDGDD (LO 3/2018), disp. adicional 7.ª**: es la norma estatal de la que viene la regla de las cuatro cifras del documento de identidad.\n\n**Condiciones y excepciones**\n- **Lo que no puedes hacer:** usar un tablón abierto del pasillo. Un pasillo es una zona común, así que no cumple aunque el tablón tuviera llave.\n- **Lo que no puedes publicar:** el DNI completo, el correo, el número de expediente ni ningún otro dato. Las cifras 4.ª a 7.ª del documento solo se añaden si hay dos estudiantes con el mismo nombre y apellidos.\n- **Plazos (art. 34.2):**\n  - Las notas de las pruebas de evaluación continua se publican en un máximo de **15 días hábiles** desde que se hacen.\n  - Las notas de evaluación continua tienen que estar disponibles al menos **5 días hábiles** antes de la prueba final.\n  - Las notas provisionales se notifican antes de que sean definitivas (art. 34.1).\n- **Antes de usar el tablón físico:** que Faitic «dé problemas» probablemente no basta como el «no ser posible» que exige el art. 34.3. Esto es interpretación mía. Primero hay que intentar resolverlo por la vía oficial.\n\n**Qué no he podido verificar**\n- Que la plataforma oficial actual se llama **Moovi** y que Faitic dejó de serlo hace años es conocimiento general, no lo he comprobado en la normativa. Si tienes la materia en Faitic, puede que el problema sea ese.\n- No sé si la Escola tiene tablones cerrados con llave fuera de zonas comunes. Eso lo tienes que preguntar en el centro.\n- Mandar a cada estudiante solo su nota por correo institucional no está prohibido por estos artículos. Pero tampoco es la forma de publicación que prevé el art. 34.3, porque esa forma permite ver también las notas de los compañeros del grupo. Esto es interpretación mía.\n- Lo he comprobado en directo hoy, 2-oct-2026: el art. 34 del 565, el 460 y la LOPDGDD siguen sin cambios. Corpus descargado el 2026-10-01.\n\n**Siguiente paso**\n1. Publica las notas en **Moovi**, solo para la materia. Si no te funciona, abre una incidencia con el servicio de teledocencia de la UVigo.\n2. Si de verdad no se puede publicar ahí a tiempo, pregunta en la **dirección o secretaría de la EEAE** si hay un tablón cerrado con llave fuera de zonas comunes que puedas usar. Guarda constancia del motivo.\n3. Pon solo nombre, apellidos y nota. Déjalas publicadas hasta que termine el plazo de revisión.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 10,
+    "output": 2739,
+    "cache_creation": 21337,
+    "cache_read": 101095,
+    "total": 125181
+  },
+  "coste_usd": 0.24573500000000004,
+  "duracion_s": 33.39,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:03:10+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy profesor de la EEAE y quiero publicar las notas del parcial en el tablón del pasillo del centro, con nombre y apellidos y la nota, porque Faitic me está dando problemas. ¿Puedo hacerlo? ¿Qué datos puedo publicar y dónde?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 6,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/689bd6cdc3c34c1698becb2deff533ba/home/workspace/.claude/skills/normativa-uvigo-eeae && grep -n -i -A3 \\\"datos\\\\|notas\\\\|cualificac\\\" references/temas.md | head -60; python3 scripts/buscar.py \\\"publicación cualificacións datos persoais\\\" -n 8; python3 scripts/bus"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 565 --art 34; python3 scripts/buscar.py --ver 460 --art 11 | head -60; python3 scripts/buscar.py \\\"cualificacións taboleiro\\\" --ambito uvigo -n 4 | grep -i \\\"━━\\\\|Artigo\\\\|XI\\\\|taboleir\\\" ; python3 scripts/comprobar.py 565 460 lopdgdd 2>&1 | tail -15\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"grep -rn -i -B2 -A8 \\\"publicación de cualificacións\\\\|publicación das cualificacións\\\\|publicación de notas\\\\|PUBLICACIÓN DE CUALIF\\\" normativa/uvigo/560* | head -60; grep -n \\\"descargado\\\" normativa/uvigo/565*.md | head -2\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

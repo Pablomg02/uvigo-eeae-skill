@@ -1,0 +1,76 @@
+{
+  "eval_id": 6,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?",
+  "respuesta": "Ya he revisado el Regulamento de doutoramento de la UVigo y el RD 99/2011 y he comprobado que siguen vigentes. Esta es la respuesta:\n\n**Respuesta corta:** Sí te vale, con dos condiciones. La primera: entre las dos estancias tienes que acreditar al menos 3 meses completos fuera de España. Dos meses y medio más tres semanas son unos 96 días, así que llegas, pero con poco margen. La segunda: ni Alemania ni Francia pueden ser tu país de residencia habitual ni el país donde estudiaste antes del doctorado. Además, necesitas dos informes de expertos extranjeros y un tribunal con un miembro extranjero, y ninguno puede pertenecer a los centros donde hiciste las estancias. Desde que se autoriza la defensa hay 10 días hábiles de exposición pública y un máximo de 3 meses para defender.\n\n**Fundamento**\n- RD 99/2011, art. 15.1 (en la versión del RD 576/2023): «una o varias estancias durante, al menos, tres meses […] En caso de realizar varias estancias, al menos una de ellas tendrá una duración mínima de un mes». https://www.boe.es/buscar/act.php?id=BOE-A-2011-2541\n- Regulamento de Estudos de Doutoramento UVigo (Consello de Goberno, 20-jun-2024, en vigor desde el 1-oct-2024), https://secretaria.uvigo.gal/uv/web/normativa/public/show/625:\n  - **Art. 43.a) Estancias:** «polo menos unha delas deberá ter unha duración mínima de un mes e ningunha unha duración inferior aos sete días […] avaladas polo/a director/a e autorizadas pola CAPD, e incorporaranse ao documento de actividades». Tú lo cumples: una estancia de 2,5 meses (≥ 1 mes), otra de 3 semanas (≥ 7 días), y solo 2 periodos de los 5 permitidos como máximo.\n  - **Art. 43.f) Movilidad real:** la estancia debe ser «cara a un país diferente daquel no que teña ou tivera a súa residencia habitual e diferente daquel no que se desenvolvera a súa formación académica previa».\n  - **Art. 43.b) Idioma:** «polo menos a introdución, o resumo e as conclusións» tienen que estar escritos, presentados y defendidos en una lengua científica que no sea oficial en España, por ejemplo el inglés.\n  - **Art. 43.c) Informes:** necesitas al menos «dous/dúas expertos/as doutores/as pertencentes a algunha institución […] non español non coincidente coa institución na que se realizou a estadía. Os expertos que fagan os informes non poden estar no tribunal de tese». Estos informes sustituyen a los dos informes externos ordinarios del art. 36.\n  - **Arts. 43.d) y 38 (tribunal):**\n    - La CAPD propone 7 personas y la EIDO nombra a 3 titulares y 2 suplentes.\n    - Entre los titulares debe haber al menos un doctor o doctora de una institución extranjera, distinto de los dos informantes. Si es posible, otro con el mismo perfil como suplente.\n    - Lo forma una mayoría de miembros ajenos a las universidades del programa y a las instituciones de las estancias.\n    - No pueden formar parte: los tutores de las estancias, tu director o directora, tu tutor o tutora, ni coautores de tus publicaciones.\n    - No puede haber más de un titular de la misma entidad.\n    - Al menos un titular de cada sexo, y al menos dos de cada sexo contando titulares y suplentes.\n  - **Art. 43.e)** La defensa se hace en la Universidade de Vigo.\n  - **Art. 36 (plazos):**\n    - Desde que solicitas el depósito, la CAPD tiene un máximo de 2 meses para emitir su informe. Si el informe queda condicionado a cambios, te dan como mucho 3 meses para hacerlos, y después la CAPD tiene 1 mes más.\n    - Con el expediente completo se abre la exposición pública: «dez días hábiles en período lectivo».\n    - Defensa: «nun prazo máximo de tres meses desde a autorización da defensa polo órgano designado pola EIDO», que coincide con el nombramiento del tribunal. Si se pasa ese plazo, los trámites empiezan de nuevo.\n  - **Art. 39:** la secretaría del tribunal avisa a la EIDO de la fecha «polo menos con dez días de antelación», y la defensa tiene que ser «durante o período lectivo».\n\n**Condiciones y excepciones**\n- Los 3 meses son el total de las dos estancias. Esto es interpretación mía: como vas justa, pide a cada centro un certificado con las fechas exactas de entrada y salida, y no acortes la estancia en Francia.\n- La estancia en Francia necesita el aval de tu dirección y la autorización de la CAPD. Si es posible, consíguela antes de irte. La de Alemania también tiene que estar autorizada y anotada en el documento de actividades.\n- Tus dos estancias son en centros distintos. El art. 43.c habla en singular, pero lo prudente es que los informantes no pertenezcan a ninguno de los dos centros. Esto también es interpretación mía.\n- Al depositar, subes a la Secretaría Virtual los certificados de las estancias, sus autorizaciones y los dos informes de los expertos (art. 43, último párrafo).\n- Si empezaste el doctorado antes del curso 2023/24, en algunas cuestiones pueden aplicarse las normas vigentes cuando empezaste. Aun así, el tribunal y la defensa se rigen ya por el reglamento de 2024.\n\n**Qué no he podido verificar:** el texto de la web de tu programa de doctorado y los acuerdos de su comisión académica, ni el calendario de días lectivos de este curso. Ambas cosas influyen en cuándo pueden caer la exposición y la defensa. En agosto, por ejemplo, no hay periodo lectivo.\n\n**Siguiente paso:** pide ya a la CAPD de tu programa que autorice la estancia en Francia. Después, acuerda con tu dirección los dos informantes y el miembro extranjero del tribunal, y confirma los plazos con la EIDO (eido.uvigo.gal) antes de depositar.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 12,
+    "output": 3947,
+    "cache_creation": 33604,
+    "cache_read": 144282,
+    "total": 181845
+  },
+  "coste_usd": 0.3766764,
+  "duracion_s": 42.48,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:02:38+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy doctoranda en la EEAE y quiero que mi tesis lleve la mención de doctorado internacional. Llevo una estancia de dos meses y medio en un centro de Alemania y tengo prevista otra de tres semanas en Francia. ¿Me vale así? ¿Qué informes y qué tribunal necesito? Y cuando deposite, ¿cuánto tiempo hay para la exposición pública y para la defensa?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 7,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/283e9bf7852a41379aee2550f8898346/home/workspace/.claude/skills/normativa-uvigo-eeae && python3 scripts/buscar.py \\\"mención internacional estancia tres meses\\\" -n 6; python3 scripts/buscar.py \\\"mención internacional\\\" --ambito eido -n 6; grep -n -i -A5 \\\"internac"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 625 --art 43; python3 scripts/buscar.py --ver 625 --art 41; python3 scripts/buscar.py --ver 625 --art 42; python3 scripts/buscar.py --ver 625 --art 38; python3 scripts/buscar.py --ver 625 --art 39\", \"description\": \"Read articles 38-43 of doctoral regulati"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver 625 --art 35; python3 scripts/buscar.py --ver 625 --art 36; python3 scripts/buscar.py --ver 625 --art 40 | head -30; python3 scripts/buscar.py \\\"exposición pública tese días hábiles depósito\\\" -n 5 --ambito uvigo | head -60\", \"description\": \"Read deposit "
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver rd-99-2011-doctorado --art 15 | head -30; python3 scripts/buscar.py --ver 625 | grep -i -A3 \\\"transitoria\\\\|observaci\\\" | head -40; python3 scripts/comprobar.py 625 rd-99-2011-doctorado 2>&1 | tail -15\", \"description\": \"Read RD 99/2011 art 15, transitiona"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

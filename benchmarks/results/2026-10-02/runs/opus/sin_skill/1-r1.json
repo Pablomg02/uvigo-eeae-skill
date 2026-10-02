@@ -1,0 +1,88 @@
+{
+  "eval_id": 1,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?",
+  "respuesta": "**Respuesta corta:** sí puedes cogerte esos tres días, pero no te recomiendo que sean de vacaciones. Lo más fácil es usar días de **asuntos particulares** (o de conciliación), que en la UVigo autoriza la **dirección de tu departamento**.\n\n### 1. Vacaciones: no es la opción adecuada\nLa norma de la UVigo es la *Instrución da Vicerreitoría de Profesorado e Ordenación Académica sobre vacacións e días de libre disposición do PDI*, que se publica cada año. He leído la de 2024 (la 1/2024, de 24 de enero). La de 2026 no está publicada en abierto, pero suele repetir el mismo texto. En el apartado 2.1 dice:\n\n> «Gozaranse preferentemente no mes de agosto, podendo autorizarse noutro mes **sempre que as obrigas docentes e investigadoras o permitan**».\n\nEn pleno periodo de clases es probable que no te lo autoricen. Además, una parte de agosto ya cuenta como vacaciones obligatorias por el cierre de centros.\n\n### 2. La opción buena: asuntos particulares\nLa misma instrucción dice:\n- **Apartado 3:** tienes **6 días de asuntos particulares**, más días extra por trienios. *«A autorización corresponderá aos directores/as de departamento e estará supeditada ás obrigas docentes»*.\n- **Apartado 4:** tienes además **hasta 3 días al año por conciliación** de la vida laboral, familiar y personal, que se tramitan igual que los asuntos particulares.\n- Si en 2026 se repite el cierre de agosto (apartado 6 de la de 2024), también tendrás **3 días extra de libre disposición**.\n\nPara esto no tienes que justificar el motivo. El único requisito es que la docencia quede cubierta.\n\n### 3. A quién y cómo\n1. **Pídeselo por escrito a la dirección de tu departamento** con antelación. La boda es este mes, así que hazlo ya, por el procedimiento habitual de la sede electrónica o la Secretaría virtual.\n2. **Explica cómo vas a cubrir las clases**: un compañero que te sustituya, recuperar las sesiones o cambiar el horario. Es en lo que se fijará la dirección para autorizarlo.\n3. **Avisa a la Escola de Aeronáutica**, sobre todo si cambias horarios o la ocupación de aulas o laboratorios, y a tu alumnado.\n4. Si tienes dudas sobre cuántos días te quedan, escribe al Servizo de PDI: **consultapdi@uvigo.gal**.\n\n### 4. Normas que te amparan\n- **Instrución anual de vacacións e días de libre disposición do PDI de la UVigo**: apartados 2, 3 y 4. Es la norma que vas a usar en la práctica.\n- **II Convenio colectivo do PDI laboral das universidades da Coruña, Santiago e Vigo** (DOG nº 74, de 14/04/2011, con adaptaciones posteriores de la Comisión Paritaria, la última en el DOG de 14/03/2025). Te aplica como contratado doctor.\n- **Estatuto Básico del Empleado Público** (RDL 5/2015), arts. 48 y 50. Te aplica también como personal laboral.\n\n**Pendiente de confirmar:** no he podido comprobar si tu convenio incluye un permiso retribuido propio por **boda de un familiar** (algunos convenios dan 1 día, o 2 si es fuera). Pregúntalo en consultapdi@uvigo.gal. Si existe, te ahorraría uno de los días de asuntos particulares.\n\nFuentes:\n- [Instrución 1/2024 sobre vacacións e días de libre disposición do PDI (UVigo)](https://secretaria.uvigo.gal/uv/web/avisos/aviso/adjunto/get/fa0a1bfc9ecd3f652dc9da2ce67becba54b01ba285ec8ca21b7b6c244b3807e8)\n- [Aviso de la Instrución 2024](https://secretaria.uvigo.gal/uv/web/avisos/aviso/show/42458) · [Instrución 2025](https://secretaria.uvigo.gal/uv/web/avisos/aviso/show/44915)\n- [II Convenio PDI laboral (DOG 14/04/2011)](https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html)\n- [Comisión Paritaria del II Convenio (DOG 14/03/2025)](https://www.xunta.gal/dog/Publicados/2025/20250314/AnuncioG0767-280225-0004_gl.html)\n- [UVigo – PDI: xestión laboral](https://www.uvigo.gal/en/university/administration-and-staff/pdi/labour-training-and-economic-management)",
+  "herramientas": [
+    "Bash",
+    "ToolSearch",
+    "WebSearch",
+    "WebFetch"
+  ],
+  "tokens": {
+    "input": 14,
+    "output": 4158,
+    "cache_creation": 15335,
+    "cache_read": 114736,
+    "total": 134243
+  },
+  "coste_usd": 0.38146420000000003,
+  "duracion_s": 66.19,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:04:16+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy contratado doctor en la Escola de Aeronáutica. Tengo que irme tres días a la boda de un familiar fuera en octubre, en plena época de clases. ¿Puedo cogerlos como vacaciones? ¿A quién se lo tengo que pedir y qué norma me ampara?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 9,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"find . -type f | head -100\", \"description\": \"List workspace files\"}"
+      },
+      {
+        "herramienta": "ToolSearch",
+        "entrada_resumen": "{\"query\": \"select:WebSearch\", \"max_results\": 1}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"Universidade de Vigo PDI vacacións permisos licenzas período lectivo solicitude convenio PDI laboral\"}"
+      },
+      {
+        "herramienta": "ToolSearch",
+        "entrada_resumen": "{\"query\": \"select:WebFetch\", \"max_results\": 1}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"Instrución vacacións días de libre disposición 2026 PDI Universidade de Vigo\"}"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://secretaria.uvigo.gal/uv/web/avisos/aviso/adjunto/get/fa0a1bfc9ecd3f652dc9da2ce67becba54b01ba285ec8ca21b7b6c244b3807e8\", \"prompt\": \"What year is this instruction for? Summarize exactly: vacation days, when they must be taken (período non lectivo?), días de libre disposición/asuntos p"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://intercentros.webs.uvigo.es/webs/convenio.htm\", \"prompt\": \"Quote the articles on vacacións and on permisos/licenzas, especially any permiso for matrimonio de familiares, asuntos propios, and how/to whom requests are made. Give article numbers.\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/3a4d7d8c386442d0842622be9c9b1af3/claude-config/projects/*/79693169*/tool-results/ && pdftotext -layout webfetch-1790964226874-dciihm.pdf - | head -250\", \"description\": \"Extract text from downloaded PDF instruction\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

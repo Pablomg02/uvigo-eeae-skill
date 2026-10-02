@@ -1,0 +1,108 @@
+{
+  "eval_id": 9,
+  "grupo": "nuevas",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?",
+  "respuesta": "**Respuesta corta:** no he encontrado ninguna prueba de que sea verdad. Según lo que he podido consultar, el III Convenio del PDI laboral de las universidades públicas gallegas (UDC, USC y UVigo, que es la que te aplica en la EEAE) **no está firmado**. Sigue en negociación, así que no recoge todavía ninguna mejora que puedas exigir: ni complemento nuevo ni teletrabajo.\n\n**Lo que he podido comprobar**\n\n- **Febrero de 2025:** las tres universidades y los sindicatos CIG, CCOO, UGT y CSIF firmaron un acuerdo, pero era para **empezar a negociar** el III Convenio, no el convenio en sí. La comisión negociadora se constituyó el 21 de febrero de 2025, con 15 representantes de las universidades y 15 de los sindicatos.\n- Ese mismo acuerdo también incluía:\n  - adaptar de forma transitoria el **II Convenio** (publicado en el DOG en 2011) a la LOSU y a otros cambios legales;\n  - recuperar la cláusula de **jubilación forzosa**, que había dejado de aplicarse en 2015.\n- **Abril de 2025:** según CCOO Ensino, la negociación seguía discutiendo a qué personal se aplica el convenio (el contratado con cargo a proyectos y convenios). Además, la **UVigo llegó a amenazar con negociar su propio convenio por separado**. Esa nota no menciona ni teletrabajo ni complementos nuevos.\n- He buscado en el DOG y no aparece ningún \"III Convenio colectivo para el personal docente e investigador laboral\". Lo último publicado en el DOG sobre este convenio son actas de la comisión paritaria del **II Convenio** (por ejemplo, la de marzo de 2025).\n\n**Lo que significa para ti**\n\nMientras no se firme y se publique en el DOG un texto nuevo, tus condiciones siguen siendo las del **II Convenio** (con las adaptaciones que se hayan acordado a la LOSU), más la normativa propia de la UVigo. Puede que tu compañero esté confundiendo el acuerdo de 2025 para empezar a negociar con el convenio en sí. También puede estar pensando en otro acuerdo distinto, como el de trienios para el personal investigador.\n\n**Una advertencia:** las noticias más recientes que he encontrado sobre la negociación son de 2025. Si se hubiera firmado algo en los últimos meses, podría no estar indexado todavía. Para salir de dudas:\n1. Pregunta al **comité de empresa del PDI laboral de la UVigo** o a cualquiera de los cuatro sindicatos que negocian.\n2. Busca en el **DOG** la resolución de registro y publicación del III Convenio. Si no está publicada, no se aplica.\n3. Si alguien te dice que se va a cobrar un complemento, pide la referencia concreta: el acuerdo, el artículo y la fecha en el DOG.\n\nFuentes:\n- [USC – Acuerdo para iniciar la negociación del III Convenio](https://www.usc.gal/gl/xornal/novas/universidades-publicas-galegas-organizacions-sindicais-acordan-iniciar-negociacion-terceiro-convenio-colectivo-persoal-docente-laboral)\n- [CSIF Galicia](https://www.csif.es/va/articulo/galicia/general/65630)\n- [CCOO Ensino – Información sobre o convenio colectivo do PDIL](https://ccooensino.gal/informacion-sobre-o-convenio-colectivo-do-pdil/)\n- [CIG – Recuperación da xubilación forzosa](https://www.cig.gal/nova/aprobase-a-recuperacion-da-xubilacion-forzosa-para-o-persoal-docente-e-investigador-laboral-nas-universidades-publicas-galegas.html)\n- [Galicia Confidencial – Comienzo de la negociación](https://www.galiciaconfidencial.com/noticia/5430023-universidades-publicas-galegas-e-sindicatos-comezan-negociacion-do-terceiro-convenio-colectivo-do-persoal-docente)\n- [DOG 74 de 14/04/2011 – II Convenio](https://www.xunta.gal/dog/Publicados/2011/20110414/Anuncio11926_es.html)\n- [DOG 51 de 14/03/2025 – Acta de la comisión paritaria del II Convenio](https://www.xunta.gal/dog/Publicados/2025/20250314/AnuncioG0767-280225-0004_es.html)\n- [CIG – Acuerdo de trienios para el personal investigador](https://www.cig.gal/nova/acordo-coas-tres-universidades-polo-dereito-a-trienios-do-persoal-con-contrato-predoutoral-e-posdoutoral.html)",
+  "herramientas": [
+    "Bash",
+    "ToolSearch",
+    "WebSearch",
+    "WebFetch"
+  ],
+  "tokens": {
+    "input": 18,
+    "output": 3412,
+    "cache_creation": 21954,
+    "cache_read": 178010,
+    "total": 203394
+  },
+  "coste_usd": 0.49986699999999995,
+  "duracion_s": 70.35,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:06:06+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Soy profesor del PDI laboral de la EEAE. Un compañero me dice que el III Convenio ya está firmado y que este curso cobramos un complemento nuevo y tenemos teletrabajo. ¿Es verdad? ¿Qué mejoras recoge el III Convenio?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 14,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"find . -type f | head -100\", \"description\": \"List workspace files\"}"
+      },
+      {
+        "herramienta": "ToolSearch",
+        "entrada_resumen": "{\"query\": \"select:WebSearch,WebFetch\", \"max_results\": 2}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"III Convenio colectivo PDI laboral universidades públicas Galicia 2026\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"EEAE PDI laboral III Convenio\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"\\\"III convenio\\\" PDI laboral universidades galegas sinatura\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"EEAE universidad escuela PDI laboral\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"terceiro convenio colectivo PDI laboral USC UDC UVigo negociación 2026\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"III convenio PDI laboral Galicia teletraballo complemento DOG 2026\"}"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://www.udc.es/en/novas/A-UDC-xunto-coa-USC-e-a-UVIGO-iniciara-a-negociacion-do-III-convenio-colectivo-do-persoal-docente-laboral-o-proximo-21-de-febreiro/\", \"prompt\": \"What is the exact publication date (year) of this news? Summarize the content.\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"convenio colectivo PDI laboral universidades galegas asinado acordo 2026 CIG CCOO\"}"
+      },
+      {
+        "herramienta": "WebFetch",
+        "entrada_resumen": "{\"url\": \"https://ccooensino.gal/informacion-sobre-o-convenio-colectivo-do-pdil/\", \"prompt\": \"Date of publication and current status of the III convenio negotiation. Is it signed? Any mention of teletrabajo or new complements?\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"\\\"convenio\\\" PDI laboral universidades galegas mesa negociadora 2026 ámbito persoal proxectos\"}"
+      },
+      {
+        "herramienta": "WebSearch",
+        "entrada_resumen": "{\"query\": \"\\\"III Convenio colectivo para el personal docente e investigador laboral\\\" A Coruña Santiago Vigo\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

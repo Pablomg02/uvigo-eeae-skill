@@ -1,0 +1,84 @@
+{
+  "eval_id": 4,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "prompt": "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?",
+  "respuesta": "**Respuesta corta:** No puedes dar 70 horas. Un contratado predoctoral tiene un tope legal de **60 horas al año** de docencia y **180 en todo el contrato**, y además es voluntario. La prórroga de la tesis sí puedes pedirla: es de **un año** a tiempo completo, la solicitas tú a la Comisión Académica del Programa (CAPD) con motivación y debes hacerlo **antes de que se te cumplan los 4 años desde la matrícula**. Esa prórroga no alarga tu contrato FPU.\n\n## 1. Las 70 horas de prácticas\n\n**Fundamento**\n- RD 103/2019 (Estatuto del personal investigador predoctoral en formación), art. 4.2: «podrá colaborar en tareas docentes […] hasta un máximo de 180 horas durante la extensión total del contrato predoctoral, y sin que en ningún caso se puedan superar las 60 horas anuales». [BOE-A-2019-3700](https://www.boe.es/buscar/act.php?id=BOE-A-2019-3700)\n- El mismo art. 4.1 dice que no se te puede exigir «cualquier otra actividad que desvirtúe la finalidad investigadora y formativa del contrato». El art. 4.2 habla de colaboraciones que los departamentos facilitan al personal investigador «que lo solicite». Es decir, se trata de una colaboración voluntaria, no de un encargo docente.\n\n**Lo que interpreto de esto:**\n- Solo las 70 horas de este cuatrimestre ya superan el tope anual de 60. Como mucho podrías aceptar 60 horas, y menos si ya diste alguna en este año de contrato.\n- Revisa también cuántas horas llevas en total. Si en los tres primeros años diste, por ejemplo, 60, 60 y 40, solo te quedarían 20 horas.\n- Tu director no puede imponértelo. Puedes decirle que no o aceptar menos horas sin incumplir nada.\n\n## 2. Prórroga para depositar la tesis\n\n**Fundamento**\n- RD 99/2011, art. 3.2 y 3.4: el máximo es de 4 años a tiempo completo, contados «desde la fecha de matrícula […] hasta la fecha del depósito». Además: «**Antes de la finalización** de los plazos […] la Comisión académica […], previa solicitud de la doctoranda o el doctorando, podrá autorizar la prórroga de este plazo por un año más». [BOE-A-2011-2541](https://www.boe.es/buscar/act.php?id=BOE-A-2011-2541)\n- Regulamento de Estudos de Doutoramento UVigo (CG 20-jun-2024), art. 26: «un máximo de catro anos naturais a tempo completo». Art. 27: «A prórroga sería dun ano nos estudos de doutoramento a tempo completo […]. A solicitude de autorización da citada prórroga farase de forma motivada e de acordo coa normativa da Universidade de Vigo». [Normativa 625](https://secretaria.uvigo.gal/uv/web/normativa/public/show/625)\n\n**Condiciones y excepciones**\n- **Cuánto:** un año como máximo a tiempo completo. Desde la reforma de 2023, el RD 99/2011 ya no prevé un segundo año extraordinario.\n- **Cuándo:** el plazo cuenta desde la fecha de tu matrícula y en años naturales, no por cursos académicos. Pide la prórroga antes de esa fecha. El art. 27 del reglamento de la UVigo está redactado de forma ambigua, pero el Real Decreto exige que sea «antes de la finalización».\n- **Quién decide:** la CAPD de tu programa, a petición tuya y de forma motivada. Lo normal es acompañarla con un informe o el visto bueno del director y un calendario realista para terminar.\n- **Muy importante:**\n  - La prórroga es académica: amplía el plazo para depositar, no el contrato.\n  - El RD 103/2019, art. 6.1, fija que el contrato predoctoral no puede «exceder de cuatro años».\n  - El tiempo de contrato solo se interrumpe en los supuestos del art. 6.2: incapacidad temporal, permisos por nacimiento o cuidado y situaciones similares.\n  - Por tanto, si te prorrogan el plazo de la tesis, el quinto año probablemente lo harás sin el contrato FPU.\n- **Alternativa:** existe la baja temporal a petición propia, de hasta 2 años en total (art. 28 del reglamento de la UVigo). Ese tiempo no cuenta en el plazo de permanencia, pero mientras estás de baja no puedes incluir actividades en el documento de actividades. Mientras tengas el contrato, consúltalo antes con Recursos Humanos.\n\n**Qué no he podido verificar**\n- He supuesto que empezaste el doctorado en 2023/24, porque estás en cuarto año a tiempo completo. Si empezaste antes, el reglamento de la UVigo, en su disposición transitoria primera, dice que te aplica la normativa vigente cuando empezaste, salvo en tribunal, defensa y evaluación. La regla del RD 99/2011 es la misma en cualquier caso.\n- No he leído tu convocatoria FPU concreta. Puede tener reglas propias sobre docencia o sobre el periodo de orientación postdoctoral.\n- No he encontrado en la web de la EIDO el formulario ni el plazo concreto de la solicitud de prórroga.\n- Las normas son de mi copia descargada el 1-oct-2026. He comprobado en línea hoy, 2-oct-2026, que el BOE y el portal de normativa de la UVigo no muestran cambios.\n\n**Siguientes pasos**\n1. **Docencia:** comprueba cuántas horas te quedan disponibles, tanto este año de contrato como en el total de 180, y díselo a tu director y al departamento. Si hay discrepancia, consúltalo con el Servicio de RR. HH. / PDI de la UVigo.\n2. **Prórroga:**\n   - Mira en tu expediente la fecha exacta de tu primera matrícula.\n   - Pide a la coordinación de tu programa o a la EIDO el formulario y el plazo.\n   - Presenta la solicitud motivada a la CAPD antes de cumplir los 4 años.\n3. **Contrato FPU:** confirma con RR. HH. en qué fecha termina tu contrato y qué pasa si no depositas antes.",
+  "herramientas": [
+    "Skill",
+    "Bash"
+  ],
+  "tokens": {
+    "input": 16,
+    "output": 5082,
+    "cache_creation": 36904,
+    "cache_read": 250986,
+    "total": 292988
+  },
+  "coste_usd": 0.4471332,
+  "duracion_s": 61.02,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:02:36+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [
+      "normativa-uvigo-eeae"
+    ],
+    "num_turnos": 9,
+    "tool_uses": [
+      {
+        "herramienta": "Skill",
+        "entrada_resumen": "{\"skill\": \"normativa-uvigo-eeae\", \"args\": \"Doctorando con contrato FPU en la EEAE, 4º año de doctorado a tiempo completo. El director le pide 70 horas de prácticas este cuatrimestre. ¿Puede darlas? Además no llegará a depositar la tesis este curso: ¿cómo pedir prórroga y cuánto le pueden dar?\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"cd /tmp/uvigo-bench/runs/0f96ba44875b4ba1a60ec0fc77366899/home/workspace/.claude/skills/normativa-uvigo-eeae && cat references/temas.md | head -150; echo ----; cat references/huecos.md; echo ---; cat references/jerarquia.md | head -120\", \"description\": \"Read skill routing references\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver rd-103-2019-epif --art 4; python3 scripts/buscar.py --ver rd-103-2019-epif --art 6; for a in 24 25 26 27 28 29; do python3 scripts/buscar.py --ver 625 --art $a; done\", \"description\": \"Read RD 103/2019 and 625 articles\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"python3 scripts/buscar.py --ver rd-99-2011-doctorado --art 3; python3 scripts/buscar.py --ver 625 | head -30; python3 scripts/buscar.py --ver 625 | grep -n -i -A12 \\\"transitoria\\\"; python3 scripts/buscar.py \\\"prórroga doutoramento solicitude\\\" -n 6; python3 scripts/comprobar.py 625 rd-1"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -m 20 \\\"https://eido.uvigo.gal/\\\" | grep -o -i 'href=\\\"[^\\\"]*pr[oó]rroga[^\\\"]*\\\"' | head; curl -sL -m 20 \\\"https://eido.uvigo.gal/\\\" | grep -o -i '[^>]\\\\{0,80\\\\}pr[oó]rroga[^<]\\\\{0,80\\\\}' | head\", \"description\": \"Look for prórroga info on EIDO website\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"curl -sL -m 20 -o /tmp/eido.html -w \\\"%{http_code} %{size_download}\\\\n\\\" \\\"https://eido.uvigo.gal/\\\"; grep -o -i 'href=\\\"[^\\\"]*\\\"' /tmp/eido.html | grep -i -E \\\"tramit|matr|estudant|proced|formul\\\" | head -20\", \"description\": \"Fetch EIDO homepage and list procedure links\"}"
+      },
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"for p in /gl/eido/formularios /gl/estudantes/matricula; do echo \\\"== $p\\\"; curl -sL -m 20 \\\"https://eido.uvigo.gal$p\\\" | sed 's/<[^>]*>/ /g' | tr -s ' \\\\n' | grep -i -o '.\\\\{0,200\\\\}pr[oó]rroga.\\\\{0,250\\\\}' | head -8; done\", \"description\": \"Search EIDO forms and enrolment pages for prór"
+      }
+    ],
+    "stderr_tail": null
+  }
+}

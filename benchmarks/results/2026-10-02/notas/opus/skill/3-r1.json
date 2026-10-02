@@ -1,0 +1,85 @@
+{
+  "eval_id": 3,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "skill",
+  "rep": 1,
+  "juez": "claude-opus-5-5",
+  "resultado": {
+    "assertions": [
+      {
+        "indice": 0,
+        "resultado": "pass",
+        "cita": "Tiene 3 miembros titulares (presidente/a, secretario/a y vocal) y al menos un suplente."
+      },
+      {
+        "indice": 1,
+        "resultado": "pass",
+        "cita": "Quién nombra: «o tribunal avaliador dos TFG será designado pola CARC»."
+      },
+      {
+        "indice": 2,
+        "resultado": "pass",
+        "cita": "Tú no puedes formar parte del tribunal que evalúe a tu alumno."
+      },
+      {
+        "indice": 3,
+        "resultado": "pass",
+        "cita": "Máximo de trabajos, apartado 3: «Un mesmo tribunal non avaliará máis de 5 traballos, salvo casos excepcionais autorizados polas comisións delegadas»."
+      },
+      {
+        "indice": 4,
+        "resultado": "pass",
+        "cita": "«tres membros […] Presidente/a, Secretario/a, Vogal» y «cando menos un/ha suplente»."
+      },
+      {
+        "indice": 5,
+        "resultado": "pass",
+        "cita": "La de la Escola fija 3 miembros. Mi lectura, que es interpretación y no texto de la norma: en la EEAE el tribunal ordinario es de 3."
+      }
+    ],
+    "comentario": "La respuesta es correcta y completa, y apoya en citas literales del art. 13 todos los puntos de la referencia. Solo tiene dos detalles menores: no menciona la CAM para los TFM, que no se preguntaba, y en la respuesta corta atribuye la autorización excepcional a la CARC en lugar de a las «comisiones delegadas», aunque en el fundamento sí cita el texto literal."
+  },
+  "prompt_juez": "Eres un corrector objetivo de respuestas sobre normativa universitaria. No sabes qué modelo ha respondido: evalúa solo el contenido de la respuesta.\n\nPREGUNTA PLANTEADA:\nVoy a ser tutor de un TFG en el Grao en Enxeñaría Aeroespacial. ¿Quién nombra el tribunal, cuántos miembros tiene, puedo formar parte yo del tribunal de mi alumno y cuántos trabajos como máximo puede evaluar un mismo tribunal?\n\nRESPUESTA DE REFERENCIA (orientativa, puede estar incompleta):\nRegulamento de TFG/TFM de la EEAE art. 13: tribunal de tres miembros (presidente/a, secretario/a, vogal), designado por la CARC en el caso de los TFG (y por la CAM en los TFM); al menos un suplente; un mismo tribunal no evalúa más de cinco trabajos salvo casos excepcionales autorizados por las comisiones delegadas; el tutor o cotutor no puede pertenecer al tribunal que evalúe a su estudiantado.\n\nTEXTOS NORMATIVOS CITADOS (úsalos para comprobar cifras, plazos y atribuciones; no dependas de tu memoria):\n### tfg-tfm-eeae art. 13\n# Regulamento de Traballo de Fin de Grao e de Máster da EEAE  [tfg-tfm-eeae]\n# documento: \n# fuente: https://aero.uvigo.es/gl/o-centro/normativa-e-formularios/\n# original: normativa/eeae/_originales/TFG-TFM_EEAE.pdf\n# estado:   \n\nArtigo 13. Nomeamento e composición do tribunal avaliador\nEn cada unha das datas establecidas o tribunal avaliador dos TFG será designado pola CARC e o\ntribunal avaliador dos TFM será designado pola CAM do xeito seguinte:\n1. Cada tribunal estará formado por tres membros cos seguintes roles, determinados polas comisións delegadas:\nPresidente/a\nSecretario/a\nVogal\n2. Cada tribunal terá cando menos un/ha suplente.\n3. Un mesmo tribunal non avaliará máis de 5 traballos, salvo casos excepcionais autorizados\npolas comisións delegadas.\n4. Os tribunais comporanse de profesorado que imparta docencia no título do cal se efectúa a\ndefensa de TFG/TFM. Tamén poderá ser membro do tribunal profesorado doutros títulos\ndo centro que sexa titor de TFG/TFM nese curso académico. Co obxecto de garantir a\ndistribución máis homoxénea posible de profesorado en tribunais, establecerase un\nmecanismo que permita ao profesorado elixido, na medida do posible, que un mesmo\nprofesor non esté en máis dunha convocatoria de TFG/TFM nun mesmo curso como\nmembro titular.\n5. De ser necesaria a substitución dalgún dos membros dos tribunais, as comisións pertinentes\npoderán propor un/ha suplente.\n6. Os tribunais de avaliación do TFG e TFM constituiranse formalmente coa debida publicidade\ne antelación ao acto de defensa.\n7. O/a titor/a e cotitor/a dun TFG ou TFM non poderán pertencer ao tribunal que avalíe ao\nseu estudantado titorizado.\n\nASERCIONES A EVALUAR (cada una se refiere a la respuesta evaluada):\n0. Indica que el tribunal tiene tres miembros con los roles de presidencia, secretaría y vocalía.\n1. Indica que el tribunal de TFG lo designa la CARC (y el de TFM la CAM).\n2. Indica que el tutor o cotutor no puede pertenecer al tribunal que evalúe a su estudiantado.\n3. Indica que un mismo tribunal no evalúa más de cinco trabajos, salvo casos excepcionales autorizados por las comisiones delegadas.\n4. Indica que cada tribunal cuenta al menos con un suplente.\n5. No inventa una composición, un número de miembros ni un límite de trabajos distintos de los de la norma.\n\nRESPUESTA EVALUADA:\n\"\"\"\n**Respuesta corta:** El tribunal lo nombra la Comisión Académica e de Recoñecemento de Créditos (CARC) de la Escola. Tiene 3 miembros titulares (presidente/a, secretario/a y vocal) y al menos un suplente. Tú no puedes formar parte del tribunal que evalúe a tu alumno. Un mismo tribunal puede evaluar como máximo 5 trabajos, salvo casos excepcionales que autorice la CARC.\n\n**Fundamento**\n\n- **Normativa para a realización do TFG de la UVigo** (Consello de Goberno, consolidada a 31-10-2022), art. 8 bis.1: «A Xunta de Centro ou a comisión en quen delegue nomeará, en base a criterios públicos e motivados, o tribunal de avaliación colexiado […] Este estará constituído polo menos por tres persoas que exercerán presidencia, secretaría e vogal». En el art. 8 bis.3 deja a cada centro definir el papel del tutor: «As persoas titoras poderán estar presentes con dereito a voz no acto de defensa». [secretaria.uvigo.gal/…/show/550](https://secretaria.uvigo.gal/uv/web/normativa/public/show/550)\n- **Regulamento de TFG e TFM da EEAE** (19-12-2018), art. 13:\n  - Quién nombra: «o tribunal avaliador dos TFG será designado pola CARC».\n  - Miembros, apartados 1 y 2: «tres membros […] Presidente/a, Secretario/a, Vogal» y «cando menos un/ha suplente».\n  - Máximo de trabajos, apartado 3: «Un mesmo tribunal non avaliará máis de 5 traballos, salvo casos excepcionais autorizados polas comisións delegadas».\n  - Tutor en el tribunal, apartado 7: «O/a titor/a e cotitor/a dun TFG ou TFM non poderán pertencer ao tribunal que avalíe ao seu estudantado titorizado».\n  \n  [aero.uvigo.es – normativa](https://aero.uvigo.es/docs/escuela/normativa/TFG-TFM_EEAE.pdf)\n- **RRI de la EEAE** (2017), art. 60: entre las funciones de la CARC está «Aprobar os títulos e tribunais de Traballos Fin de Grao».\n\n**Condiciones y aspectos útiles para ti como tutor**\n\n- **Quién puede estar en el tribunal** (art. 13.4 EEAE): profesorado que da clase en el grado. También puede estar profesorado de otras titulaciones del centro si ese curso tutoriza algún TFG o TFM. La Escola intenta que un mismo profesor no sea titular en más de una convocatoria por curso.\n- **Lo que sí haces como tutor:**\n  - Pones el 25 % de la nota con el informe del Anexo III y la rúbrica vigente. El tribunal pone el 75 % (art. 15 EEAE).\n  - Puedes intervenir en la defensa cuando acabe la ronda de preguntas del tribunal (art. 16.2 EEAE).\n- **Composición ampliada:** la norma de la UVigo permite más de un vocal y, excepcionalmente, miembros externos (art. 8 bis.2). La de la Escola fija 3 miembros. Mi lectura, que es interpretación y no texto de la norma: en la EEAE el tribunal ordinario es de 3.\n\n**Qué no he podido verificar:** el reglamento de la Escola es de 2018, anterior a la última modificación de la norma de la UVigo (2022). He comprobado hoy (2-10-2026) que los dos textos publicados coinciden con mi copia y que en estos puntos no se contradicen. No he revisado si la CARC tiene acuerdos posteriores sobre tribunales para este curso.\n\n**Siguiente paso:** para saber las fechas de defensa y la composición concreta de los tribunales de cada convocatoria, consulta los acuerdos de la CARC o pregunta en la Secretaría de la Escola.\n\"\"\"\n\nInstrucciones:\n- Para cada aserción decide \"pass\" (la respuesta la cumple de forma clara) o \"fail\" (no la cumple, la contradice o no es verificable en la respuesta).\n- En \"cita\" copia un fragmento LITERAL de la respuesta evaluada que justifique el resultado. No puede estar vacía. Si el resultado es \"fail\" porque la respuesta omite algo, cita el fragmento más cercano que demuestre la omisión, o la frase completa si la respuesta no menciona nada relevante.\n- \"comentario\": una o dos frases de valoración global.\n- Devuelve SOLO un objeto JSON válido, sin texto adicional ni bloques de código, con este esquema exacto:\n{\n  \"assertions\": [\n    {\"indice\": 0, \"resultado\": \"pass\" | \"fail\", \"cita\": \"fragmento literal de la respuesta evaluada\"}\n  ],\n  \"comentario\": \"una o dos frases\"\n}",
+  "tokens_juez": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4583,
+    "cache_read_input_tokens": 4762,
+    "output_tokens": 750,
+    "output_tokens_details": {
+      "thinking_tokens": 204
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4583,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 750,
+        "cache_read_input_tokens": 4762,
+        "cache_creation_input_tokens": 4583,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4583
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "coste_usd_juez": 0.0526244,
+  "duracion_juez_s": 8.05,
+  "duracion_s": 8.05,
+  "contaminada": false,
+  "skill_usada": true,
+  "error": null,
+  "timestamp": "2026-10-02T20:06:58+02:00"
+}

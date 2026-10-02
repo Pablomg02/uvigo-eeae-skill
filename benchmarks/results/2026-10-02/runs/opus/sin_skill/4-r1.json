@@ -1,0 +1,57 @@
+{
+  "eval_id": 4,
+  "grupo": "desarrollo",
+  "modelo": "opus",
+  "condicion": "sin_skill",
+  "rep": 1,
+  "prompt": "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?",
+  "respuesta": "No tenía documentos tuyos en el espacio de trabajo, así que te respondo con la normativa general que conozco. Las cifras concretas compruébalas en tu convocatoria FPU y con la EIDO de la UVigo.\n\n## 1. Las 70 horas de prácticas: no deberías aceptarlas así\n\nComo FPU te aplica el **Estatuto del Personal Investigador Predoctoral en Formación (RD 103/2019, art. 4)** y las bases de la convocatoria FPU. Los límites de docencia son:\n\n- **Máximo 60 horas por curso académico.**\n- **Máximo 180 horas** en toda la duración del contrato.\n- La docencia es una **colaboración voluntaria**. Se acuerda entre las partes y no puede afectar a tu formación investigadora.\n\n**70 horas en un cuatrimestre supera el límite anual.** Como mucho podrías dar 60 horas en todo el curso, y menos si ya llevas cerca de 180 horas acumuladas en años anteriores. Mira cuántas tienes reconocidas y díselo a tu director. Que la docencia sea voluntaria también juega a tu favor: en el último año, con la tesis sin depositar, tienes motivos de sobra para pedir que sean menos. Si el departamento insiste en pasar del límite, pregunta en el Servicio de Investigación o en el de Recursos Humanos de la UVigo. Un exceso así puede dar problemas con el Ministerio en la justificación de la ayuda.\n\n## 2. Prórroga para depositar la tesis\n\nLa duración de la tesis la regula el **RD 99/2011, art. 3.2**. Lo modificó el **RD 576/2023**, y lo que te toca depende de cuándo te admitieron:\n\n| Régimen | Tiempo completo | Prórroga |\n|---|---|---|\n| Actual (tras RD 576/2023) | 4 años | 1 año más |\n| Anterior | 3 años | 1 año + 1 año excepcional |\n\n- Las **bajas por incapacidad temporal, maternidad o paternidad, etc.** no cuentan en el plazo.\n- **Cómo se pide:** con una solicitud dirigida a la **Comisión Académica del Programa de Doctorado (CAPD)**. Normalmente se presenta por la sede electrónica o la secretaría virtual de la UVigo, con el **informe favorable de tu director o tutor** y una breve justificación del estado de la tesis y del plan para terminarla. Preséntala **antes de que termine el plazo**. Revisa el *Regulamento de estudos de doutoramento* de la UVigo y pregunta en la **EIDO** o a la coordinación de tu programa el formulario y la fecha límite de este curso.\n- Si estás en tu cuarto año pero con el régimen antiguo de 3 años, puede que ya estés en la primera prórroga. En ese caso solo te quedaría la prórroga excepcional. Confírmalo con la EIDO.\n\n## 3. La prórroga no alarga el contrato FPU\n\nLa prórroga de permanencia en el doctorado **no amplía el contrato FPU**, que dura como máximo 4 años. Solo se alarga por suspensiones como la incapacidad temporal o los permisos de maternidad o paternidad. Además, si no defiendes la tesis antes de que acabe el contrato, **pierdes el derecho al periodo de orientación postdoctoral (POP)** previsto en la convocatoria FPU. Es otro buen motivo para limitar las horas de docencia este curso.\n\nSi me pasas tu convocatoria FPU (año) o la normativa de tu programa, te confirmo las cifras exactas.",
+  "herramientas": [
+    "Bash"
+  ],
+  "tokens": {
+    "input": 4,
+    "output": 2937,
+    "cache_creation": 5298,
+    "cache_read": 22951,
+    "total": 31190
+  },
+  "coste_usd": 0.10573020000000001,
+  "duracion_s": 33.67,
+  "exit_code": 0,
+  "contaminada": false,
+  "skill_usada": false,
+  "error": null,
+  "timestamp": "2026-10-02T20:04:30+02:00",
+  "comando": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "medium",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--allowedTools",
+    "Bash Read Grep Glob WebFetch WebSearch Skill",
+    "--max-turns",
+    "40",
+    "--setting-sources",
+    "project",
+    "--settings",
+    "{\"disableBundledSkills\": true, \"enabledPlugins\": {\"cc-plugin-plugin-authoring@builtin\": false, \"cc-plugin-agents-md@builtin\": false, \"cc-plugin-telemetry@builtin\": false}, \"skillOverrides\": {\"design\": \"off\", \"doctor\": \"off\"}}",
+    "Tengo contrato FPU en la EEAE y estoy en cuarto año de doctorado a tiempo completo. Mi director me ha pedido que dé 70 horas de prácticas este cuatrimestre y además no voy a llegar a depositar la tesis este curso. ¿Puedo dar esas horas? ¿Qué tengo que hacer para pedir una prórroga y cuánto me pueden dar?"
+  ],
+  "transcripcion_resumen": {
+    "skills_visibles": [],
+    "num_turnos": 2,
+    "tool_uses": [
+      {
+        "herramienta": "Bash",
+        "entrada_resumen": "{\"command\": \"find . -maxdepth 3 | head -100\", \"description\": \"List workspace files\"}"
+      }
+    ],
+    "stderr_tail": null
+  }
+}
