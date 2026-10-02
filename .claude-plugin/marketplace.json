@@ -1,6 +1,6 @@
 {
   "name": "uvigo-eeae-skill",
-  "description": "Skill de normativa de la Universidade de Vigo para el profesorado de la EEAE y el doctorado (EIDO).",
+  "description": "Skill de normativa de la Universidade de Vigo para el profesorado y el estudiantado de la EEAE y el doctorado (EIDO).",
   "owner": {
     "name": "Pablo Magariños",
     "url": "https://github.com/Pablomg02/uvigo-eeae-skill"
@@ -9,7 +9,7 @@
     {
       "name": "normativa-uvigo-eeae",
       "source": "./skills/normativa-uvigo-eeae",
-      "description": "Responde dudas normativas del profesorado de la EEAE y de quien hace el doctorado en la UVigo, citando artículo y fuente, con corpus local, buscador y comprobación de vigencia en directo.",
+      "description": "Responde dudas normativas del profesorado y del estudiantado de la EEAE y de quien hace el doctorado en la UVigo, citando artículo y fuente, con corpus local, buscador y comprobación de vigencia en directo.",
       "category": "education",
       "tags": ["uvigo", "normativa", "eeae", "doctorado", "derecho"]
     }

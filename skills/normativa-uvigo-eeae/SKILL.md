@@ -1,22 +1,22 @@
 ---
 name: normativa-uvigo-eeae
-description: Normativa de la Universidade de Vigo, la Escola de Enxeñaría Aeronáutica e do Espazo (EEAE) y la Escola Internacional de Doutoramento, con la legislación estatal, gallega y el convenio del PDI laboral, para resolver dudas del profesorado de la EEAE (también si es doctorando) y comprobar que una decisión cumple la norma, verificándola en internet. Úsala siempre que pregunte si puede, debe o le está permitido algo como docente, investigador o doctorando, aunque no diga «normativa». Cubre exámenes (fechas, cambios, revisión, notas, actas, avaliación global, fraude), guías docentes, calendario, tutorías, TFG/TFM, prácticas, estudiantes con necesidades, POD y dedicación, vacaciones, permisos, contratos, tesis (plan de investigación, plazos, prórrogas, depósito, defensa, mención internacional), investigación y art. 83, incompatibilidades, datos, acoso, régimen disciplinario y viajes. Responde en español citando artículo y fuente.
+description: Normativa de la Universidade de Vigo, la Escola de Enxeñaría Aeronáutica e do Espazo (EEAE) y la Escola Internacional de Doutoramento, con la legislación estatal, gallega y el convenio del PDI laboral, para resolver dudas del profesorado y del estudiantado de la EEAE (también si es doctorando) y comprobar que una decisión cumple la norma, verificándola en internet. Úsala siempre que pregunte si puede, debe o le está permitido algo como docente, estudiante, investigador o doctorando, aunque no diga «normativa». Cubre exámenes y convocatorias (fechas, cambios, revisión, notas, actas, avaliación global, fraude), guías docentes, calendario, tutorías, TFG/TFM, prácticas, estudiantes con necesidades, POD y dedicación, vacaciones, permisos, contratos, tesis (plan de investigación, plazos, prórrogas, depósito, defensa, mención internacional), investigación y art. 83, incompatibilidades, datos, acoso, régimen disciplinario y viajes. Responde en español citando artículo y fuente.
 ---
 
-# Normativa UVigo + EEAE + doctorado para profesorado
+# Normativa UVigo + EEAE + doctorado para profesorado y estudiantado
 
-Copia local de la normativa que afecta al profesorado de la EEAE y a quien hace el doctorado, con un buscador y un comprobador en directo. La razón de ser es **no responder de memoria**: la norma cambia por cursos, está en gallego, y sin artículo y fecha la respuesta no sirve para decidir. El trabajo es siempre: encontrar el texto, leerlo entero, comprobar que está vigente y aplicable, y citarlo.
+Copia local de la normativa que afecta al profesorado y al estudiantado de la EEAE y a quien hace el doctorado, con un buscador y un comprobador en directo. La razón de ser es **no responder de memoria**: la norma cambia por cursos, está en gallego, y sin artículo y fecha la respuesta no sirve para decidir. El trabajo es siempre: encontrar el texto, leerlo entero, comprobar que está vigente y aplicable, y citarlo.
 
 Contexto del caso: la skill no guarda datos de nadie. La persona cuenta su caso en la conversación y de ahí sale todo.
 
-- **Qué hace falta saber** (solo lo que cambia la respuesta): figura contractual (contratado, funcionario, predoctoral o asociado), si pregunta como docente, doctorando o director, la materia y el curso si hay guía o fecha de por medio, y el programa de doctorado si pregunta por él. Pregúntalo en una línea; si falta algo no decisivo, declara la suposición y sigue.
+- **Qué hace falta saber** (solo lo que cambia la respuesta): figura contractual (contratado, funcionario, predoctoral o asociado), si pregunta como docente, estudiante (grado o máster), doctorando o director, la titulación, la materia y el curso si hay guía o fecha de por medio, y el programa de doctorado si pregunta por él. Pregúntalo en una línea; si falta algo no decisivo, declara la suposición y sigue.
 - **Las guías docentes no están en el corpus.** Cuando la respuesta dependa de una materia (pesos, mínimos, asistencia, avaliación global, fin de carreira), bájala con `python3 scripts/guia.py "<nombre o código>" [--curso 2025_26] [--grep "<texto>"]` (busca en las titulaciones de la EEAE; `--lista` enseña las materias). Cítala con URL y «consultada el <fecha>».
 - **Calendario y exámenes** de la Escola (`--ambito curso`) están descargados para un curso concreto, el que diga su cabecera; para otro, ver «Trampas».
 - Si es doctorando, la web de su programa (actividades formativas, seguimiento, comisión académica) se consulta en línea: localiza el programa en `eido.uvigo.gal`. Es información, no norma: si difiere del Regulamento de doutoramento de 2024 (625), manda 625.
 
 ## Flujo de trabajo
 
-1. **Fija los hechos que cambian la respuesta**: figura contractual, si actúa como profesor, doctorando o director, curso o fecha del asunto. Si falta uno decisivo, pregúntalo en una línea; si no, declara la suposición y sigue.
+1. **Fija los hechos que cambian la respuesta**: figura contractual, si actúa como profesor, estudiante, doctorando o director, curso o fecha del asunto. Si falta uno decisivo, pregúntalo en una línea; si no, declara la suposición y sigue.
 2. **Enruta** con `references/temas.md`: dice qué normas leer y de qué nivel. Casi toda duda toca varios niveles (ley, convenio, UVigo, Escola, guía docente); leer solo uno lleva a aplicar una regla que otra superior ya cambió.
 3. **Busca** desde la carpeta de la skill (la que contiene este SKILL.md), con varias consultas y en ambos idiomas (avaliación/evaluación, titorías/tutorías):
    ```bash

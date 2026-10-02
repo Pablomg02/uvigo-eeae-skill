@@ -1,6 +1,6 @@
 # normativa-uvigo-eeae
 
-**Skill de agentes de IA para consultar la normativa de la Universidade de Vigo aplicable al profesorado de la EEAE y al doctorado (EIDO).**
+**Skill de agentes de IA para consultar la normativa de la Universidade de Vigo aplicable al profesorado y al estudiantado de la EEAE y al doctorado (EIDO).**
 
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/Pablomg02/uvigo-eeae-skill)](https://github.com/Pablomg02/uvigo-eeae-skill/releases)
@@ -8,9 +8,9 @@
 [![Juez: Claude Opus 5.5 (IA)](https://img.shields.io/badge/juez-Claude%20Opus%205.5%20%28IA%29-orange.svg)](#benchmarks)
 
 > [!NOTE]
-> **Resumen.** Skill de agentes de IA para consultar la normativa de la Universidade de Vigo aplicable al profesorado de la EEAE y al doctorado (EIDO): corpus local, respuesta en español con cita de artículo y fuente, y comprobación de vigencia en directo. En el benchmark del 2026-10-02 el acierto mejora **+26,7 pp** con DeepSeek V4.1 Flash (58,3 % → 85,0 %) y **+31,7 pp** con Claude Opus 5.5 (60,0 % → 91,7 %); la corrección la hizo un juez de IA (Claude Opus 5.5), no verificada al 100 % ([detalles y limitaciones](#benchmarks)).
+> **Resumen.** Skill de agentes de IA para consultar la normativa de la Universidade de Vigo aplicable al profesorado y al estudiantado de la EEAE y al doctorado (EIDO): corpus local, respuesta en español con cita de artículo y fuente, y comprobación de vigencia en directo. En el benchmark del 2026-10-02 el acierto mejora **+26,7 pp** con DeepSeek V4.1 Flash (58,3 % → 85,0 %) y **+31,7 pp** con Claude Opus 5.5 (60,0 % → 91,7 %); la corrección la hizo un juez de IA (Claude Opus 5.5); si bien no es una verificación exhaustiva, la evidencia muestra que la mejora es relevante ([detalles y limitaciones](#benchmarks)).
 
-La skill responde dudas normativas del profesorado de la Escola de Enxeñaría Aeronáutica e do Espazo (EEAE) y de quien realiza el doctorado en la Universidade de Vigo: exámenes, guías docentes, POD y dedicación, permisos, contratos, tesis, art. 83, incompatibilidades, protección de datos y régimen disciplinario.
+La skill responde dudas normativas del profesorado y del estudiantado de la Escola de Enxeñaría Aeronáutica e do Espazo (EEAE) y de quien realiza el doctorado en la Universidade de Vigo: exámenes, guías docentes, POD y dedicación, permisos, contratos, tesis, art. 83, incompatibilidades, protección de datos y régimen disciplinario. Para el estudiantado de grado y máster cubre, además, convocatorias y evaluación, TFG/TFM, prácticas, movilidad, permanencia, reconocimiento de créditos y régimen disciplinario.
 
 Se apoya en un **corpus local de 160 textos** (legislación estatal y gallega, convenio del PDI laboral, normativa de la UVigo, la EEAE y la EIDO), con un buscador y un comprobador que contrasta la vigencia en directo con el portal de la UVigo, el BOE y las webs de la Escola y la EIDO. Responde en español, **cita artículo y fuente** y declara explícitamente lo que no puede verificar.
 
@@ -61,6 +61,12 @@ Formato de respuesta (recortado):
 
 **Siguiente paso:** a quién preguntar o qué trámite hacer.
 ```
+
+La skill también vale para el estudiantado de la Escola. Por ejemplo:
+
+> ¿Cuántas convocatorias me quedan si suspendo la última asignatura del grado?
+
+El agente busca en el Regulamento de avaliación (565), la normativa de permanencia y progreso (628) y el Regulamento de estudantes (460), y responde con el artículo y el enlace, igual que en el caso anterior.
 
 La versión empaquetada para la app de Claude es el archivo `.skill` de las [releases](https://github.com/Pablomg02/uvigo-eeae-skill/releases) (≈7 MB). El repositorio versiona únicamente los PDF imprescindibles (13 de 128); el resto se descarga bajo demanda cuando una consulta necesita una tabla o un documento escaneado.
 
@@ -167,7 +173,7 @@ Con una sola repetición, el `±` y estas diferencias reflejan la dispersión en
 
 ## Alcance y adaptación
 
-La skill es específica de la UVigo, la EEAE y el doctorado (EIDO), pero su estructura —corpus con cabeceras de fuente y fecha, buscador, comprobador de vigencia, mapa de temas y jerarquía normativa— sirve de base para otras escuelas, facultades o universidades. Para adaptarla a otro centro, escribir a través de [pablomagarinos.es](https://pablomagarinos.es).
+La skill es específica de la UVigo, la EEAE, su estudiantado y el doctorado (EIDO), pero su estructura —corpus con cabeceras de fuente y fecha, buscador, comprobador de vigencia, mapa de temas y jerarquía normativa— sirve de base para otras escuelas, facultades o universidades. Para adaptarla a otro centro, escribir a través de [pablomagarinos.es](https://pablomagarinos.es).
 
 ## Limitaciones y aviso legal
 
